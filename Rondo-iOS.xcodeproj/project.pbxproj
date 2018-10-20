@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		076A1B97D98D2A014EAD9592 /* Pods_Rondo_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B2FED934BBD1490DFA4011 /* Pods_Rondo_iOSTests.framework */; };
+		38962800FAF7EBCA23281AD4 /* Pods_Rondo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40EB60B072509CA9186DE640 /* Pods_Rondo_iOS.framework */; };
 		A81D2381217BE70C006DFAC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D2380217BE70C006DFAC5 /* AppDelegate.m */; };
 		A81D2384217BE70C006DFAC5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D2383217BE70C006DFAC5 /* ViewController.m */; };
 		A81D2387217BE70C006DFAC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A81D2385217BE70C006DFAC5 /* Main.storyboard */; };
@@ -27,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15F973582855629A676E97E6 /* Pods-Rondo-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOSTests/Pods-Rondo-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A9928E675741FDB447B060A /* Pods-Rondo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		40EB60B072509CA9186DE640 /* Pods_Rondo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rondo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43B2FED934BBD1490DFA4011 /* Pods_Rondo_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rondo_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A81D237C217BE70C006DFAC5 /* Rondo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rondo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A81D237F217BE70C006DFAC5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A81D2380217BE70C006DFAC5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -40,6 +46,8 @@
 		A81D2394217BE70F006DFAC5 /* Rondo-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rondo-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A81D2398217BE70F006DFAC5 /* Rondo_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rondo_iOSTests.m; sourceTree = "<group>"; };
 		A81D239A217BE70F006DFAC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C00C8E1D6C4FDF56EF95E4DF /* Pods-Rondo-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOSTests/Pods-Rondo-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		CDBDE9BDB90BFFB0DE41A4A8 /* Pods-Rondo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38962800FAF7EBCA23281AD4 /* Pods_Rondo_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +63,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076A1B97D98D2A014EAD9592 /* Pods_Rondo_iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0659116C3945ED606A8EEADC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40EB60B072509CA9186DE640 /* Pods_Rondo_iOS.framework */,
+				43B2FED934BBD1490DFA4011 /* Pods_Rondo_iOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0AAAE905BB1BEDE8A62A364E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDBDE9BDB90BFFB0DE41A4A8 /* Pods-Rondo-iOS.debug.xcconfig */,
+				3A9928E675741FDB447B060A /* Pods-Rondo-iOS.release.xcconfig */,
+				15F973582855629A676E97E6 /* Pods-Rondo-iOSTests.debug.xcconfig */,
+				C00C8E1D6C4FDF56EF95E4DF /* Pods-Rondo-iOSTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A81D2373217BE70C006DFAC5 = {
 			isa = PBXGroup;
 			children = (
 				A81D237E217BE70C006DFAC5 /* Rondo-iOS */,
 				A81D2397217BE70F006DFAC5 /* Rondo-iOSTests */,
 				A81D237D217BE70C006DFAC5 /* Products */,
+				0AAAE905BB1BEDE8A62A364E /* Pods */,
+				0659116C3945ED606A8EEADC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A81D239D217BE70F006DFAC5 /* Build configuration list for PBXNativeTarget "Rondo-iOS" */;
 			buildPhases = (
+				434FE7C81EDCB1C99C55D66F /* [CP] Check Pods Manifest.lock */,
 				A81D2378217BE70C006DFAC5 /* Sources */,
 				A81D2379217BE70C006DFAC5 /* Frameworks */,
 				A81D237A217BE70C006DFAC5 /* Resources */,
+				DD2AE4A29E4F50C7D9A58AB9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,6 +161,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A81D23A0217BE70F006DFAC5 /* Build configuration list for PBXNativeTarget "Rondo-iOSTests" */;
 			buildPhases = (
+				55CD5395518DDD54D288DB71 /* [CP] Check Pods Manifest.lock */,
 				A81D2390217BE70F006DFAC5 /* Sources */,
 				A81D2391217BE70F006DFAC5 /* Frameworks */,
 				A81D2392217BE70F006DFAC5 /* Resources */,
@@ -197,6 +232,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		434FE7C81EDCB1C99C55D66F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rondo-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55CD5395518DDD54D288DB71 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rondo-iOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD2AE4A29E4F50C7D9A58AB9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS-frameworks.sh",
+				"${PODS_ROOT}/Leanplum-iOS-SDK/Leanplum.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Leanplum.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A81D2378217BE70C006DFAC5 /* Sources */ = {
@@ -361,6 +453,7 @@
 		};
 		A81D239E217BE70F006DFAC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDBDE9BDB90BFFB0DE41A4A8 /* Pods-Rondo-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +471,7 @@
 		};
 		A81D239F217BE70F006DFAC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A9928E675741FDB447B060A /* Pods-Rondo-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -395,6 +489,7 @@
 		};
 		A81D23A1217BE70F006DFAC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15F973582855629A676E97E6 /* Pods-Rondo-iOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -414,6 +509,7 @@
 		};
 		A81D23A2217BE70F006DFAC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C00C8E1D6C4FDF56EF95E4DF /* Pods-Rondo-iOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
