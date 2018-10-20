@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A81D2381217BE70C006DFAC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D2380217BE70C006DFAC5 /* AppDelegate.m */; };
+		A81D2384217BE70C006DFAC5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D2383217BE70C006DFAC5 /* ViewController.m */; };
+		A81D2387217BE70C006DFAC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A81D2385217BE70C006DFAC5 /* Main.storyboard */; };
+		A81D2389217BE70F006DFAC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A81D2388217BE70F006DFAC5 /* Assets.xcassets */; };
+		A81D238C217BE70F006DFAC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A81D238A217BE70F006DFAC5 /* LaunchScreen.storyboard */; };
+		A81D238F217BE70F006DFAC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D238E217BE70F006DFAC5 /* main.m */; };
+		A81D2399217BE70F006DFAC5 /* Rondo_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D2398217BE70F006DFAC5 /* Rondo_iOSTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A81D2395217BE70F006DFAC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A81D2374217BE70C006DFAC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A81D237B217BE70C006DFAC5;
+			remoteInfo = "Rondo-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A81D237C217BE70C006DFAC5 /* Rondo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rondo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A81D237F217BE70C006DFAC5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A81D2380217BE70C006DFAC5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A81D2382217BE70C006DFAC5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A81D2383217BE70C006DFAC5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A81D2386217BE70C006DFAC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A81D2388217BE70F006DFAC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A81D238B217BE70F006DFAC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A81D238D217BE70F006DFAC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A81D238E217BE70F006DFAC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A81D2394217BE70F006DFAC5 /* Rondo-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rondo-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A81D2398217BE70F006DFAC5 /* Rondo_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rondo_iOSTests.m; sourceTree = "<group>"; };
+		A81D239A217BE70F006DFAC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A81D2379217BE70C006DFAC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A81D2391217BE70F006DFAC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A81D2373217BE70C006DFAC5 = {
+			isa = PBXGroup;
+			children = (
+				A81D237E217BE70C006DFAC5 /* Rondo-iOS */,
+				A81D2397217BE70F006DFAC5 /* Rondo-iOSTests */,
+				A81D237D217BE70C006DFAC5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A81D237D217BE70C006DFAC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A81D237C217BE70C006DFAC5 /* Rondo-iOS.app */,
+				A81D2394217BE70F006DFAC5 /* Rondo-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A81D237E217BE70C006DFAC5 /* Rondo-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A81D237F217BE70C006DFAC5 /* AppDelegate.h */,
+				A81D2380217BE70C006DFAC5 /* AppDelegate.m */,
+				A81D2382217BE70C006DFAC5 /* ViewController.h */,
+				A81D2383217BE70C006DFAC5 /* ViewController.m */,
+				A81D2385217BE70C006DFAC5 /* Main.storyboard */,
+				A81D2388217BE70F006DFAC5 /* Assets.xcassets */,
+				A81D238A217BE70F006DFAC5 /* LaunchScreen.storyboard */,
+				A81D238D217BE70F006DFAC5 /* Info.plist */,
+				A81D238E217BE70F006DFAC5 /* main.m */,
+			);
+			path = "Rondo-iOS";
+			sourceTree = "<group>";
+		};
+		A81D2397217BE70F006DFAC5 /* Rondo-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				A81D2398217BE70F006DFAC5 /* Rondo_iOSTests.m */,
+				A81D239A217BE70F006DFAC5 /* Info.plist */,
+			);
+			path = "Rondo-iOSTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A81D237B217BE70C006DFAC5 /* Rondo-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A81D239D217BE70F006DFAC5 /* Build configuration list for PBXNativeTarget "Rondo-iOS" */;
+			buildPhases = (
+				A81D2378217BE70C006DFAC5 /* Sources */,
+				A81D2379217BE70C006DFAC5 /* Frameworks */,
+				A81D237A217BE70C006DFAC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rondo-iOS";
+			productName = "Rondo-iOS";
+			productReference = A81D237C217BE70C006DFAC5 /* Rondo-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A81D2393217BE70F006DFAC5 /* Rondo-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A81D23A0217BE70F006DFAC5 /* Build configuration list for PBXNativeTarget "Rondo-iOSTests" */;
+			buildPhases = (
+				A81D2390217BE70F006DFAC5 /* Sources */,
+				A81D2391217BE70F006DFAC5 /* Frameworks */,
+				A81D2392217BE70F006DFAC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A81D2396217BE70F006DFAC5 /* PBXTargetDependency */,
+			);
+			name = "Rondo-iOSTests";
+			productName = "Rondo-iOSTests";
+			productReference = A81D2394217BE70F006DFAC5 /* Rondo-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A81D2374217BE70C006DFAC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = Leanplum;
+				TargetAttributes = {
+					A81D237B217BE70C006DFAC5 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					A81D2393217BE70F006DFAC5 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = A81D237B217BE70C006DFAC5;
+					};
+				};
+			};
+			buildConfigurationList = A81D2377217BE70C006DFAC5 /* Build configuration list for PBXProject "Rondo-iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A81D2373217BE70C006DFAC5;
+			productRefGroup = A81D237D217BE70C006DFAC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A81D237B217BE70C006DFAC5 /* Rondo-iOS */,
+				A81D2393217BE70F006DFAC5 /* Rondo-iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A81D237A217BE70C006DFAC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A81D238C217BE70F006DFAC5 /* LaunchScreen.storyboard in Resources */,
+				A81D2389217BE70F006DFAC5 /* Assets.xcassets in Resources */,
+				A81D2387217BE70C006DFAC5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A81D2392217BE70F006DFAC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A81D2378217BE70C006DFAC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A81D2384217BE70C006DFAC5 /* ViewController.m in Sources */,
+				A81D238F217BE70F006DFAC5 /* main.m in Sources */,
+				A81D2381217BE70C006DFAC5 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A81D2390217BE70F006DFAC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A81D2399217BE70F006DFAC5 /* Rondo_iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A81D2396217BE70F006DFAC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A81D237B217BE70C006DFAC5 /* Rondo-iOS */;
+			targetProxy = A81D2395217BE70F006DFAC5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A81D2385217BE70C006DFAC5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A81D2386217BE70C006DFAC5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A81D238A217BE70F006DFAC5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A81D238B217BE70F006DFAC5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A81D239B217BE70F006DFAC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A81D239C217BE70F006DFAC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A81D239E217BE70F006DFAC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4XLWYATZ5P;
+				INFOPLIST_FILE = "Rondo-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leanplum.Rondo-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A81D239F217BE70F006DFAC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4XLWYATZ5P;
+				INFOPLIST_FILE = "Rondo-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leanplum.Rondo-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A81D23A1217BE70F006DFAC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4XLWYATZ5P;
+				INFOPLIST_FILE = "Rondo-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leanplum.Rondo-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rondo-iOS.app/Rondo-iOS";
+			};
+			name = Debug;
+		};
+		A81D23A2217BE70F006DFAC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4XLWYATZ5P;
+				INFOPLIST_FILE = "Rondo-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leanplum.Rondo-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rondo-iOS.app/Rondo-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A81D2377217BE70C006DFAC5 /* Build configuration list for PBXProject "Rondo-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A81D239B217BE70F006DFAC5 /* Debug */,
+				A81D239C217BE70F006DFAC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A81D239D217BE70F006DFAC5 /* Build configuration list for PBXNativeTarget "Rondo-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A81D239E217BE70F006DFAC5 /* Debug */,
+				A81D239F217BE70F006DFAC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A81D23A0217BE70F006DFAC5 /* Build configuration list for PBXNativeTarget "Rondo-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A81D23A1217BE70F006DFAC5 /* Debug */,
+				A81D23A2217BE70F006DFAC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A81D2374217BE70C006DFAC5 /* Project object */;
+}
