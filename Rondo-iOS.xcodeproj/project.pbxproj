@@ -16,6 +16,9 @@
 		A81D238C217BE70F006DFAC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A81D238A217BE70F006DFAC5 /* LaunchScreen.storyboard */; };
 		A81D238F217BE70F006DFAC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D238E217BE70F006DFAC5 /* main.m */; };
 		A81D2399217BE70F006DFAC5 /* Rondo_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D2398217BE70F006DFAC5 /* Rondo_iOSTests.m */; };
+		A81D23A9217C1227006DFAC5 /* TriggersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D23A8217C1227006DFAC5 /* TriggersViewController.m */; };
+		A81D23AC217C1230006DFAC5 /* VariablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D23AB217C1230006DFAC5 /* VariablesViewController.m */; };
+		A81D23B2217C1746006DFAC5 /* AppInboxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D23B1217C1746006DFAC5 /* AppInboxTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,13 @@
 		A81D2394217BE70F006DFAC5 /* Rondo-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rondo-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A81D2398217BE70F006DFAC5 /* Rondo_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rondo_iOSTests.m; sourceTree = "<group>"; };
 		A81D239A217BE70F006DFAC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A81D23A6217C0D80006DFAC5 /* Rondo-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Rondo-iOS.entitlements"; sourceTree = "<group>"; };
+		A81D23A7217C1227006DFAC5 /* TriggersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriggersViewController.h; sourceTree = "<group>"; };
+		A81D23A8217C1227006DFAC5 /* TriggersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TriggersViewController.m; sourceTree = "<group>"; };
+		A81D23AA217C1230006DFAC5 /* VariablesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VariablesViewController.h; sourceTree = "<group>"; };
+		A81D23AB217C1230006DFAC5 /* VariablesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VariablesViewController.m; sourceTree = "<group>"; };
+		A81D23B0217C1746006DFAC5 /* AppInboxTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInboxTableViewController.h; sourceTree = "<group>"; };
+		A81D23B1217C1746006DFAC5 /* AppInboxTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppInboxTableViewController.m; sourceTree = "<group>"; };
 		C00C8E1D6C4FDF56EF95E4DF /* Pods-Rondo-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOSTests/Pods-Rondo-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		CDBDE9BDB90BFFB0DE41A4A8 /* Pods-Rondo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,10 +123,17 @@
 		A81D237E217BE70C006DFAC5 /* Rondo-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A81D23A6217C0D80006DFAC5 /* Rondo-iOS.entitlements */,
 				A81D237F217BE70C006DFAC5 /* AppDelegate.h */,
 				A81D2380217BE70C006DFAC5 /* AppDelegate.m */,
 				A81D2382217BE70C006DFAC5 /* ViewController.h */,
 				A81D2383217BE70C006DFAC5 /* ViewController.m */,
+				A81D23A7217C1227006DFAC5 /* TriggersViewController.h */,
+				A81D23A8217C1227006DFAC5 /* TriggersViewController.m */,
+				A81D23AA217C1230006DFAC5 /* VariablesViewController.h */,
+				A81D23AB217C1230006DFAC5 /* VariablesViewController.m */,
+				A81D23B0217C1746006DFAC5 /* AppInboxTableViewController.h */,
+				A81D23B1217C1746006DFAC5 /* AppInboxTableViewController.m */,
 				A81D2385217BE70C006DFAC5 /* Main.storyboard */,
 				A81D2388217BE70F006DFAC5 /* Assets.xcassets */,
 				A81D238A217BE70F006DFAC5 /* LaunchScreen.storyboard */,
@@ -187,6 +204,11 @@
 				TargetAttributes = {
 					A81D237B217BE70C006DFAC5 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					A81D2393217BE70F006DFAC5 = {
 						CreatedOnToolsVersion = 10.0;
@@ -296,7 +318,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A81D2384217BE70C006DFAC5 /* ViewController.m in Sources */,
+				A81D23A9217C1227006DFAC5 /* TriggersViewController.m in Sources */,
+				A81D23AC217C1230006DFAC5 /* VariablesViewController.m in Sources */,
 				A81D238F217BE70F006DFAC5 /* main.m in Sources */,
+				A81D23B2217C1746006DFAC5 /* AppInboxTableViewController.m in Sources */,
 				A81D2381217BE70C006DFAC5 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +481,7 @@
 			baseConfigurationReference = CDBDE9BDB90BFFB0DE41A4A8 /* Pods-Rondo-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Rondo-iOS/Rondo-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
 				INFOPLIST_FILE = "Rondo-iOS/Info.plist";
@@ -474,6 +500,7 @@
 			baseConfigurationReference = 3A9928E675741FDB447B060A /* Pods-Rondo-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Rondo-iOS/Rondo-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
 				INFOPLIST_FILE = "Rondo-iOS/Info.plist";
