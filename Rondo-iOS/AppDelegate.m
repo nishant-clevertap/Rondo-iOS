@@ -17,16 +17,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-#ifdef DEBUG
-    LEANPLUM_USE_ADVERTISING_ID;
-    [Leanplum setAppId:@"app_ve9UCNlqI8dy6Omzfu1rEh6hkWonNHVZJIWtLLt6aLs"
-    withDevelopmentKey:@"dev_cKF5HMpLGqhbovlEGMKjgTuf8AHfr2Jar6rrnNhtzQ0"];
-#else
-    [Leanplum setAppId:@"app_ve9UCNlqI8dy6Omzfu1rEh6hkWonNHVZJIWtLLt6aLs"
-     withProductionKey:@"prod_D5ECYBLrRrrOYaFZvAFFHTg1JyZ2Llixe5s077Lw3rM"];
-#endif
-//    [Leanplum start];
-
     return YES;
 }
 

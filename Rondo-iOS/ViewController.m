@@ -9,8 +9,12 @@
 #import "ViewController.h"
 #import <Leanplum/Leanplum.h>
 #import <LeanplumLocation/LPLocationManager.h>
+#import "Configure.h"
+#import <Leanplum/Constants.h>
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *apiEndpointLabel;
+@property (weak, nonatomic) IBOutlet UILabel *sdkVersionLabel;
 
 @end
 
@@ -23,8 +27,21 @@
     if(LPLocation.needsAuthorization){
         [LPLocation authorize];
     }
+
+    [self updateConfigLabels];
+#ifdef DEBUG
+    LEANPLUM_USE_ADVERTISING_ID;
+    [Leanplum setAppId:LPT_APP_ID withDevelopmentKey:LPT_DEVELOPMENT_KEY];
+#else
+    [Leanplum setAppId:LPT_APP_ID withProductionKey:LPT_PRODUCTION_KEY];
+#endif
+
     [Leanplum start];
 }
 
+-(void)updateConfigLabels {
+    self.apiEndpointLabel.text = LPT_API_HOST_NAME;
+    self.sdkVersionLabel.text = LEANPLUM_SDK_VERSION;
+}
 
 @end

@@ -33,51 +33,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhW-wF-sUp">
-                                <rect key="frame" x="159" y="86" width="57" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Triggers"/>
-                                <connections>
-                                    <segue destination="zgG-Oo-rTD" kind="show" id="D98-sV-Dsa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ch-gs-qGx">
-                                <rect key="frame" x="158" y="116" width="69" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="App Inbox"/>
-                                <connections>
-                                    <segue destination="GAX-qB-sf3" kind="show" id="Qoy-Cs-jex"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdS-GI-i0M">
-                                <rect key="frame" x="161" y="151" width="63" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Variables"/>
-                                <connections>
-                                    <segue destination="s6N-Ot-oSu" kind="show" id="Inj-Uz-D3b"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73Q-4v-ATB">
-                                <rect key="frame" x="158" y="181" width="70" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Messages"/>
-                                <connections>
-                                    <segue destination="O12-KG-sFP" kind="show" id="4HU-Vm-EzF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOJ-fW-mcQ">
-                                <rect key="frame" x="175" y="219" width="35" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Push"/>
-                                <connections>
-                                    <segue destination="WOL-98-CHw" kind="show" id="nBy-Xc-QzC"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OJd-lc-ux4">
+                                <rect key="frame" x="113" y="238" width="149.5" height="191"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OcH-Ir-rAb">
+                                        <rect key="frame" x="0.0" y="0.0" width="149.5" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="API Endpoint: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsX-ZG-WUP">
+                                                <rect key="frame" x="0.0" y="0.0" width="107.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMY-sT-cbr">
+                                                <rect key="frame" x="107.5" y="0.0" width="42" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="hlI-ch-txg"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWB-3C-Wi9">
+                                        <rect key="frame" x="0.0" y="20.5" width="149.5" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SDK Version: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgK-Nl-GzB">
+                                                <rect key="frame" x="0.0" y="0.0" width="104" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPy-O9-9HI">
+                                                <rect key="frame" x="104" y="0.0" width="45.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhW-wF-sUp">
+                                        <rect key="frame" x="0.0" y="41" width="149.5" height="30"/>
+                                        <state key="normal" title="Triggers"/>
+                                        <connections>
+                                            <segue destination="zgG-Oo-rTD" kind="show" id="D98-sV-Dsa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ch-gs-qGx">
+                                        <rect key="frame" x="0.0" y="71" width="149.5" height="30"/>
+                                        <state key="normal" title="App Inbox"/>
+                                        <connections>
+                                            <segue destination="GAX-qB-sf3" kind="show" id="Qoy-Cs-jex"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdS-GI-i0M">
+                                        <rect key="frame" x="0.0" y="101" width="149.5" height="30"/>
+                                        <state key="normal" title="Variables"/>
+                                        <connections>
+                                            <segue destination="s6N-Ot-oSu" kind="show" id="Inj-Uz-D3b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73Q-4v-ATB">
+                                        <rect key="frame" x="0.0" y="131" width="149.5" height="30"/>
+                                        <state key="normal" title="Messages"/>
+                                        <connections>
+                                            <segue destination="O12-KG-sFP" kind="show" id="4HU-Vm-EzF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOJ-fW-mcQ">
+                                        <rect key="frame" x="0.0" y="161" width="149.5" height="30"/>
+                                        <state key="normal" title="Push"/>
+                                        <connections>
+                                            <segue destination="WOL-98-CHw" kind="show" id="nBy-Xc-QzC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OJd-lc-ux4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="h7K-Ps-Fpg"/>
+                            <constraint firstItem="OJd-lc-ux4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="li9-XV-pux"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ej1-nM-2Nl"/>
+                    <connections>
+                        <outlet property="apiEndpointLabel" destination="HMY-sT-cbr" id="zD3-Mi-dV9"/>
+                        <outlet property="sdkVersionLabel" destination="fPy-O9-9HI" id="JWN-XV-zXr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
