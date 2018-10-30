@@ -12,11 +12,13 @@
 @interface VariablesViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *composerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *compositionLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
 DEFINE_VAR_STRING(composerName, @"defaultComposer");
 DEFINE_VAR_STRING(compositionTitle, @"defaultComposition");
+DEFINE_VAR_FILE(photograph, nil);
 
 @implementation VariablesViewController
 
@@ -25,7 +27,7 @@ DEFINE_VAR_STRING(compositionTitle, @"defaultComposition");
     // Do any additional setup after loading the view.
     self.composerLabel.text = composerName.stringValue;
     self.compositionLabel.text = compositionTitle.stringValue;
-
+    self.imageView.image = [UIImage imageWithContentsOfFile:photograph.fileValue];
 //    [Leanplum onVariablesChanged:^{
 //        self.composerLabel.text = composerName.stringValue;
 //        self.compositionLabel.text = compositionTitle.stringValue;

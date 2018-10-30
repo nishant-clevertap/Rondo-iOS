@@ -19,6 +19,8 @@
 		A81D23A9217C1227006DFAC5 /* TriggersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D23A8217C1227006DFAC5 /* TriggersViewController.m */; };
 		A81D23AC217C1230006DFAC5 /* VariablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D23AB217C1230006DFAC5 /* VariablesViewController.m */; };
 		A81D23B2217C1746006DFAC5 /* AppInboxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D23B1217C1746006DFAC5 /* AppInboxTableViewController.m */; };
+		A8B0A39B2182D70000E6C3A7 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B0A39A2182D70000E6C3A7 /* MessagesViewController.m */; };
+		A8B0A39E2182E29900E6C3A7 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B0A39D2182E29900E6C3A7 /* PushViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		A81D23AB217C1230006DFAC5 /* VariablesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VariablesViewController.m; sourceTree = "<group>"; };
 		A81D23B0217C1746006DFAC5 /* AppInboxTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInboxTableViewController.h; sourceTree = "<group>"; };
 		A81D23B1217C1746006DFAC5 /* AppInboxTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppInboxTableViewController.m; sourceTree = "<group>"; };
+		A8B0A3992182D70000E6C3A7 /* MessagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
+		A8B0A39A2182D70000E6C3A7 /* MessagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
+		A8B0A39C2182E29900E6C3A7 /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
+		A8B0A39D2182E29900E6C3A7 /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
 		C00C8E1D6C4FDF56EF95E4DF /* Pods-Rondo-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOSTests/Pods-Rondo-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		CDBDE9BDB90BFFB0DE41A4A8 /* Pods-Rondo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +140,10 @@
 				A81D23AB217C1230006DFAC5 /* VariablesViewController.m */,
 				A81D23B0217C1746006DFAC5 /* AppInboxTableViewController.h */,
 				A81D23B1217C1746006DFAC5 /* AppInboxTableViewController.m */,
+				A8B0A3992182D70000E6C3A7 /* MessagesViewController.h */,
+				A8B0A39A2182D70000E6C3A7 /* MessagesViewController.m */,
+				A8B0A39C2182E29900E6C3A7 /* PushViewController.h */,
+				A8B0A39D2182E29900E6C3A7 /* PushViewController.m */,
 				A81D2385217BE70C006DFAC5 /* Main.storyboard */,
 				A81D2388217BE70F006DFAC5 /* Assets.xcassets */,
 				A81D238A217BE70F006DFAC5 /* LaunchScreen.storyboard */,
@@ -299,10 +309,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS-frameworks.sh",
-				"${PODS_ROOT}/Leanplum-iOS-SDK/Leanplum.framework",
+				"${PODS_ROOT}/Leanplum-iOS-Location/LeanplumLocation.framework",
+				"${BUILT_PRODUCTS_DIR}/Leanplum-iOS-SDK/Leanplum.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LeanplumLocation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Leanplum.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +335,8 @@
 				A81D238F217BE70F006DFAC5 /* main.m in Sources */,
 				A81D23B2217C1746006DFAC5 /* AppInboxTableViewController.m in Sources */,
 				A81D2381217BE70C006DFAC5 /* AppDelegate.m in Sources */,
+				A8B0A39E2182E29900E6C3A7 /* PushViewController.m in Sources */,
+				A8B0A39B2182D70000E6C3A7 /* MessagesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

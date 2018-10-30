@@ -1,6 +1,10 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
+## Leanplum-iOS-Location
+
+See https://www.leanplum.com/tos
+
 ## Leanplum-iOS-SDK
 
 See https://www.leanplum.com/tos

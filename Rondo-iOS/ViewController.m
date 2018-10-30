@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <Leanplum/Leanplum.h>
+#import <LeanplumLocation/LPLocationManager.h>
 
 @interface ViewController ()
 
@@ -18,8 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    LPLocationManager * LPLocation = [[LPLocationManager alloc] init];
+    if(LPLocation.needsAuthorization){
+        [LPLocation authorize];
+    }
     [Leanplum start];
-
 }
 
 

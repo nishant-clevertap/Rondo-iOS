@@ -40,8 +40,20 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     LPInboxMessage *message = self.inbox.allMessages[indexPath.row];
+
+    NSData *data = [NSData dataWithContentsOfURL:message.imageURL];
+    UIImage *img = [[UIImage alloc] initWithData:data];
+
     cell.textLabel.text = message.title;
+    cell.imageView.image = img;
+    cell.detailTextLabel.text = message.subtitle;
+
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    LPInboxMessage *message = self.inbox.allMessages[indexPath.row];
+    [message read];
 }
 
 @end
