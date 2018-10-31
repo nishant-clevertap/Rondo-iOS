@@ -50,6 +50,7 @@
 #import "LPRequesting.h"
 #import "LPRequestSender.h"
 #import "LPResponse.h"
+#import "LPMessageArchiveData.h"
 #import "LPAES.h"
 #import "FileMD5Hash.h"
 #import "JRSwizzle.h"

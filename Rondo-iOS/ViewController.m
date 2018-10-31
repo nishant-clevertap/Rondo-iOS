@@ -10,7 +10,7 @@
 #import <Leanplum/Leanplum.h>
 #import <LeanplumLocation/LPLocationManager.h>
 #import "Configure.h"
-#import <Leanplum/Constants.h>
+//#import <Leanplum/Constants.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *apiEndpointLabel;
@@ -37,11 +37,18 @@
 #endif
 
     [Leanplum start];
+
+//    [Leanplum onMessageDisplayed:^(LPMessageArchiveData *messageArchiveData) {
+//        NSLog(messageArchiveData.messageID);
+//        NSLog(messageArchiveData.messageBody);
+//        NSLog(messageArchiveData.recipientUserID);
+////        NSLog(messageArchiveData.deliveryDateTime);
+//    }];
 }
 
 -(void)updateConfigLabels {
     self.apiEndpointLabel.text = LPT_API_HOST_NAME;
-    self.sdkVersionLabel.text = LEANPLUM_SDK_VERSION;
+//    self.sdkVersionLabel.text = LEANPLUM_SDK_VERSION;
 }
 
 @end
