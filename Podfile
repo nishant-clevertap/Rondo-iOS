@@ -3,8 +3,15 @@ platform :ios, '12.0'
 target 'Rondo-iOS' do
   use_frameworks!
 
-  pod 'Leanplum-iOS-SDK', '2.1.0'
-  pod 'Leanplum-iOS-Location', '2.1.0'#'2.2-beta.3'
+  ## Released Packages
+  pod 'Leanplum-iOS-SDK', '2.2.0'
+  pod 'Leanplum-iOS-Location', '2.2.0'
+
+  ## Source
+#  pod 'Leanplum-iOS-SDK', :path => '../Leanplum-iOS-SDK'
+#  pod 'Leanplum-iOS-Location', :path => '../Leanplum-iOS-Location'
+#  pod 'Leanplum-iOS-LocationAndBeacons', :path => '../Leanplum-iOS-Location'
+
 
   target 'Rondo-iOSTests' do
     inherit! :search_paths

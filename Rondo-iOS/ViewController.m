@@ -11,6 +11,7 @@
 #import <LeanplumLocation/LPLocationManager.h>
 #import "Configure.h"
 //#import <Leanplum/Constants.h>
+#import "UIDevice+IdentifierAddition.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *apiEndpointLabel;
@@ -24,11 +25,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     LPLocationManager * LPLocation = [[LPLocationManager alloc] init];
-    if(LPLocation.needsAuthorization){
+//    if(LPLocation.needsAuthorization){
         [LPLocation authorize];
-    }
+//    }
 
-    [self updateConfigLabels];
+    CLLocationManager *locManager = [[CLLocationManager alloc]init];
+//    self.locManager.delegate = self;
+    [locManager requestAlwaysAuthorization];
+//    [self updateConfigLabels];
 #ifdef DEBUG
     LEANPLUM_USE_ADVERTISING_ID;
     [Leanplum setAppId:LPT_APP_ID withDevelopmentKey:LPT_DEVELOPMENT_KEY];
@@ -36,14 +40,19 @@
     [Leanplum setAppId:LPT_APP_ID withProductionKey:LPT_PRODUCTION_KEY];
 #endif
 
-    [Leanplum start];
 
-//    [Leanplum onMessageDisplayed:^(LPMessageArchiveData *messageArchiveData) {
-//        NSLog(messageArchiveData.messageID);
-//        NSLog(messageArchiveData.messageBody);
-//        NSLog(messageArchiveData.recipientUserID);
-////        NSLog(messageArchiveData.deliveryDateTime);
-//    }];
+    [Leanplum startWithUserId:@"A694K4"];
+    [Leanplum onStartResponse:^(BOOL success) {
+    }];
+    [Leanplum onMessageDisplayed:^(LPMessageArchiveData *messageArchiveData) {
+        NSLog(messageArchiveData.messageID);
+        NSLog(messageArchiveData.messageBody);
+        NSLog(messageArchiveData.recipientUserID);
+//        NSLog(messageArchiveData.deliveryDateTime);
+    }];
+    NSString *deviceId = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    NSString *deviceId2 = [[UIDevice currentDevice] leanplum_uniqueGlobalDeviceIdentifier];
+
 }
 
 -(void)updateConfigLabels {

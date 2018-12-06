@@ -1,10 +1,11 @@
 PODS:
-  - Leanplum-iOS-Location (2.1.0)
-  - Leanplum-iOS-SDK (2.1.0)
+  - Leanplum-iOS-Location (2.2.0):
+    - Leanplum-iOS-SDK
+  - Leanplum-iOS-SDK (2.2.0)
 
 DEPENDENCIES:
-  - Leanplum-iOS-Location (= 2.1.0)
-  - Leanplum-iOS-SDK (= 2.1.0)
+  - Leanplum-iOS-Location (= 2.2.0)
+  - Leanplum-iOS-SDK (= 2.2.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -12,9 +13,9 @@ SPEC REPOS:
     - Leanplum-iOS-SDK
 
 SPEC CHECKSUMS:
-  Leanplum-iOS-Location: 04eaeaebdcc63b782742d39f049bca15f8d50af8
-  Leanplum-iOS-SDK: b88f90e8bfacfb1ea602b33377c2926286d3de77
+  Leanplum-iOS-Location: 6d906bd9c871d72ddddad9d0ca53291478a8cfaa
+  Leanplum-iOS-SDK: d74a35352c1f5e634f49cbfa17cc44390d01b425
 
-PODFILE CHECKSUM: 3bc5c8d645ecec2b9687b16c65c6a0bdaef3b074
+PODFILE CHECKSUM: 835596c4af5471f339a4dc1c0e629fe174967987
 
 COCOAPODS: 1.5.3

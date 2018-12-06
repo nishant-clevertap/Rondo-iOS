@@ -8,6 +8,7 @@
 
 #import "TriggersViewController.h"
 #import <Leanplum/Leanplum.h>
+#import <LeanplumLocation/LPLocationManager.h>
 
 @interface TriggersViewController ()
 
@@ -21,7 +22,10 @@
 }
 
 - (IBAction)triggerEvent:(id)sender {
-    [Leanplum track:@"testEvent"];
+    [Leanplum track:@"Promo_BlockerShow8"];
+    CLLocationManager *locManager = [[CLLocationManager alloc]init];
+    //    self.locManager.delegate = self;
+    [locManager requestAlwaysAuthorization];
 }
 
 - (IBAction)triggerState:(id)sender {
@@ -35,6 +39,7 @@
 
 - (IBAction)trigger3xsession:(id)sender {
     [Leanplum advanceTo:@"sessionLimit"];
+
 }
 
 - (IBAction)trigger3xLifetime:(id)sender {
