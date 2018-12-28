@@ -24,6 +24,7 @@
 		A889994021D6AC5600AA1F72 /* InternalState.m in Sources */ = {isa = PBXBuildFile; fileRef = A889993F21D6AC5600AA1F72 /* InternalState.m */; };
 		A889994321D6AC6100AA1F72 /* LeanplumApp.m in Sources */ = {isa = PBXBuildFile; fileRef = A889994221D6AC6100AA1F72 /* LeanplumApp.m */; };
 		A889994621D6AC6C00AA1F72 /* LeanplumEnv.m in Sources */ = {isa = PBXBuildFile; fileRef = A889994521D6AC6C00AA1F72 /* LeanplumEnv.m */; };
+		A889994921D6AF2B00AA1F72 /* AdhocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A889994821D6AF2B00AA1F72 /* AdhocViewController.m */; };
 		A8B0A39B2182D70000E6C3A7 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B0A39A2182D70000E6C3A7 /* MessagesViewController.m */; };
 		A8B0A39E2182E29900E6C3A7 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B0A39D2182E29900E6C3A7 /* PushViewController.m */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,8 @@
 		A889994221D6AC6100AA1F72 /* LeanplumApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumApp.m; sourceTree = "<group>"; };
 		A889994421D6AC6C00AA1F72 /* LeanplumEnv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumEnv.h; sourceTree = "<group>"; };
 		A889994521D6AC6C00AA1F72 /* LeanplumEnv.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumEnv.m; sourceTree = "<group>"; };
+		A889994721D6AF2B00AA1F72 /* AdhocViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdhocViewController.h; sourceTree = "<group>"; };
+		A889994821D6AF2B00AA1F72 /* AdhocViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdhocViewController.m; sourceTree = "<group>"; };
 		A8B0A3992182D70000E6C3A7 /* MessagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
 		A8B0A39A2182D70000E6C3A7 /* MessagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
 		A8B0A39C2182E29900E6C3A7 /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 				A8B0A39D2182E29900E6C3A7 /* PushViewController.m */,
 				A84E663221D69BD30063EC78 /* AppSetupViewController.h */,
 				A84E663321D69BD30063EC78 /* AppSetupViewController.m */,
+				A889994721D6AF2B00AA1F72 /* AdhocViewController.h */,
+				A889994821D6AF2B00AA1F72 /* AdhocViewController.m */,
 				A81D2385217BE70C006DFAC5 /* Main.storyboard */,
 				A81D2388217BE70F006DFAC5 /* Assets.xcassets */,
 				A81D238A217BE70F006DFAC5 /* LaunchScreen.storyboard */,
@@ -374,6 +379,7 @@
 				A81D23B2217C1746006DFAC5 /* AppInboxTableViewController.m in Sources */,
 				A889994321D6AC6100AA1F72 /* LeanplumApp.m in Sources */,
 				A81D2381217BE70C006DFAC5 /* AppDelegate.m in Sources */,
+				A889994921D6AF2B00AA1F72 /* AdhocViewController.m in Sources */,
 				A8B0A39E2182E29900E6C3A7 /* PushViewController.m in Sources */,
 				A8B0A39B2182D70000E6C3A7 /* MessagesViewController.m in Sources */,
 				A889994021D6AC5600AA1F72 /* InternalState.m in Sources */,
