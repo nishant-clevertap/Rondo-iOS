@@ -8,14 +8,20 @@
 
 #import "AppSetupViewController.h"
 #import <Leanplum/Leanplum.h>
+#import "InternalState.h"
+#import "LeanplumApp.h"
+#import "LeanplumEnv.h"
+
 
 @interface AppSetupViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *appNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *appIdLabel;
 @property (weak, nonatomic) IBOutlet UILabel *devKeyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *prodKeyLabel;
+
 @property (weak, nonatomic) IBOutlet UILabel *userIdLabel;
 @property (weak, nonatomic) IBOutlet UILabel *deviceIdLabel;
+
 @property (weak, nonatomic) IBOutlet UILabel *sdkVersionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *apiHostLabel;
 @property (weak, nonatomic) IBOutlet UILabel *apiSslLabel;
@@ -28,7 +34,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self populateInfo];
+}
+
+-(void)populateInfo {
+    InternalState *state = [InternalState sharedState];
+    LeanplumApp *app = state.app;
+    LeanplumEnv *env = state.env;
+
+    self.appNameLabel.text = app.displayName;
+    self.appIdLabel.text = app.appId;
+    self.devKeyLabel.text = app.devKey;
+    self.prodKeyLabel.text = app.prodKey;
+
+    self.apiHostLabel.text = env.apiHostName;
+    self.apiSslLabel.text = env.apiSSL ? @"True" : @"False";
+    self.socketHostLabel.text = env.socketHostName;
+    self.socketPortLabel.text = [NSString stringWithFormat:@"%i", env.socketPort];
 }
 
 - (IBAction)leanplumStartPressed:(id)sender {
