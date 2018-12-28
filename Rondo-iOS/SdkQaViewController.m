@@ -11,6 +11,7 @@
 @interface SdkQaViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *apiEndpointLabel;
 @property (weak, nonatomic) IBOutlet UILabel *sdkVersionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *leanplumAppLabel;
 
 @end
 
