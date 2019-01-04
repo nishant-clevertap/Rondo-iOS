@@ -22,10 +22,7 @@
 }
 
 - (IBAction)triggerEvent:(id)sender {
-    [Leanplum track:@"Promo_BlockerShow8"];
-    CLLocationManager *locManager = [[CLLocationManager alloc]init];
-    //    self.locManager.delegate = self;
-    [locManager requestAlwaysAuthorization];
+    [Leanplum track:@"testEvent"];
 }
 
 - (IBAction)triggerState:(id)sender {

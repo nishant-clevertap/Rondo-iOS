@@ -39,12 +39,8 @@
 
     [Leanplum onStartResponse:^(BOOL success) {
     }];
-    [Leanplum onMessageDisplayed:^(LPMessageArchiveData *messageArchiveData) {
-        NSLog(messageArchiveData.messageID);
-        NSLog(messageArchiveData.messageBody);
-        NSLog(messageArchiveData.recipientUserID);
-        //        NSLog(messageArchiveData.deliveryDateTime);
-    }];
+
+    [Leanplum start];
 }
 
 @end
