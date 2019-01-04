@@ -52,6 +52,7 @@
     self.devKeyLabel.text = app.devKey;
     self.prodKeyLabel.text = app.prodKey;
 
+    self.sdkVersionLabel.text = state.sdkVersion;
     self.apiHostLabel.text = env.apiHostName;
     self.apiSslLabel.text = env.apiSSL ? @"True" : @"False";
     self.socketHostLabel.text = env.socketHostName;
