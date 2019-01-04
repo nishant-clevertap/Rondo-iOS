@@ -12,9 +12,17 @@
 #import "RondoState.h"
 #import "LeanplumApp.h"
 #import "LeanplumEnv.h"
-//#import <Leanplum/Constants.h>
+#import "RondoPreferences.h"
+#import "LeanplumAppPersistence.h"
+#import "LeanplumEnvPersistence.h"
 
 @interface RondoTabBarViewController ()
+
+@end
+
+@interface Leanplum(Socket)
+
++ (void)setSocketHostName:(NSString *)hostName withPortNumber:(int)port;
 
 @end
 
@@ -22,6 +30,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self seedDatabases];
 
     LPLocationManager * LPLocation = [[LPLocationManager alloc] init];
     //    if(LPLocation.needsAuthorization){
@@ -39,6 +49,10 @@
     RondoState *rondoState = [RondoState sharedState];
     LeanplumApp *app = rondoState.app;
     LeanplumEnv *env = rondoState.env;
+
+    [Leanplum setApiHostName:env.apiHostName withServletName:@"api" usingSsl:env.apiSSL];
+    [Leanplum setSocketHostName:env.socketHostName withPortNumber:env.socketPort];
+
 #ifdef DEBUG
     LEANPLUM_USE_ADVERTISING_ID;
     [Leanplum setAppId:app.appId withDevelopmentKey:app.devKey];
@@ -53,22 +67,16 @@
 }
 
 -(void)setupInitialAppState {
-
-    LeanplumApp *app = [LeanplumApp new];
-    app.displayName = @"Rondo QA";
-    app.appId = @"app_ve9UCNlqI8dy6Omzfu1rEh6hkWonNHVZJIWtLLt6aLs";
-    app.devKey = @"dev_cKF5HMpLGqhbovlEGMKjgTuf8AHfr2Jar6rrnNhtzQ0";
-    app.prodKey = @"prod_D5ECYBLrRrrOYaFZvAFFHTg1JyZ2Llixe5s077Lw3rM";
-
-    LeanplumEnv *env = [LeanplumEnv new];
-    env.apiHostName = @"api.leanplum.com";
-    env.apiSSL = YES;
-    env.socketHostName = @"dev.leanplum.com";
-    env.socketPort = 443;
-
+    RondoPreferences *prefs = [RondoPreferences defaultPreferences];
     RondoState *rondoState = [RondoState sharedState];
-    rondoState.app = app;
-    rondoState.env = env;
+
+    rondoState.app = prefs.app;
+    rondoState.env = prefs.env;
+}
+
+-(void)seedDatabases {
+    [LeanplumAppPersistence seedDatabase];
+    [LeanplumEnvPersistence seedDatabase];
 }
 
 @end

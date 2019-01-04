@@ -44,7 +44,7 @@
 
 +(LeanplumApp *)rondoQAProductionSeed {
     LeanplumApp *app = [LeanplumApp new];
-    app.displayName = @"Rondo QA";
+    app.displayName = @"Rondo QA Production";
     app.appId = @"app_ve9UCNlqI8dy6Omzfu1rEh6hkWonNHVZJIWtLLt6aLs";
     app.devKey = @"dev_cKF5HMpLGqhbovlEGMKjgTuf8AHfr2Jar6rrnNhtzQ0";
     app.prodKey = @"prod_D5ECYBLrRrrOYaFZvAFFHTg1JyZ2Llixe5s077Lw3rM";

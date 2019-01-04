@@ -29,6 +29,7 @@
 		A8B0A39E2182E29900E6C3A7 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B0A39D2182E29900E6C3A7 /* PushViewController.m */; };
 		A8B38EB621E01893003FC10A /* LeanplumAppPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EB521E01893003FC10A /* LeanplumAppPersistence.m */; };
 		A8B38EB921E01B72003FC10A /* LeanplumEnvPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EB821E01B72003FC10A /* LeanplumEnvPersistence.m */; };
+		A8B38EBC21E01D1A003FC10A /* RondoPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EBB21E01D1A003FC10A /* RondoPreferences.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,8 @@
 		A8B38EB521E01893003FC10A /* LeanplumAppPersistence.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumAppPersistence.m; sourceTree = "<group>"; };
 		A8B38EB721E01B72003FC10A /* LeanplumEnvPersistence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumEnvPersistence.h; sourceTree = "<group>"; };
 		A8B38EB821E01B72003FC10A /* LeanplumEnvPersistence.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumEnvPersistence.m; sourceTree = "<group>"; };
+		A8B38EBA21E01D1A003FC10A /* RondoPreferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RondoPreferences.h; sourceTree = "<group>"; };
+		A8B38EBB21E01D1A003FC10A /* RondoPreferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RondoPreferences.m; sourceTree = "<group>"; };
 		C00C8E1D6C4FDF56EF95E4DF /* Pods-Rondo-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOSTests/Pods-Rondo-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		CDBDE9BDB90BFFB0DE41A4A8 /* Pods-Rondo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,6 +209,8 @@
 				A889994521D6AC6C00AA1F72 /* LeanplumEnv.m */,
 				A8B38EB721E01B72003FC10A /* LeanplumEnvPersistence.h */,
 				A8B38EB821E01B72003FC10A /* LeanplumEnvPersistence.m */,
+				A8B38EBA21E01D1A003FC10A /* RondoPreferences.h */,
+				A8B38EBB21E01D1A003FC10A /* RondoPreferences.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -395,6 +400,7 @@
 				A8B38EB621E01893003FC10A /* LeanplumAppPersistence.m in Sources */,
 				A889994021D6AC5600AA1F72 /* RondoState.m in Sources */,
 				A8B38EB921E01B72003FC10A /* LeanplumEnvPersistence.m in Sources */,
+				A8B38EBC21E01D1A003FC10A /* RondoPreferences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
