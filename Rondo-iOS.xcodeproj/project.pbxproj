@@ -31,6 +31,8 @@
 		A8B38EB921E01B72003FC10A /* LeanplumEnvPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EB821E01B72003FC10A /* LeanplumEnvPersistence.m */; };
 		A8B38EBC21E01D1A003FC10A /* RondoPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EBB21E01D1A003FC10A /* RondoPreferences.m */; };
 		A8B38EBE21E022D1003FC10A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A8B38EBD21E022D1003FC10A /* Podfile */; };
+		A8B38EC121E025D6003FC10A /* LeanplumAppPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EC021E025D6003FC10A /* LeanplumAppPickerTableViewController.m */; };
+		A8B38EC421E025E5003FC10A /* LeanplumEnvPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EC321E025E5003FC10A /* LeanplumEnvPickerTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,10 @@
 		A8B38EBA21E01D1A003FC10A /* RondoPreferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RondoPreferences.h; sourceTree = "<group>"; };
 		A8B38EBB21E01D1A003FC10A /* RondoPreferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RondoPreferences.m; sourceTree = "<group>"; };
 		A8B38EBD21E022D1003FC10A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		A8B38EBF21E025D6003FC10A /* LeanplumAppPickerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumAppPickerTableViewController.h; sourceTree = "<group>"; };
+		A8B38EC021E025D6003FC10A /* LeanplumAppPickerTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumAppPickerTableViewController.m; sourceTree = "<group>"; };
+		A8B38EC221E025E5003FC10A /* LeanplumEnvPickerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumEnvPickerTableViewController.h; sourceTree = "<group>"; };
+		A8B38EC321E025E5003FC10A /* LeanplumEnvPickerTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumEnvPickerTableViewController.m; sourceTree = "<group>"; };
 		C00C8E1D6C4FDF56EF95E4DF /* Pods-Rondo-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOSTests/Pods-Rondo-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		CDBDE9BDB90BFFB0DE41A4A8 /* Pods-Rondo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,6 +187,10 @@
 				A84E663321D69BD30063EC78 /* AppSetupViewController.m */,
 				A889994721D6AF2B00AA1F72 /* AdhocViewController.h */,
 				A889994821D6AF2B00AA1F72 /* AdhocViewController.m */,
+				A8B38EBF21E025D6003FC10A /* LeanplumAppPickerTableViewController.h */,
+				A8B38EC021E025D6003FC10A /* LeanplumAppPickerTableViewController.m */,
+				A8B38EC221E025E5003FC10A /* LeanplumEnvPickerTableViewController.h */,
+				A8B38EC321E025E5003FC10A /* LeanplumEnvPickerTableViewController.m */,
 				A81D2385217BE70C006DFAC5 /* Main.storyboard */,
 				A81D2388217BE70F006DFAC5 /* Assets.xcassets */,
 				A81D238A217BE70F006DFAC5 /* LaunchScreen.storyboard */,
@@ -399,10 +409,12 @@
 				A889994321D6AC6100AA1F72 /* LeanplumApp.m in Sources */,
 				A81D2381217BE70C006DFAC5 /* AppDelegate.m in Sources */,
 				A889994921D6AF2B00AA1F72 /* AdhocViewController.m in Sources */,
+				A8B38EC421E025E5003FC10A /* LeanplumEnvPickerTableViewController.m in Sources */,
 				A8B0A39E2182E29900E6C3A7 /* PushViewController.m in Sources */,
 				A8B0A39B2182D70000E6C3A7 /* MessagesViewController.m in Sources */,
 				A8B38EB621E01893003FC10A /* LeanplumAppPersistence.m in Sources */,
 				A889994021D6AC5600AA1F72 /* RondoState.m in Sources */,
+				A8B38EC121E025D6003FC10A /* LeanplumAppPickerTableViewController.m in Sources */,
 				A8B38EB921E01B72003FC10A /* LeanplumEnvPersistence.m in Sources */,
 				A8B38EBC21E01D1A003FC10A /* RondoPreferences.m in Sources */,
 			);
