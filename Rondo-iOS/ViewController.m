@@ -44,15 +44,6 @@
     [Leanplum startWithUserId:@"A694K4"];
     [Leanplum onStartResponse:^(BOOL success) {
     }];
-    [Leanplum onMessageDisplayed:^(LPMessageArchiveData *messageArchiveData) {
-        NSLog(messageArchiveData.messageID);
-        NSLog(messageArchiveData.messageBody);
-        NSLog(messageArchiveData.recipientUserID);
-//        NSLog(messageArchiveData.deliveryDateTime);
-    }];
-    NSString *deviceId = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
-    NSString *deviceId2 = [[UIDevice currentDevice] leanplum_uniqueGlobalDeviceIdentifier];
-
 }
 
 -(void)updateConfigLabels {
