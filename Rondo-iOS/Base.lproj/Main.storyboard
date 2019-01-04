@@ -196,11 +196,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OJd-lc-ux4">
-                                <rect key="frame" x="109" y="258" width="157" height="151.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OJd-lc-ux4">
+                                <rect key="frame" x="101" y="218" width="173" height="231.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWB-3C-Wi9">
-                                        <rect key="frame" x="0.0" y="0.0" width="157" height="20.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rWB-3C-Wi9">
+                                        <rect key="frame" x="0.0" y="0.0" width="173" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SDK Version: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgK-Nl-GzB">
                                                 <rect key="frame" x="0.0" y="0.0" width="104" height="20.5"/>
@@ -209,15 +209,15 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPy-O9-9HI">
-                                                <rect key="frame" x="104" y="0.0" width="53" height="20.5"/>
+                                                <rect key="frame" x="120" y="0.0" width="53" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OcH-Ir-rAb">
-                                        <rect key="frame" x="0.0" y="20.5" width="157" height="20.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OcH-Ir-rAb">
+                                        <rect key="frame" x="0.0" y="36.5" width="173" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leanplum App:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsX-ZG-WUP">
                                                 <rect key="frame" x="0.0" y="0.0" width="115" height="20.5"/>
@@ -226,7 +226,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMY-sT-cbr" userLabel="Leanplum App Label">
-                                                <rect key="frame" x="115" y="0.0" width="42" height="20.5"/>
+                                                <rect key="frame" x="131" y="0.0" width="42" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -234,8 +234,8 @@
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="hlI-ch-txg"/>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMv-cG-iUO">
-                                        <rect key="frame" x="0.0" y="41" width="157" height="20.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZMv-cG-iUO">
+                                        <rect key="frame" x="0.0" y="73" width="173" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="API URL: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccU-bz-Rad">
                                                 <rect key="frame" x="0.0" y="0.0" width="115" height="20.5"/>
@@ -244,7 +244,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6f-BI-ll7">
-                                                <rect key="frame" x="115" y="0.0" width="42" height="20.5"/>
+                                                <rect key="frame" x="131" y="0.0" width="42" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -253,21 +253,21 @@
                                         <viewLayoutGuide key="safeArea" id="Q3H-jd-QJg"/>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhW-wF-sUp">
-                                        <rect key="frame" x="0.0" y="61.5" width="157" height="30"/>
+                                        <rect key="frame" x="0.0" y="109.5" width="173" height="30"/>
                                         <state key="normal" title="Triggers"/>
                                         <connections>
                                             <segue destination="zgG-Oo-rTD" kind="show" id="D98-sV-Dsa"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73Q-4v-ATB">
-                                        <rect key="frame" x="0.0" y="91.5" width="157" height="30"/>
+                                        <rect key="frame" x="0.0" y="155.5" width="173" height="30"/>
                                         <state key="normal" title="Messages"/>
                                         <connections>
                                             <segue destination="O12-KG-sFP" kind="show" id="4HU-Vm-EzF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOJ-fW-mcQ">
-                                        <rect key="frame" x="0.0" y="121.5" width="157" height="30"/>
+                                        <rect key="frame" x="0.0" y="201.5" width="173" height="30"/>
                                         <state key="normal" title="Push"/>
                                         <connections>
                                             <segue destination="WOL-98-CHw" kind="show" id="nBy-Xc-QzC"/>
@@ -532,7 +532,7 @@
                                                         <color key="textColor" red="1" green="0.0081869199099999998" blue="0.85055696260000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMV-Pc-sq2">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMV-Pc-sq2">
                                                         <rect key="frame" x="17" y="0.0" width="326" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
