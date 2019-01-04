@@ -72,11 +72,25 @@
 
     rondoState.app = prefs.app;
     rondoState.env = prefs.env;
+    rondoState.sdkVersion = [self SDKVersionFromPodfile];
 }
 
 -(void)seedDatabases {
     [LeanplumAppPersistence seedDatabase];
     [LeanplumEnvPersistence seedDatabase];
+}
+
+-(NSString *)SDKVersionFromPodfile {
+    NSError *error;
+    NSString *strFileContent = [NSString stringWithContentsOfFile:[[NSBundle mainBundle]
+                                                                   pathForResource: @"Podfile" ofType: @""] encoding:NSUTF8StringEncoding error:&error];
+    if(error) {  //Handle error
+    }
+
+    NSArray <NSString *> * components = [strFileContent componentsSeparatedByString:@"pod 'Leanplum-iOS-SDK', "];
+    NSArray <NSString *> * components2 = [components[1] componentsSeparatedByString:@"\n"];
+    NSString *sdkVersion = components2[0];
+    return sdkVersion;
 }
 
 @end

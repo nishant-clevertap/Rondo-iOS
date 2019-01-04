@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) LeanplumApp *app;
 @property (nonatomic, strong) LeanplumEnv *env;
+@property (nonatomic, strong) NSString *sdkVersion;
 
 + (RondoState *)sharedState;
 

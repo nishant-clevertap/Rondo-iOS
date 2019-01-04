@@ -31,7 +31,7 @@
     LeanplumApp *app = rondoState.app;
     LeanplumEnv *env = rondoState.env;
 
-    self.sdkVersionLabel.text = @"";
+    self.sdkVersionLabel.text = rondoState.sdkVersion;
     self.apiEndpointLabel.text = env.apiHostName;
     self.leanplumAppLabel.text = app.displayName;
 

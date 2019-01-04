@@ -30,6 +30,7 @@
 		A8B38EB621E01893003FC10A /* LeanplumAppPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EB521E01893003FC10A /* LeanplumAppPersistence.m */; };
 		A8B38EB921E01B72003FC10A /* LeanplumEnvPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EB821E01B72003FC10A /* LeanplumEnvPersistence.m */; };
 		A8B38EBC21E01D1A003FC10A /* RondoPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EBB21E01D1A003FC10A /* RondoPreferences.m */; };
+		A8B38EBE21E022D1003FC10A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A8B38EBD21E022D1003FC10A /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		A8B38EB821E01B72003FC10A /* LeanplumEnvPersistence.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumEnvPersistence.m; sourceTree = "<group>"; };
 		A8B38EBA21E01D1A003FC10A /* RondoPreferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RondoPreferences.h; sourceTree = "<group>"; };
 		A8B38EBB21E01D1A003FC10A /* RondoPreferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RondoPreferences.m; sourceTree = "<group>"; };
+		A8B38EBD21E022D1003FC10A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		C00C8E1D6C4FDF56EF95E4DF /* Pods-Rondo-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOSTests/Pods-Rondo-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		CDBDE9BDB90BFFB0DE41A4A8 /* Pods-Rondo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				A81D237E217BE70C006DFAC5 /* Rondo-iOS */,
+				A8B38EBD21E022D1003FC10A /* Podfile */,
 				A81D2397217BE70F006DFAC5 /* Rondo-iOSTests */,
 				A81D237D217BE70C006DFAC5 /* Products */,
 				0AAAE905BB1BEDE8A62A364E /* Pods */,
@@ -305,6 +308,7 @@
 			files = (
 				A81D238C217BE70F006DFAC5 /* LaunchScreen.storyboard in Resources */,
 				A81D2389217BE70F006DFAC5 /* Assets.xcassets in Resources */,
+				A8B38EBE21E022D1003FC10A /* Podfile in Resources */,
 				A81D2387217BE70C006DFAC5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
