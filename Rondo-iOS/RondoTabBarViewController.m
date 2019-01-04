@@ -9,7 +9,9 @@
 #import "RondoTabBarViewController.h"
 #import <Leanplum/Leanplum.h>
 #import <LeanplumLocation/LPLocationManager.h>
-#import "Configure.h"
+#import "RondoState.h"
+#import "LeanplumApp.h"
+#import "LeanplumEnv.h"
 //#import <Leanplum/Constants.h>
 
 @interface RondoTabBarViewController ()
@@ -30,17 +32,43 @@
     //    self.locManager.delegate = self;
     [locManager requestAlwaysAuthorization];
     //    [self updateConfigLabels];
+
+    [self setupInitialAppState];
+
+
+    RondoState *rondoState = [RondoState sharedState];
+    LeanplumApp *app = rondoState.app;
+    LeanplumEnv *env = rondoState.env;
 #ifdef DEBUG
     LEANPLUM_USE_ADVERTISING_ID;
-    [Leanplum setAppId:LPT_APP_ID withDevelopmentKey:LPT_DEVELOPMENT_KEY];
+    [Leanplum setAppId:app.appId withDevelopmentKey:app.devKey];
 #else
-    [Leanplum setAppId:LPT_APP_ID withProductionKey:LPT_PRODUCTION_KEY];
+    [Leanplum setAppId:app.appId withProductionKey:app.prodKey];
 #endif
 
     [Leanplum onStartResponse:^(BOOL success) {
     }];
 
     [Leanplum start];
+}
+
+-(void)setupInitialAppState {
+
+    LeanplumApp *app = [LeanplumApp new];
+    app.displayName = @"Rondo QA";
+    app.appId = @"app_ve9UCNlqI8dy6Omzfu1rEh6hkWonNHVZJIWtLLt6aLs";
+    app.devKey = @"dev_cKF5HMpLGqhbovlEGMKjgTuf8AHfr2Jar6rrnNhtzQ0";
+    app.prodKey = @"prod_D5ECYBLrRrrOYaFZvAFFHTg1JyZ2Llixe5s077Lw3rM";
+
+    LeanplumEnv *env = [LeanplumEnv new];
+    env.apiHostName = @"api.leanplum.com";
+    env.apiSSL = YES;
+    env.socketHostName = @"dev.leanplum.com";
+    env.socketPort = 443;
+
+    RondoState *rondoState = [RondoState sharedState];
+    rondoState.app = app;
+    rondoState.env = env;
 }
 
 @end

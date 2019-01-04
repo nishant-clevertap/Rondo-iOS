@@ -10,11 +10,11 @@
 #import "LeanplumApp.h"
 #import "LeanplumEnv.h"
 
-@interface InternalState : NSObject
+@interface RondoState : NSObject
 
 @property (nonatomic, strong) LeanplumApp *app;
 @property (nonatomic, strong) LeanplumEnv *env;
 
-+ (InternalState *)sharedState;
++ (RondoState *)sharedState;
 
 @end

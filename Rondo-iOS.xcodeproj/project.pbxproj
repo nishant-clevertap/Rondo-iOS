@@ -21,7 +21,7 @@
 		A81D23B2217C1746006DFAC5 /* AppInboxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D23B1217C1746006DFAC5 /* AppInboxTableViewController.m */; };
 		A84E663121D696D30063EC78 /* RondoTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A84E663021D696D30063EC78 /* RondoTabBarViewController.m */; };
 		A84E663421D69BD30063EC78 /* AppSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A84E663321D69BD30063EC78 /* AppSetupViewController.m */; };
-		A889994021D6AC5600AA1F72 /* InternalState.m in Sources */ = {isa = PBXBuildFile; fileRef = A889993F21D6AC5600AA1F72 /* InternalState.m */; };
+		A889994021D6AC5600AA1F72 /* RondoState.m in Sources */ = {isa = PBXBuildFile; fileRef = A889993F21D6AC5600AA1F72 /* RondoState.m */; };
 		A889994321D6AC6100AA1F72 /* LeanplumApp.m in Sources */ = {isa = PBXBuildFile; fileRef = A889994221D6AC6100AA1F72 /* LeanplumApp.m */; };
 		A889994621D6AC6C00AA1F72 /* LeanplumEnv.m in Sources */ = {isa = PBXBuildFile; fileRef = A889994521D6AC6C00AA1F72 /* LeanplumEnv.m */; };
 		A889994921D6AF2B00AA1F72 /* AdhocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A889994821D6AF2B00AA1F72 /* AdhocViewController.m */; };
@@ -64,13 +64,12 @@
 		A81D23AB217C1230006DFAC5 /* VariablesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VariablesViewController.m; sourceTree = "<group>"; };
 		A81D23B0217C1746006DFAC5 /* AppInboxTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInboxTableViewController.h; sourceTree = "<group>"; };
 		A81D23B1217C1746006DFAC5 /* AppInboxTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppInboxTableViewController.m; sourceTree = "<group>"; };
-		A83F7D2B2188989500F4E409 /* Configure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configure.h; sourceTree = "<group>"; };
 		A84E662F21D696D30063EC78 /* RondoTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RondoTabBarViewController.h; sourceTree = "<group>"; };
 		A84E663021D696D30063EC78 /* RondoTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RondoTabBarViewController.m; sourceTree = "<group>"; };
 		A84E663221D69BD30063EC78 /* AppSetupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppSetupViewController.h; sourceTree = "<group>"; };
 		A84E663321D69BD30063EC78 /* AppSetupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppSetupViewController.m; sourceTree = "<group>"; };
-		A889993E21D6AC5600AA1F72 /* InternalState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InternalState.h; sourceTree = "<group>"; };
-		A889993F21D6AC5600AA1F72 /* InternalState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InternalState.m; sourceTree = "<group>"; };
+		A889993E21D6AC5600AA1F72 /* RondoState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RondoState.h; sourceTree = "<group>"; };
+		A889993F21D6AC5600AA1F72 /* RondoState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RondoState.m; sourceTree = "<group>"; };
 		A889994121D6AC6100AA1F72 /* LeanplumApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumApp.h; sourceTree = "<group>"; };
 		A889994221D6AC6100AA1F72 /* LeanplumApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumApp.m; sourceTree = "<group>"; };
 		A889994421D6AC6C00AA1F72 /* LeanplumEnv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumEnv.h; sourceTree = "<group>"; };
@@ -149,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				A81D23A6217C0D80006DFAC5 /* Rondo-iOS.entitlements */,
-				A83F7D2B2188989500F4E409 /* Configure.h */,
 				A889993D21D6AC4000AA1F72 /* Models */,
 				A81D237F217BE70C006DFAC5 /* AppDelegate.h */,
 				A81D2380217BE70C006DFAC5 /* AppDelegate.m */,
@@ -192,8 +190,8 @@
 		A889993D21D6AC4000AA1F72 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A889993E21D6AC5600AA1F72 /* InternalState.h */,
-				A889993F21D6AC5600AA1F72 /* InternalState.m */,
+				A889993E21D6AC5600AA1F72 /* RondoState.h */,
+				A889993F21D6AC5600AA1F72 /* RondoState.m */,
 				A889994121D6AC6100AA1F72 /* LeanplumApp.h */,
 				A889994221D6AC6100AA1F72 /* LeanplumApp.m */,
 				A889994421D6AC6C00AA1F72 /* LeanplumEnv.h */,
@@ -382,7 +380,7 @@
 				A889994921D6AF2B00AA1F72 /* AdhocViewController.m in Sources */,
 				A8B0A39E2182E29900E6C3A7 /* PushViewController.m in Sources */,
 				A8B0A39B2182D70000E6C3A7 /* MessagesViewController.m in Sources */,
-				A889994021D6AC5600AA1F72 /* InternalState.m in Sources */,
+				A889994021D6AC5600AA1F72 /* RondoState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

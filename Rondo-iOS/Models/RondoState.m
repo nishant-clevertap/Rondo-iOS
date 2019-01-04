@@ -6,14 +6,14 @@
 //  Copyright © 2018 Leanplum. All rights reserved.
 //
 
-#import "InternalState.h"
+#import "RondoState.h"
 
-static InternalState *leanplum_sharedInternalState = nil;
+static RondoState *leanplum_sharedInternalState = nil;
 static dispatch_once_t leanplum_InternalState_onceToken;
 
-@implementation InternalState
+@implementation RondoState
 
-+ (InternalState *)sharedState
++ (RondoState *)sharedState
 {
     dispatch_once(&leanplum_InternalState_onceToken, ^{
         leanplum_sharedInternalState = [[self alloc] init];

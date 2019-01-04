@@ -7,6 +7,9 @@
 //
 
 #import "SdkQaViewController.h"
+#import "RondoState.h"
+#import "LeanplumApp.h"
+#import "LeanplumEnv.h"
 
 @interface SdkQaViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *apiEndpointLabel;
@@ -19,11 +22,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self updateConfigLabels];
+    self.title = @"SDK QA";
 }
 
 -(void)updateConfigLabels {
-//    self.apiEndpointLabel.text = LPT_API_HOST_NAME;
-//    self.sdkVersionLabel.text = LEANPLUM_SDK_VERSION;
+    RondoState *rondoState = [RondoState sharedState];
+    LeanplumApp *app = rondoState.app;
+    LeanplumEnv *env = rondoState.env;
+
+    self.sdkVersionLabel.text = @"";
+    self.apiEndpointLabel.text = env.apiHostName;
+    self.leanplumAppLabel.text = app.displayName;
+
 }
 
 @end

@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"App Inbox";
     self.inbox = [Leanplum inbox];
     [self.tableView reloadData];
 

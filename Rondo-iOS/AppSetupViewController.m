@@ -8,7 +8,7 @@
 
 #import "AppSetupViewController.h"
 #import <Leanplum/Leanplum.h>
-#import "InternalState.h"
+#import "RondoState.h"
 #import "LeanplumApp.h"
 #import "LeanplumEnv.h"
 
@@ -34,6 +34,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"App Setup";
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -42,7 +43,7 @@
 }
 
 -(void)populateInfo {
-    InternalState *state = [InternalState sharedState];
+    RondoState *state = [RondoState sharedState];
     LeanplumApp *app = state.app;
     LeanplumEnv *env = state.env;
 
@@ -55,6 +56,9 @@
     self.apiSslLabel.text = env.apiSSL ? @"True" : @"False";
     self.socketHostLabel.text = env.socketHostName;
     self.socketPortLabel.text = [NSString stringWithFormat:@"%i", env.socketPort];
+
+    self.userIdLabel.text = Leanplum.userId;
+    self.deviceIdLabel.text = Leanplum.deviceId;
 }
 
 - (IBAction)leanplumStartPressed:(id)sender {

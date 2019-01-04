@@ -28,6 +28,7 @@ DEFINE_VAR_FILE(varFile, nil);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Variables";
 
     [self updateLabels];
 
