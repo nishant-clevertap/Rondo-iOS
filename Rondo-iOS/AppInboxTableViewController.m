@@ -51,6 +51,12 @@
     return cell;
 }
 
+#pragma mark - Table view delegate
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100.;
+}
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     LPInboxMessage *message = self.inbox.allMessages[indexPath.row];
     [message read];
