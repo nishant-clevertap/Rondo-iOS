@@ -10,40 +10,40 @@
 #import <Leanplum/Leanplum.h>
 
 @interface VariablesViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *composerLabel;
-@property (weak, nonatomic) IBOutlet UILabel *compositionLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *stringLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *boolLabel;
+@property (weak, nonatomic) IBOutlet UILabel *fileLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
-DEFINE_VAR_STRING(composerName, @"defaultComposer");
-DEFINE_VAR_STRING(compositionTitle, @"defaultComposition");
-DEFINE_VAR_FILE(photograph, nil);
+DEFINE_VAR_STRING(var_text, @"This is a local string.");
+DEFINE_VAR_NUMBER(var_number, 0);
+DEFINE_VAR_BOOL(var_bool, false);
+DEFINE_VAR_FILE(var_file, nil);
 
 @implementation VariablesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.composerLabel.text = composerName.stringValue;
-    self.compositionLabel.text = compositionTitle.stringValue;
-    self.imageView.image = [UIImage imageWithContentsOfFile:photograph.fileValue];
-//    [Leanplum onVariablesChanged:^{
-//        self.composerLabel.text = composerName.stringValue;
-//        self.compositionLabel.text = compositionTitle.stringValue;
-//    }];
-//
-//    [Leanplum forceContentUpdate];
+
+    [self updateLabels];
+
+    [Leanplum onVariablesChanged:^{
+        [self updateLabels];
+    }];
+
+    [Leanplum forceContentUpdate];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)updateLabels {
+    self.stringLabel.text = var_text.stringValue;
+    self.numberLabel.text = [NSString stringWithFormat:@"%@", var_number.numberValue];
+    self.boolLabel.text = [NSString stringWithFormat:@"%@", var_bool.numberValue];
+    self.fileLabel.text = [NSString stringWithFormat:@"%@", var_file.stringValue];
+    [self.imageView setImage:var_file.imageValue];
 }
-*/
 
 @end
