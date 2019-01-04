@@ -2,20 +2,26 @@ PODS:
   - Leanplum-iOS-Location (2.2.0):
     - Leanplum-iOS-SDK
   - Leanplum-iOS-SDK (2.2.0)
+  - Realm (3.13.0):
+    - Realm/Headers (= 3.13.0)
+  - Realm/Headers (3.13.0)
 
 DEPENDENCIES:
   - Leanplum-iOS-Location (= 2.2.0)
   - Leanplum-iOS-SDK (= 2.2.0)
+  - Realm
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Leanplum-iOS-Location
     - Leanplum-iOS-SDK
+    - Realm
 
 SPEC CHECKSUMS:
   Leanplum-iOS-Location: 6d906bd9c871d72ddddad9d0ca53291478a8cfaa
   Leanplum-iOS-SDK: d74a35352c1f5e634f49cbfa17cc44390d01b425
+  Realm: 5edd2ee65406aef591a4f9895de5a3440e51b3d8
 
-PODFILE CHECKSUM: 4d8d9306d9ba89710bea72eda9f9e1f38fdd26e6
+PODFILE CHECKSUM: 1b29e560c8dfc594e35afced536f1d352bf3eb79
 
 COCOAPODS: 1.5.3

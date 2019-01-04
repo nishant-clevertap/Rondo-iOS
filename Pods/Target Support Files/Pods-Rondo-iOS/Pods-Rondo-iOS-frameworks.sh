@@ -145,10 +145,12 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Leanplum-iOS-Location/LeanplumLocation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Leanplum-iOS-SDK/Leanplum.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Realm/Realm.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Leanplum-iOS-Location/LeanplumLocation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Leanplum-iOS-SDK/Leanplum.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Realm/Realm.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

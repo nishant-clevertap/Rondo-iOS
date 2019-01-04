@@ -6,9 +6,9 @@
 //  Copyright © 2018 Leanplum. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <Realm/Realm.h>
 
-@interface LeanplumEnv : NSObject
+@interface LeanplumEnv : RLMObject
 
 @property (nonatomic, strong) NSString *apiHostName;
 @property (nonatomic, assign) BOOL apiSSL;

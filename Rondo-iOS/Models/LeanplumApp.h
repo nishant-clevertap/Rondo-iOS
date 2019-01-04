@@ -6,9 +6,9 @@
 //  Copyright © 2018 Leanplum. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <Realm/Realm.h>
 
-@interface LeanplumApp : NSObject
+@interface LeanplumApp : RLMObject
 
 @property (nonatomic, strong) NSString *displayName;
 @property (nonatomic, strong) NSString *appId;

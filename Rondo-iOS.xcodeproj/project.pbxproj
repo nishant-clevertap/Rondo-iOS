@@ -27,6 +27,8 @@
 		A889994921D6AF2B00AA1F72 /* AdhocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A889994821D6AF2B00AA1F72 /* AdhocViewController.m */; };
 		A8B0A39B2182D70000E6C3A7 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B0A39A2182D70000E6C3A7 /* MessagesViewController.m */; };
 		A8B0A39E2182E29900E6C3A7 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B0A39D2182E29900E6C3A7 /* PushViewController.m */; };
+		A8B38EB621E01893003FC10A /* LeanplumAppPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EB521E01893003FC10A /* LeanplumAppPersistence.m */; };
+		A8B38EB921E01B72003FC10A /* LeanplumEnvPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EB821E01B72003FC10A /* LeanplumEnvPersistence.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,10 @@
 		A8B0A39A2182D70000E6C3A7 /* MessagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
 		A8B0A39C2182E29900E6C3A7 /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
 		A8B0A39D2182E29900E6C3A7 /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
+		A8B38EB421E01893003FC10A /* LeanplumAppPersistence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumAppPersistence.h; sourceTree = "<group>"; };
+		A8B38EB521E01893003FC10A /* LeanplumAppPersistence.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumAppPersistence.m; sourceTree = "<group>"; };
+		A8B38EB721E01B72003FC10A /* LeanplumEnvPersistence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumEnvPersistence.h; sourceTree = "<group>"; };
+		A8B38EB821E01B72003FC10A /* LeanplumEnvPersistence.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumEnvPersistence.m; sourceTree = "<group>"; };
 		C00C8E1D6C4FDF56EF95E4DF /* Pods-Rondo-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOSTests/Pods-Rondo-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		CDBDE9BDB90BFFB0DE41A4A8 /* Pods-Rondo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,8 +200,12 @@
 				A889993F21D6AC5600AA1F72 /* RondoState.m */,
 				A889994121D6AC6100AA1F72 /* LeanplumApp.h */,
 				A889994221D6AC6100AA1F72 /* LeanplumApp.m */,
+				A8B38EB421E01893003FC10A /* LeanplumAppPersistence.h */,
+				A8B38EB521E01893003FC10A /* LeanplumAppPersistence.m */,
 				A889994421D6AC6C00AA1F72 /* LeanplumEnv.h */,
 				A889994521D6AC6C00AA1F72 /* LeanplumEnv.m */,
+				A8B38EB721E01B72003FC10A /* LeanplumEnvPersistence.h */,
+				A8B38EB821E01B72003FC10A /* LeanplumEnvPersistence.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -349,11 +359,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Leanplum-iOS-Location/LeanplumLocation.framework",
 				"${BUILT_PRODUCTS_DIR}/Leanplum-iOS-SDK/Leanplum.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LeanplumLocation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Leanplum.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -380,7 +392,9 @@
 				A889994921D6AF2B00AA1F72 /* AdhocViewController.m in Sources */,
 				A8B0A39E2182E29900E6C3A7 /* PushViewController.m in Sources */,
 				A8B0A39B2182D70000E6C3A7 /* MessagesViewController.m in Sources */,
+				A8B38EB621E01893003FC10A /* LeanplumAppPersistence.m in Sources */,
 				A889994021D6AC5600AA1F72 /* RondoState.m in Sources */,
+				A8B38EB921E01B72003FC10A /* LeanplumEnvPersistence.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
