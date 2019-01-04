@@ -7,8 +7,12 @@
 //
 
 #import "AdhocViewController.h"
+#import <Leanplum/Leanplum.h>
 
 @interface AdhocViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *trackTextField;
+@property (weak, nonatomic) IBOutlet UITextField *stateTextField;
+@property (weak, nonatomic) IBOutlet UITextField *userAttribTextField;
 
 @end
 
@@ -19,14 +23,16 @@
     // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)sendTrack:(id)sender {
+    [Leanplum track:self.trackTextField.text];
 }
-*/
+
+- (IBAction)sendState:(id)sender {
+    [Leanplum advanceTo:self.stateTextField.text];
+}
+
+- (IBAction)setUserAttrib:(id)sender {
+//    [Leanplum setUserAttributes:@{}];
+}
 
 @end
