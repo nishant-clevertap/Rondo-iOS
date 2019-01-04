@@ -19,10 +19,10 @@
 
 @end
 
-DEFINE_VAR_STRING(var_text, @"This is a local string.");
-DEFINE_VAR_NUMBER(var_number, 0);
-DEFINE_VAR_BOOL(var_bool, false);
-DEFINE_VAR_FILE(var_file, nil);
+DEFINE_VAR_STRING(varString, @"This is a local string.");
+DEFINE_VAR_NUMBER(varNumber, 0);
+DEFINE_VAR_BOOL(varBool, false);
+DEFINE_VAR_FILE(varFile, nil);
 
 @implementation VariablesViewController
 
@@ -39,11 +39,11 @@ DEFINE_VAR_FILE(var_file, nil);
 }
 
 -(void)updateLabels {
-    self.stringLabel.text = var_text.stringValue;
-    self.numberLabel.text = [NSString stringWithFormat:@"%@", var_number.numberValue];
-    self.boolLabel.text = [NSString stringWithFormat:@"%@", var_bool.numberValue];
-    self.fileLabel.text = [NSString stringWithFormat:@"%@", var_file.stringValue];
-    [self.imageView setImage:var_file.imageValue];
+    self.stringLabel.text = varString.stringValue;
+    self.numberLabel.text = [NSString stringWithFormat:@"%@", varNumber.numberValue];
+    self.boolLabel.text = [NSString stringWithFormat:@"%@", varBool.numberValue];
+    self.fileLabel.text = [NSString stringWithFormat:@"%@", varFile.stringValue];
+    [self.imageView setImage:varFile.imageValue];
 }
 
 @end

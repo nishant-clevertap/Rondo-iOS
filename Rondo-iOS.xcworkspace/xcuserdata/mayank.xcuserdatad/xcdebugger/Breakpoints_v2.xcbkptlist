@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/Leanplum-iOS-SDK/Leanplum-SDK/Classes/Internal/Leanplum.m"
-            timestampString = "565129890.6612099"
+            timestampString = "568327444.506741"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "962"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/Leanplum-iOS-SDK/Leanplum-SDK/Classes/Internal/Leanplum.m"
-            timestampString = "565129890.6628391"
+            timestampString = "568327444.506923"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1758"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/Leanplum-iOS-SDK/Leanplum-SDK/Classes/Internal/Leanplum.m"
-            timestampString = "565129890.663416"
+            timestampString = "568327444.507041"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1781"
@@ -96,54 +96,6 @@
             startingLineNumber = "117"
             endingLineNumber = "117"
             landmarkName = "+sharedManager"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/Leanplum-iOS-SDK/Leanplum-SDK/Classes/Internal/Leanplum.m"
-            timestampString = "565129890.664176"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "900"
-            endingLineNumber = "900"
-            landmarkName = "+startWithUserId:userAttributes:responseHandler:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/Leanplum-iOS-SDK/Leanplum-SDK/Classes/Managers/Networking/LPNetworkOperation.m"
-            timestampString = "565131276.797783"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
-            landmarkName = "-runSynchronously:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/Leanplum-iOS-SDK/Leanplum-SDK/Classes/Managers/Networking/LPNetworkOperation.m"
-            timestampString = "565131276.798184"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
-            landmarkName = "-runSynchronously:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
