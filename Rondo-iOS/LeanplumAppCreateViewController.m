@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Create App";
 }
 
 - (IBAction)createButtonPressed:(id)sender {
