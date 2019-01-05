@@ -161,9 +161,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="n1V-J3-PEt" kind="relationship" relationship="viewControllers" id="gTA-xz-iKv"/>
-                        <segue destination="Zjz-eS-t2P" kind="relationship" relationship="viewControllers" id="GFa-nh-4gm"/>
                         <segue destination="RMD-qS-1DG" kind="relationship" relationship="viewControllers" id="yUj-w4-feo"/>
                         <segue destination="Jf3-Kv-Dff" kind="relationship" relationship="viewControllers" id="DV8-Tk-rjw"/>
+                        <segue destination="Zjz-eS-t2P" kind="relationship" relationship="viewControllers" id="GFa-nh-4gm"/>
                         <segue destination="99f-0m-sXm" kind="relationship" relationship="viewControllers" id="On3-Ie-Jtj"/>
                     </connections>
                 </tabBarController>
@@ -832,7 +832,6 @@
         <!--Leanplum App Picker Table View Controller-->
         <scene sceneID="uZ0-b6-pGM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pfj-tt-Fh7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="HAz-FH-df7" customClass="LeanplumAppPickerTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4aE-kR-UY8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -854,6 +853,7 @@
                         </connections>
                     </tableView>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pfj-tt-Fh7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-433" y="1769"/>
         </scene>
