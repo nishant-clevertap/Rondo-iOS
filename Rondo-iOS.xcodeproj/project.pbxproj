@@ -33,6 +33,8 @@
 		A8B38EBE21E022D1003FC10A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A8B38EBD21E022D1003FC10A /* Podfile */; };
 		A8B38EC121E025D6003FC10A /* LeanplumAppPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EC021E025D6003FC10A /* LeanplumAppPickerTableViewController.m */; };
 		A8B38EC421E025E5003FC10A /* LeanplumEnvPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EC321E025E5003FC10A /* LeanplumEnvPickerTableViewController.m */; };
+		A8B38EC821E036B6003FC10A /* LeanplumAppCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EC621E036B6003FC10A /* LeanplumAppCreateViewController.m */; };
+		A8B38EC921E036B6003FC10A /* LeanplumAppCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B38EC721E036B6003FC10A /* LeanplumAppCreateViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,9 @@
 		A8B38EC021E025D6003FC10A /* LeanplumAppPickerTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumAppPickerTableViewController.m; sourceTree = "<group>"; };
 		A8B38EC221E025E5003FC10A /* LeanplumEnvPickerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumEnvPickerTableViewController.h; sourceTree = "<group>"; };
 		A8B38EC321E025E5003FC10A /* LeanplumEnvPickerTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumEnvPickerTableViewController.m; sourceTree = "<group>"; };
+		A8B38EC521E036B6003FC10A /* LeanplumAppCreateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumAppCreateViewController.h; sourceTree = "<group>"; };
+		A8B38EC621E036B6003FC10A /* LeanplumAppCreateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumAppCreateViewController.m; sourceTree = "<group>"; };
+		A8B38EC721E036B6003FC10A /* LeanplumAppCreateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeanplumAppCreateViewController.xib; sourceTree = "<group>"; };
 		C00C8E1D6C4FDF56EF95E4DF /* Pods-Rondo-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOSTests/Pods-Rondo-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		CDBDE9BDB90BFFB0DE41A4A8 /* Pods-Rondo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,6 +196,9 @@
 				A8B38EC021E025D6003FC10A /* LeanplumAppPickerTableViewController.m */,
 				A8B38EC221E025E5003FC10A /* LeanplumEnvPickerTableViewController.h */,
 				A8B38EC321E025E5003FC10A /* LeanplumEnvPickerTableViewController.m */,
+				A8B38EC521E036B6003FC10A /* LeanplumAppCreateViewController.h */,
+				A8B38EC621E036B6003FC10A /* LeanplumAppCreateViewController.m */,
+				A8B38EC721E036B6003FC10A /* LeanplumAppCreateViewController.xib */,
 				A81D2385217BE70C006DFAC5 /* Main.storyboard */,
 				A81D2388217BE70F006DFAC5 /* Assets.xcassets */,
 				A81D238A217BE70F006DFAC5 /* LaunchScreen.storyboard */,
@@ -318,6 +326,7 @@
 			files = (
 				A81D238C217BE70F006DFAC5 /* LaunchScreen.storyboard in Resources */,
 				A81D2389217BE70F006DFAC5 /* Assets.xcassets in Resources */,
+				A8B38EC921E036B6003FC10A /* LeanplumAppCreateViewController.xib in Resources */,
 				A8B38EBE21E022D1003FC10A /* Podfile in Resources */,
 				A81D2387217BE70C006DFAC5 /* Main.storyboard in Resources */,
 			);
@@ -416,6 +425,7 @@
 				A889994021D6AC5600AA1F72 /* RondoState.m in Sources */,
 				A8B38EC121E025D6003FC10A /* LeanplumAppPickerTableViewController.m in Sources */,
 				A8B38EB921E01B72003FC10A /* LeanplumEnvPersistence.m in Sources */,
+				A8B38EC821E036B6003FC10A /* LeanplumAppCreateViewController.m in Sources */,
 				A8B38EBC21E01D1A003FC10A /* RondoPreferences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

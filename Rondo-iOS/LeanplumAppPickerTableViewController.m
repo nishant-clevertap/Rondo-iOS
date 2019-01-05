@@ -10,6 +10,7 @@
 #import "LeanplumAppPersistence.h"
 #import "RondoState.h"
 #import "RondoPreferences.h"
+#import "LeanplumAppCreateViewController.h"
 
 @interface LeanplumAppPickerTableViewController ()
 
@@ -23,9 +24,20 @@
     [super viewDidLoad];
     self.title = @"App Picker";
 
-    self.items = [LeanplumAppPersistence loadLeanplumApps];
-
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"reuseIdentifier"];
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"New App" style:UIBarButtonItemStylePlain target:self action:@selector(addItem)];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.items = [LeanplumAppPersistence loadLeanplumApps];
+    [self.tableView reloadData];
+}
+
+-(void)addItem {
+    LeanplumAppCreateViewController *vc = [[LeanplumAppCreateViewController alloc] initWithNibName:@"LeanplumAppCreateViewController" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - Table view data source
