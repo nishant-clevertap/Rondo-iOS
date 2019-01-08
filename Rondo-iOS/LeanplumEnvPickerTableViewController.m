@@ -7,6 +7,7 @@
 //
 
 #import "LeanplumEnvPickerTableViewController.h"
+#import "LeanplumEnvCreateViewController.h"
 #import "LeanplumEnvPersistence.h"
 #import "RondoState.h"
 #import "RondoPreferences.h"
@@ -23,9 +24,20 @@
     [super viewDidLoad];
     self.title = @"Env Picker";
 
-    self.items = [LeanplumEnvPersistence loadLeanplumEnvs];
-
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"reuseIdentifier"];
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"New Env" style:UIBarButtonItemStylePlain target:self action:@selector(addItem)];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.items = [LeanplumEnvPersistence loadLeanplumEnvs];
+    [self.tableView reloadData];
+}
+
+-(void)addItem {
+    LeanplumEnvCreateViewController *vc = [[LeanplumEnvCreateViewController alloc] initWithNibName:@"LeanplumEnvCreateViewController" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - Table view data source

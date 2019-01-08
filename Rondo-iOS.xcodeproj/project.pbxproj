@@ -35,6 +35,8 @@
 		A8B38EC421E025E5003FC10A /* LeanplumEnvPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EC321E025E5003FC10A /* LeanplumEnvPickerTableViewController.m */; };
 		A8B38EC821E036B6003FC10A /* LeanplumAppCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EC621E036B6003FC10A /* LeanplumAppCreateViewController.m */; };
 		A8B38EC921E036B6003FC10A /* LeanplumAppCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B38EC721E036B6003FC10A /* LeanplumAppCreateViewController.xib */; };
+		A8B6C3C321E42E6900676A58 /* LeanplumEnvCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B6C3C121E42E6900676A58 /* LeanplumEnvCreateViewController.m */; };
+		A8B6C3C421E42E6900676A58 /* LeanplumEnvCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B6C3C221E42E6900676A58 /* LeanplumEnvCreateViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,9 @@
 		A8B38EC521E036B6003FC10A /* LeanplumAppCreateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumAppCreateViewController.h; sourceTree = "<group>"; };
 		A8B38EC621E036B6003FC10A /* LeanplumAppCreateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumAppCreateViewController.m; sourceTree = "<group>"; };
 		A8B38EC721E036B6003FC10A /* LeanplumAppCreateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeanplumAppCreateViewController.xib; sourceTree = "<group>"; };
+		A8B6C3C021E42E6900676A58 /* LeanplumEnvCreateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumEnvCreateViewController.h; sourceTree = "<group>"; };
+		A8B6C3C121E42E6900676A58 /* LeanplumEnvCreateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumEnvCreateViewController.m; sourceTree = "<group>"; };
+		A8B6C3C221E42E6900676A58 /* LeanplumEnvCreateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeanplumEnvCreateViewController.xib; sourceTree = "<group>"; };
 		C00C8E1D6C4FDF56EF95E4DF /* Pods-Rondo-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOSTests/Pods-Rondo-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		CDBDE9BDB90BFFB0DE41A4A8 /* Pods-Rondo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,6 +204,9 @@
 				A8B38EC521E036B6003FC10A /* LeanplumAppCreateViewController.h */,
 				A8B38EC621E036B6003FC10A /* LeanplumAppCreateViewController.m */,
 				A8B38EC721E036B6003FC10A /* LeanplumAppCreateViewController.xib */,
+				A8B6C3C021E42E6900676A58 /* LeanplumEnvCreateViewController.h */,
+				A8B6C3C121E42E6900676A58 /* LeanplumEnvCreateViewController.m */,
+				A8B6C3C221E42E6900676A58 /* LeanplumEnvCreateViewController.xib */,
 				A81D2385217BE70C006DFAC5 /* Main.storyboard */,
 				A81D2388217BE70F006DFAC5 /* Assets.xcassets */,
 				A81D238A217BE70F006DFAC5 /* LaunchScreen.storyboard */,
@@ -324,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8B6C3C421E42E6900676A58 /* LeanplumEnvCreateViewController.xib in Resources */,
 				A81D238C217BE70F006DFAC5 /* LaunchScreen.storyboard in Resources */,
 				A81D2389217BE70F006DFAC5 /* Assets.xcassets in Resources */,
 				A8B38EC921E036B6003FC10A /* LeanplumAppCreateViewController.xib in Resources */,
@@ -417,6 +426,7 @@
 				A81D23B2217C1746006DFAC5 /* AppInboxTableViewController.m in Sources */,
 				A889994321D6AC6100AA1F72 /* LeanplumApp.m in Sources */,
 				A81D2381217BE70C006DFAC5 /* AppDelegate.m in Sources */,
+				A8B6C3C321E42E6900676A58 /* LeanplumEnvCreateViewController.m in Sources */,
 				A889994921D6AF2B00AA1F72 /* AdhocViewController.m in Sources */,
 				A8B38EC421E025E5003FC10A /* LeanplumEnvPickerTableViewController.m in Sources */,
 				A8B0A39E2182E29900E6C3A7 /* PushViewController.m in Sources */,
