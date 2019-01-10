@@ -6,8 +6,8 @@ target 'Rondo-iOS' do
   pod 'Realm'
 
   ## Released Packages
-  pod 'Leanplum-iOS-SDK', '2.2.1'
-  pod 'Leanplum-iOS-Location', '2.2.1'
+  pod 'Leanplum-iOS-SDK', '2.2.2'
+  pod 'Leanplum-iOS-Location', '2.2.2'
 
   ## Source
 #  pod 'Leanplum-iOS-SDK', :path => '../Leanplum-iOS-SDK'
