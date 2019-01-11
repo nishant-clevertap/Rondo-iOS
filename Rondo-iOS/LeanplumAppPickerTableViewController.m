@@ -61,6 +61,7 @@
 #pragma mark - Table view delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     LeanplumApp *app = self.items[indexPath.row];
     RondoState *state = [RondoState sharedState];
     state.app = app;

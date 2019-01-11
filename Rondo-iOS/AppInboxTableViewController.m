@@ -26,7 +26,6 @@
     self.tagOffset = 666;
     self.inbox = [Leanplum inbox];
     [self.tableView reloadData];
-
     [self.tableView registerNib:[UINib nibWithNibName:@"AppInboxTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
 }
 
@@ -43,6 +42,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AppInboxTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     LPInboxMessage *message = self.inbox.allMessages[indexPath.row];
 
     NSData *data = [NSData dataWithContentsOfURL:message.imageURL];
