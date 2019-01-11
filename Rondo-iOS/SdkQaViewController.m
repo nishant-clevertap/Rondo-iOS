@@ -10,6 +10,7 @@
 #import "RondoState.h"
 #import "LeanplumApp.h"
 #import "LeanplumEnv.h"
+#import <Leanplum/Leanplum.h>
 
 @interface SdkQaViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *apiEndpointLabel;
@@ -35,6 +36,10 @@
     self.apiEndpointLabel.text = env.apiHostName;
     self.leanplumAppLabel.text = app.displayName;
 
+}
+
+- (IBAction)registerPush:(id)sender {
+    [Leanplum track:@"registerPush"];
 }
 
 @end
