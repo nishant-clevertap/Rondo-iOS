@@ -9,10 +9,12 @@
 #import "AppInboxTableViewController.h"
 #import <Leanplum/Leanplum.h>
 #import <Leanplum/LPInbox.h>
+#import "AppInboxTableViewCell.h"
 
 @interface AppInboxTableViewController ()
 
 @property (strong, nonatomic) LPInbox *inbox;
+@property (assign, nonatomic) int tagOffset;
 
 @end
 
@@ -21,10 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"App Inbox";
+    self.tagOffset = 666;
     self.inbox = [Leanplum inbox];
     [self.tableView reloadData];
 
-    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"cell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"AppInboxTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
 }
 
 #pragma mark - Table view data source
@@ -39,28 +42,31 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    AppInboxTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     LPInboxMessage *message = self.inbox.allMessages[indexPath.row];
 
     NSData *data = [NSData dataWithContentsOfURL:message.imageURL];
     UIImage *img = [[UIImage alloc] initWithData:data];
 
-    cell.textLabel.text = message.title;
-    cell.imageView.image = img;
-    cell.detailTextLabel.text = message.subtitle;
+    cell.title.text = message.title;
+    cell.subtitle.text = message.subtitle;
+    cell.image.image = img;
+    cell.button.tag = self.tagOffset + indexPath.row;
+    [cell.button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
 
     return cell;
+}
+
+-(void)buttonPressed:(UIButton *)sender {
+    int row = (int)(sender.tag - self.tagOffset);
+    LPInboxMessage *message = self.inbox.allMessages[row];
+    [message read];
 }
 
 #pragma mark - Table view delegate
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100.;
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    LPInboxMessage *message = self.inbox.allMessages[indexPath.row];
-    [message read];
+    return 334.;
 }
 
 @end

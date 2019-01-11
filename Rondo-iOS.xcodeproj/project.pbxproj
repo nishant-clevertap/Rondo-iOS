@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		076A1B97D98D2A014EAD9592 /* Pods_Rondo_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B2FED934BBD1490DFA4011 /* Pods_Rondo_iOSTests.framework */; };
 		38962800FAF7EBCA23281AD4 /* Pods_Rondo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40EB60B072509CA9186DE640 /* Pods_Rondo_iOS.framework */; };
+		A807311221E924890099EA45 /* AppInboxTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A807311021E924890099EA45 /* AppInboxTableViewCell.m */; };
+		A807311321E924890099EA45 /* AppInboxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A807311121E924890099EA45 /* AppInboxTableViewCell.xib */; };
 		A81D2381217BE70C006DFAC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D2380217BE70C006DFAC5 /* AppDelegate.m */; };
 		A81D2384217BE70C006DFAC5 /* SdkQaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D2383217BE70C006DFAC5 /* SdkQaViewController.m */; };
 		A81D2387217BE70C006DFAC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A81D2385217BE70C006DFAC5 /* Main.storyboard */; };
@@ -54,6 +56,9 @@
 		3A9928E675741FDB447B060A /* Pods-Rondo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		40EB60B072509CA9186DE640 /* Pods_Rondo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rondo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B2FED934BBD1490DFA4011 /* Pods_Rondo_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rondo_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A807310F21E924890099EA45 /* AppInboxTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInboxTableViewCell.h; sourceTree = "<group>"; };
+		A807311021E924890099EA45 /* AppInboxTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppInboxTableViewCell.m; sourceTree = "<group>"; };
+		A807311121E924890099EA45 /* AppInboxTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppInboxTableViewCell.xib; sourceTree = "<group>"; };
 		A81D237C217BE70C006DFAC5 /* Rondo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rondo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A81D237F217BE70C006DFAC5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A81D2380217BE70C006DFAC5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -195,6 +200,9 @@
 				A8B0A39D2182E29900E6C3A7 /* PushViewController.m */,
 				A84E663221D69BD30063EC78 /* AppSetupViewController.h */,
 				A84E663321D69BD30063EC78 /* AppSetupViewController.m */,
+				A807310F21E924890099EA45 /* AppInboxTableViewCell.h */,
+				A807311021E924890099EA45 /* AppInboxTableViewCell.m */,
+				A807311121E924890099EA45 /* AppInboxTableViewCell.xib */,
 				A889994721D6AF2B00AA1F72 /* AdhocViewController.h */,
 				A889994821D6AF2B00AA1F72 /* AdhocViewController.m */,
 				A8B38EBF21E025D6003FC10A /* LeanplumAppPickerTableViewController.h */,
@@ -336,6 +344,7 @@
 				A81D238C217BE70F006DFAC5 /* LaunchScreen.storyboard in Resources */,
 				A81D2389217BE70F006DFAC5 /* Assets.xcassets in Resources */,
 				A8B38EC921E036B6003FC10A /* LeanplumAppCreateViewController.xib in Resources */,
+				A807311321E924890099EA45 /* AppInboxTableViewCell.xib in Resources */,
 				A8B38EBE21E022D1003FC10A /* Podfile in Resources */,
 				A81D2387217BE70C006DFAC5 /* Main.storyboard in Resources */,
 			);
@@ -428,6 +437,7 @@
 				A81D2381217BE70C006DFAC5 /* AppDelegate.m in Sources */,
 				A8B6C3C321E42E6900676A58 /* LeanplumEnvCreateViewController.m in Sources */,
 				A889994921D6AF2B00AA1F72 /* AdhocViewController.m in Sources */,
+				A807311221E924890099EA45 /* AppInboxTableViewCell.m in Sources */,
 				A8B38EC421E025E5003FC10A /* LeanplumEnvPickerTableViewController.m in Sources */,
 				A8B0A39E2182E29900E6C3A7 /* PushViewController.m in Sources */,
 				A8B0A39B2182D70000E6C3A7 /* MessagesViewController.m in Sources */,
