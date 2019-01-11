@@ -10,6 +10,23 @@
     </dependencies>
     <scenes>
         <!--Adhoc-->
+        <scene sceneID="IdU-rb-H5x">
+            <objects>
+                <navigationController id="AsK-fN-E7v" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Adhoc" id="5gY-zY-Z69"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3xh-lo-8Vc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Zjz-eS-t2P" kind="relationship" relationship="rootViewController" id="c4O-3Z-bfz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ct-OW-VHC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2790" y="223"/>
+        </scene>
+        <!--Adhoc-->
         <scene sceneID="4bQ-Iw-pcF">
             <objects>
                 <viewController id="Zjz-eS-t2P" customClass="AdhocViewController" sceneMemberID="viewController">
@@ -18,13 +35,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can type in custom events, sessions and attributes to send from here." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6x-Tx-Hr5">
-                                <rect key="frame" x="8" y="28" width="359" height="41"/>
+                                <rect key="frame" x="8" y="72" width="359" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lFS-hw-Hfv">
-                                <rect key="frame" x="8" y="77" width="359" height="260"/>
+                                <rect key="frame" x="8" y="121" width="359" height="260"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kZw-0r-fWN">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="76"/>
@@ -140,6 +157,7 @@
                         <viewLayoutGuide key="safeArea" id="B68-zh-1qe"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Adhoc" id="zow-QU-khU"/>
+                    <navigationItem key="navigationItem" id="wLf-ET-Nc4"/>
                     <connections>
                         <outlet property="stateTextField" destination="HhI-mN-8ir" id="tpo-cs-ypV"/>
                         <outlet property="trackTextField" destination="J90-jZ-1eJ" id="yKC-l3-wX9"/>
@@ -160,11 +178,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="n1V-J3-PEt" kind="relationship" relationship="viewControllers" id="gTA-xz-iKv"/>
+                        <segue destination="99f-0m-sXm" kind="relationship" relationship="viewControllers" id="On3-Ie-Jtj"/>
+                        <segue destination="AsK-fN-E7v" kind="relationship" relationship="viewControllers" id="lVc-01-gHD"/>
                         <segue destination="RMD-qS-1DG" kind="relationship" relationship="viewControllers" id="yUj-w4-feo"/>
                         <segue destination="Jf3-Kv-Dff" kind="relationship" relationship="viewControllers" id="DV8-Tk-rjw"/>
-                        <segue destination="Zjz-eS-t2P" kind="relationship" relationship="viewControllers" id="GFa-nh-4gm"/>
-                        <segue destination="99f-0m-sXm" kind="relationship" relationship="viewControllers" id="On3-Ie-Jtj"/>
+                        <segue destination="n1V-J3-PEt" kind="relationship" relationship="viewControllers" id="gTA-xz-iKv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ryH-RY-NSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -197,10 +215,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OJd-lc-ux4">
-                                <rect key="frame" x="101" y="218" width="173" height="231.5"/>
+                                <rect key="frame" x="91.5" y="195" width="192" height="277.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rWB-3C-Wi9">
-                                        <rect key="frame" x="0.0" y="0.0" width="173" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SDK Version: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgK-Nl-GzB">
                                                 <rect key="frame" x="0.0" y="0.0" width="104" height="20.5"/>
@@ -209,7 +227,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPy-O9-9HI">
-                                                <rect key="frame" x="120" y="0.0" width="53" height="20.5"/>
+                                                <rect key="frame" x="120" y="0.0" width="72" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -217,16 +235,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OcH-Ir-rAb">
-                                        <rect key="frame" x="0.0" y="36.5" width="173" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="36.5" width="192" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leanplum App:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsX-ZG-WUP">
-                                                <rect key="frame" x="0.0" y="0.0" width="115" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="134" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMY-sT-cbr" userLabel="Leanplum App Label">
-                                                <rect key="frame" x="131" y="0.0" width="42" height="20.5"/>
+                                                <rect key="frame" x="150" y="0.0" width="42" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -235,16 +253,16 @@
                                         <viewLayoutGuide key="safeArea" id="hlI-ch-txg"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZMv-cG-iUO">
-                                        <rect key="frame" x="0.0" y="73" width="173" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="73" width="192" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="API URL: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccU-bz-Rad">
-                                                <rect key="frame" x="0.0" y="0.0" width="115" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="134" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6f-BI-ll7">
-                                                <rect key="frame" x="131" y="0.0" width="42" height="20.5"/>
+                                                <rect key="frame" x="150" y="0.0" width="42" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -253,24 +271,31 @@
                                         <viewLayoutGuide key="safeArea" id="Q3H-jd-QJg"/>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhW-wF-sUp">
-                                        <rect key="frame" x="0.0" y="109.5" width="173" height="30"/>
+                                        <rect key="frame" x="0.0" y="109.5" width="192" height="30"/>
                                         <state key="normal" title="Triggers"/>
                                         <connections>
                                             <segue destination="zgG-Oo-rTD" kind="show" id="D98-sV-Dsa"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73Q-4v-ATB">
-                                        <rect key="frame" x="0.0" y="155.5" width="173" height="30"/>
+                                        <rect key="frame" x="0.0" y="155.5" width="192" height="30"/>
                                         <state key="normal" title="Messages"/>
                                         <connections>
                                             <segue destination="O12-KG-sFP" kind="show" id="4HU-Vm-EzF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOJ-fW-mcQ">
-                                        <rect key="frame" x="0.0" y="201.5" width="173" height="30"/>
+                                        <rect key="frame" x="0.0" y="201.5" width="192" height="30"/>
                                         <state key="normal" title="Push"/>
                                         <connections>
                                             <segue destination="WOL-98-CHw" kind="show" id="nBy-Xc-QzC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cju-f2-1Lz">
+                                        <rect key="frame" x="0.0" y="247.5" width="192" height="30"/>
+                                        <state key="normal" title="trigger Event &quot;registerPush&quot;"/>
+                                        <connections>
+                                            <action selector="registerPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="giw-cR-z4k"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -406,6 +431,30 @@
                                     <action selector="chainInApp:" destination="zgG-Oo-rTD" eventType="touchUpInside" id="Vha-Lw-VEL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6QI-aG-VFi">
+                                <rect key="frame" x="153" y="363" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open URL"/>
+                                <connections>
+                                    <action selector="openURL:" destination="zgG-Oo-rTD" eventType="touchUpInside" id="aX2-Ca-tnf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDh-VB-sPG">
+                                <rect key="frame" x="140" y="393" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Register Push"/>
+                                <connections>
+                                    <action selector="registerPush:" destination="zgG-Oo-rTD" eventType="touchUpInside" id="xrj-Tb-FtT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyD-ca-wxu">
+                                <rect key="frame" x="120" y="423" width="136" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Request App Rating"/>
+                                <connections>
+                                    <action selector="requestAppRating:" destination="zgG-Oo-rTD" eventType="touchUpInside" id="d5e-Cf-YPD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eCn-R8-wGM"/>
@@ -476,7 +525,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="63c-Ba-6xO">
-                                <rect key="frame" x="16" y="80" width="343" height="965"/>
+                                <rect key="frame" x="16" y="80" width="343" height="1011"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YUS-oc-7Bk">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="287"/>
@@ -730,6 +779,13 @@
                                         <state key="normal" title="Call Leanplum - Start"/>
                                         <connections>
                                             <action selector="leanplumStartPressed:" destination="1XP-7i-nXz" eventType="touchUpInside" id="dqE-Bu-MvA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouc-A6-sKE">
+                                        <rect key="frame" x="0.0" y="981" width="343" height="30"/>
+                                        <state key="normal" title="iOS Push Permissions"/>
+                                        <connections>
+                                            <action selector="requestPushPermissions:" destination="1XP-7i-nXz" eventType="touchUpInside" id="WaY-zu-DPx"/>
                                         </connections>
                                     </button>
                                 </subviews>
