@@ -3,8 +3,11 @@ Internal QA test app for Leanplum
 ## Installation
 Run: 
 `pod install`
+
 `open Rondo-iOS.xcworkspace/`
-Build the app
+
+Build and run the app (cmd+R)
+
 ## Usage
 Rondo iOS has a few different features to help test the Leanplum product.
 
