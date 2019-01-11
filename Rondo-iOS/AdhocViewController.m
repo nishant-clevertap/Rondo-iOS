@@ -21,6 +21,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Adhoc";
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+    [self.view addGestureRecognizer:tap];
+}
+
+-(void)tap:(id)sender {
+    [self.view endEditing:YES];
 }
 
 - (IBAction)sendTrack:(id)sender {
