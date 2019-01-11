@@ -11,7 +11,7 @@
 #import "RondoState.h"
 #import "LeanplumApp.h"
 #import "LeanplumEnv.h"
-
+#import <UserNotifications/UserNotifications.h>
 
 @interface AppSetupViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *appNameLabel;
@@ -64,6 +64,19 @@
 
 - (IBAction)leanplumStartPressed:(id)sender {
     [Leanplum start];
+}
+
+- (IBAction)requestPushPermissions:(id)sender {
+    [self registerForRemoteNotifications];
+}
+
+- (void)registerForRemoteNotifications {
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    [center requestAuthorizationWithOptions:(UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error){
+        if(!error){
+            [[UIApplication sharedApplication] registerForRemoteNotifications];
+        }
+    }];
 }
 
 @end
