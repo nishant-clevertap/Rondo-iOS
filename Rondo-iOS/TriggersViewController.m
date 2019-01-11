@@ -47,4 +47,16 @@
     [Leanplum track:@"chainedInApp"];
 }
 
+- (IBAction)openURL:(id)sender {
+    [Leanplum track:@"openURL"];
+}
+
+- (IBAction)registerPush:(id)sender {
+    [Leanplum track:@"registerPush"];
+}
+
+- (IBAction)requestAppRating:(id)sender {
+    [Leanplum track:@"appRating"];
+}
+
 @end
