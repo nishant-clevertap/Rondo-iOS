@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *trackTextField;
 @property (weak, nonatomic) IBOutlet UITextField *stateTextField;
 @property (weak, nonatomic) IBOutlet UITextField *userAttribTextField;
+@property (weak, nonatomic) IBOutlet UITextField *userAttribValueTextField;
 
 @end
 
@@ -38,7 +39,10 @@
 }
 
 - (IBAction)setUserAttrib:(id)sender {
-//    [Leanplum setUserAttributes:@{}];
+    [Leanplum setUserAttributes:
+  @{
+    self.userAttribTextField.text : self.userAttribValueTextField.text
+    }];
 }
 
 @end
