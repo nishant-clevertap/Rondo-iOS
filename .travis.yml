@@ -9,4 +9,4 @@ cache: cocoapods
 podfile: Podfile
 before_install:
 - gem install cocoapods # Since Travis is not always on latest version
-- pod install
+- pod install --repo-update
