@@ -55,6 +55,7 @@
 -(void)persistLastUsedTrackString:(NSString *)track {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:track forKey:ADHOC_VIEW_CONTROLLER_PERSIST_TRACK_KEY];
+    [userDefaults synchronize];
 }
 
 -(NSString *)retrieveLastUsedTrackString {
@@ -65,6 +66,7 @@
 -(void)persistLastUsedStateString:(NSString *)state {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:state forKey:ADHOC_VIEW_CONTROLLER_PERSIST_STATE_KEY];
+    [userDefaults synchronize];
 }
 
 -(NSString *)retrieveLastUsedStateString {
