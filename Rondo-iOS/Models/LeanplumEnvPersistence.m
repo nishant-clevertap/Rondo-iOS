@@ -56,14 +56,40 @@
     return env;
 }
 
++(LeanplumEnv *)staging {
+    RLMResults<LeanplumEnv *> *results = [LeanplumEnv objectsWhere:@"apiHostName = 'leanplum-staging.appspot.com'"];
+    return results.firstObject;
+}
+
++(LeanplumEnv *)stagingSeed {
+    LeanplumEnv *env = [LeanplumEnv new];
+    env.apiHostName = @"leanplum-staging.appspot.com";
+    env.apiSSL = YES;
+    env.socketHostName = @"dev-staging.leanplum.com";
+    env.socketPort = 80;
+    return env;
+}
+
 +(void)seedDatabase {
     if (![self production]) {
         RLMRealm *realm = [RLMRealm defaultRealm];
         [realm transactionWithBlock:^{
             [realm addObject:[self productionSeed]];
+        }];
+    }
+    if (![self qa]) {
+        RLMRealm *realm = [RLMRealm defaultRealm];
+        [realm transactionWithBlock:^{
             [realm addObject:[self qaSeed]];
         }];
     }
+    if (![self staging]) {
+        RLMRealm *realm = [RLMRealm defaultRealm];
+        [realm transactionWithBlock:^{
+            [realm addObject:[self stagingSeed]];
+        }];
+    }
+
 }
 
 @end
