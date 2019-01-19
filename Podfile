@@ -3,11 +3,9 @@ platform :ios, '12.0'
 target 'Rondo-iOS' do
   use_frameworks!
 
-  pod 'Realm'
-
   ## Released Packages
-  pod 'Leanplum-iOS-SDK', '2.2.3'
-  pod 'Leanplum-iOS-Location', '2.2.3'
+  pod 'Leanplum-iOS-SDK', '2.2.5-beta.7'
+  pod 'Leanplum-iOS-Location', '2.2.5-beta.12'
 
   ## Source
 #  pod 'Leanplum-iOS-SDK', :path => '../Leanplum-iOS-SDK'

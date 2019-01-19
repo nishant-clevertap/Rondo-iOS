@@ -23,6 +23,7 @@
 		A81D23B2217C1746006DFAC5 /* AppInboxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D23B1217C1746006DFAC5 /* AppInboxTableViewController.m */; };
 		A84E663121D696D30063EC78 /* RondoTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A84E663021D696D30063EC78 /* RondoTabBarViewController.m */; };
 		A84E663421D69BD30063EC78 /* AppSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A84E663321D69BD30063EC78 /* AppSetupViewController.m */; };
+		A883168C21F30B0200FAA926 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A883168B21F30B0200FAA926 /* Realm.framework */; };
 		A889994021D6AC5600AA1F72 /* RondoState.m in Sources */ = {isa = PBXBuildFile; fileRef = A889993F21D6AC5600AA1F72 /* RondoState.m */; };
 		A889994321D6AC6100AA1F72 /* LeanplumApp.m in Sources */ = {isa = PBXBuildFile; fileRef = A889994221D6AC6100AA1F72 /* LeanplumApp.m */; };
 		A889994621D6AC6C00AA1F72 /* LeanplumEnv.m in Sources */ = {isa = PBXBuildFile; fileRef = A889994521D6AC6C00AA1F72 /* LeanplumEnv.m */; };
@@ -106,6 +107,7 @@
 		A84E663021D696D30063EC78 /* RondoTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RondoTabBarViewController.m; sourceTree = "<group>"; };
 		A84E663221D69BD30063EC78 /* AppSetupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppSetupViewController.h; sourceTree = "<group>"; };
 		A84E663321D69BD30063EC78 /* AppSetupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppSetupViewController.m; sourceTree = "<group>"; };
+		A883168B21F30B0200FAA926 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		A889993E21D6AC5600AA1F72 /* RondoState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RondoState.h; sourceTree = "<group>"; };
 		A889993F21D6AC5600AA1F72 /* RondoState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RondoState.m; sourceTree = "<group>"; };
 		A889994121D6AC6100AA1F72 /* LeanplumApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumApp.h; sourceTree = "<group>"; };
@@ -124,7 +126,7 @@
 		A8B38EB821E01B72003FC10A /* LeanplumEnvPersistence.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumEnvPersistence.m; sourceTree = "<group>"; };
 		A8B38EBA21E01D1A003FC10A /* RondoPreferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RondoPreferences.h; sourceTree = "<group>"; };
 		A8B38EBB21E01D1A003FC10A /* RondoPreferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RondoPreferences.m; sourceTree = "<group>"; };
-		A8B38EBD21E022D1003FC10A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		A8B38EBD21E022D1003FC10A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A8B38EBF21E025D6003FC10A /* LeanplumAppPickerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumAppPickerTableViewController.h; sourceTree = "<group>"; };
 		A8B38EC021E025D6003FC10A /* LeanplumAppPickerTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumAppPickerTableViewController.m; sourceTree = "<group>"; };
 		A8B38EC221E025E5003FC10A /* LeanplumEnvPickerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumEnvPickerTableViewController.h; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A883168C21F30B0200FAA926 /* Realm.framework in Frameworks */,
 				38962800FAF7EBCA23281AD4 /* Pods_Rondo_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,6 +176,7 @@
 		0659116C3945ED606A8EEADC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A883168B21F30B0200FAA926 /* Realm.framework */,
 				40EB60B072509CA9186DE640 /* Pods_Rondo_iOS.framework */,
 				43B2FED934BBD1490DFA4011 /* Pods_Rondo_iOSTests.framework */,
 			);
@@ -481,13 +485,11 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Leanplum-iOS-Location/LeanplumLocation.framework",
 				"${BUILT_PRODUCTS_DIR}/Leanplum-iOS-SDK/Leanplum.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LeanplumLocation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Leanplum.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -697,7 +699,11 @@
 				CODE_SIGN_ENTITLEMENTS = "Rondo-iOS/Rondo-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Rondo-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -717,7 +723,11 @@
 				CODE_SIGN_ENTITLEMENTS = "Rondo-iOS/Rondo-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Rondo-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -774,7 +784,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = "Rondo-RichPush/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -794,7 +804,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = "Rondo-RichPush/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
