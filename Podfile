@@ -3,6 +3,8 @@ platform :ios, '12.0'
 target 'Rondo-iOS' do
   use_frameworks!
 
+  pod 'Crashlytics'
+
   ## Released Packages
   pod 'Leanplum-iOS-SDK', '2.2.5-beta.7'
   pod 'Leanplum-iOS-Location', '2.2.5-beta.12'
