@@ -23,7 +23,7 @@
 		A81D23B2217C1746006DFAC5 /* AppInboxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D23B1217C1746006DFAC5 /* AppInboxTableViewController.m */; };
 		A84E663121D696D30063EC78 /* RondoTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A84E663021D696D30063EC78 /* RondoTabBarViewController.m */; };
 		A84E663421D69BD30063EC78 /* AppSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A84E663321D69BD30063EC78 /* AppSetupViewController.m */; };
-		A883168C21F30B0200FAA926 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A883168B21F30B0200FAA926 /* Realm.framework */; };
+		A883169021F327C800FAA926 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A883168D21F3276A00FAA926 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A889994021D6AC5600AA1F72 /* RondoState.m in Sources */ = {isa = PBXBuildFile; fileRef = A889993F21D6AC5600AA1F72 /* RondoState.m */; };
 		A889994321D6AC6100AA1F72 /* LeanplumApp.m in Sources */ = {isa = PBXBuildFile; fileRef = A889994221D6AC6100AA1F72 /* LeanplumApp.m */; };
 		A889994621D6AC6C00AA1F72 /* LeanplumEnv.m in Sources */ = {isa = PBXBuildFile; fileRef = A889994521D6AC6C00AA1F72 /* LeanplumEnv.m */; };
@@ -62,6 +62,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		A883169121F327C800FAA926 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A883169021F327C800FAA926 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A8BBDE8521ED2DB900A24E72 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -107,7 +118,7 @@
 		A84E663021D696D30063EC78 /* RondoTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RondoTabBarViewController.m; sourceTree = "<group>"; };
 		A84E663221D69BD30063EC78 /* AppSetupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppSetupViewController.h; sourceTree = "<group>"; };
 		A84E663321D69BD30063EC78 /* AppSetupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppSetupViewController.m; sourceTree = "<group>"; };
-		A883168B21F30B0200FAA926 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		A883168D21F3276A00FAA926 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		A889993E21D6AC5600AA1F72 /* RondoState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RondoState.h; sourceTree = "<group>"; };
 		A889993F21D6AC5600AA1F72 /* RondoState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RondoState.m; sourceTree = "<group>"; };
 		A889994121D6AC6100AA1F72 /* LeanplumApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumApp.h; sourceTree = "<group>"; };
@@ -150,7 +161,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A883168C21F30B0200FAA926 /* Realm.framework in Frameworks */,
 				38962800FAF7EBCA23281AD4 /* Pods_Rondo_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,7 +186,7 @@
 		0659116C3945ED606A8EEADC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A883168B21F30B0200FAA926 /* Realm.framework */,
+				A883168D21F3276A00FAA926 /* Realm.framework */,
 				40EB60B072509CA9186DE640 /* Pods_Rondo_iOS.framework */,
 				43B2FED934BBD1490DFA4011 /* Pods_Rondo_iOSTests.framework */,
 			);
@@ -315,6 +325,7 @@
 				A81D237A217BE70C006DFAC5 /* Resources */,
 				DD2AE4A29E4F50C7D9A58AB9 /* [CP] Embed Pods Frameworks */,
 				A8BBDE8521ED2DB900A24E72 /* Embed App Extensions */,
+				A883169121F327C800FAA926 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
