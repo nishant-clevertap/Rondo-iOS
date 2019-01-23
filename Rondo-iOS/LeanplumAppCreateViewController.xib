@@ -12,9 +12,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeanplumAppCreateViewController">
             <connections>
                 <outlet property="appIdTextField" destination="LC2-Yu-MKt" id="lPJ-A0-MSr"/>
-                <outlet property="devKeyTextField" destination="eUJ-qK-eF8" id="I92-5h-hgz"/>
+                <outlet property="devKeyTextField" destination="a8e-IN-2A7" id="t7b-Sg-qL6"/>
                 <outlet property="displayNameTextField" destination="sSJ-HC-2Jr" id="lkt-An-z8N"/>
-                <outlet property="prodKeyTextField" destination="a8e-IN-2A7" id="Vxw-1Q-rlW"/>
+                <outlet property="prodKeyTextField" destination="eUJ-qK-eF8" id="DPh-4G-eiz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -35,14 +35,14 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dev Key:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zrj-q9-9gy">
-                    <rect key="frame" x="25" y="143" width="68" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prod Key:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zrj-q9-9gy">
+                    <rect key="frame" x="25" y="143" width="74" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prod Key:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9J-YV-JEb">
-                    <rect key="frame" x="25" y="171" width="74" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dev Key:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9J-YV-JEb">
+                    <rect key="frame" x="25" y="171" width="68" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -105,7 +105,7 @@
                 <constraint firstItem="LHE-gg-oiC" firstAttribute="top" secondItem="EdT-AL-h8f" secondAttribute="bottom" constant="8" id="wtt-ap-Al2"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="-172" y="-97"/>
+            <point key="canvasLocation" x="-489" y="-144"/>
         </view>
     </objects>
 </document>
