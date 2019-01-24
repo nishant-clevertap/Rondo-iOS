@@ -32,6 +32,8 @@
                      @"pushLocal",
                      @"pushLocalCancel",
                      @"pushMuted",
+                     @"pushLocalSamePriorityTime",
+                     @"pushLocalSamePriorityDifferentTime",
                      ];
     [self.tableView reloadData];
 }
