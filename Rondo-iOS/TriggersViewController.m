@@ -59,4 +59,11 @@
     [Leanplum track:@"appRating"];
 }
 
+- (IBAction)differentPrioritySameTimeAlert:(id)sender {
+    [Leanplum track:@"DifferentPrioritySameTime"];
+}
+
+
+
+
 @end
