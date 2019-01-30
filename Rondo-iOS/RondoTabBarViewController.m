@@ -15,6 +15,7 @@
 #import "RondoPreferences.h"
 #import "LeanplumAppPersistence.h"
 #import "LeanplumEnvPersistence.h"
+#import "RondoProductionMode.h"
 
 @interface RondoTabBarViewController ()
 
@@ -53,12 +54,11 @@
     [Leanplum setApiHostName:env.apiHostName withServletName:@"api" usingSsl:env.apiSSL];
     [Leanplum setSocketHostName:env.socketHostName withPortNumber:env.socketPort];
 
-#ifdef DEBUG
-    LEANPLUM_USE_ADVERTISING_ID;
-    [Leanplum setAppId:app.appId withDevelopmentKey:app.devKey];
-#else
-    [Leanplum setAppId:app.appId withProductionKey:app.prodKey];
-#endif
+    if ([RondoProductionMode productionMode]) {
+        [Leanplum setAppId:app.appId withProductionKey:app.prodKey];
+    } else {
+        [Leanplum setAppId:app.appId withDevelopmentKey:app.devKey];
+    }
 
     [Leanplum onStartResponse:^(BOOL success) {
     }];

@@ -12,6 +12,7 @@
 #import "LeanplumApp.h"
 #import "LeanplumEnv.h"
 #import <UserNotifications/UserNotifications.h>
+#import "RondoProductionMode.h"
 
 @interface AppSetupViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *appNameLabel;
@@ -27,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *apiSslLabel;
 @property (weak, nonatomic) IBOutlet UILabel *socketHostLabel;
 @property (weak, nonatomic) IBOutlet UILabel *socketPortLabel;
+@property (weak, nonatomic) IBOutlet UISwitch *productionMode;
 
 @end
 
@@ -60,6 +62,8 @@
 
     self.userIdLabel.text = Leanplum.userId;
     self.deviceIdLabel.text = Leanplum.deviceId;
+
+    self.productionMode.on = [RondoProductionMode productionMode];
 }
 
 - (IBAction)leanplumStartPressed:(id)sender {
@@ -79,6 +83,9 @@
             });
         }
     }];
+}
+- (IBAction)changeProductionMode:(id)sender {
+    [RondoProductionMode setProductionMode:self.productionMode.on];
 }
 
 @end
