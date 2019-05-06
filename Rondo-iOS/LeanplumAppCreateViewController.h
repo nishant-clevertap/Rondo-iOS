@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LeanplumAppCreateViewController : UIViewController
+@interface LeanplumAppCreateViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
 
 @end
 
