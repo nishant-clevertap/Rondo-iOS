@@ -103,17 +103,24 @@
         NSString * appId = [json objectForKey:@"app_id"];
         NSString * production = [json objectForKey:@"production"];
         NSString * development = [json objectForKey:@"development"];
-
-        if(appId != NULL) {
+        
+        if(appId != nil && production != nil && development != nil) {
             self.appIdTextField.text = appId;
-        }
-        if(production != NULL) {
             self.prodKeyTextField.text = production;
-        }
-        if(development != NULL) {
             self.devKeyTextField.text = development;
+            return;
         }
     }
+    
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Invaild QRCode"
+                                                                   message:@"The QR code must be json of the format {\"app_id\": [id of app], \"production\":[production key], \"development\":[development key]}"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)setupLivePreview {
