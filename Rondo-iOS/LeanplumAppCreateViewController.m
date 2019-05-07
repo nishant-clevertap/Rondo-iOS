@@ -45,7 +45,7 @@
     return app;
 }
 
-- (IBAction)useCamaraButtonPressed:(id)sender {
+- (IBAction)useCameraButtonPressed:(id)sender {
     self.session = [AVCaptureSession new];
      self.session.sessionPreset = AVCaptureSessionPresetPhoto;
     AVCaptureDevice *backCamera = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
