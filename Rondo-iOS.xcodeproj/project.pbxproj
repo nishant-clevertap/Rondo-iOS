@@ -43,6 +43,7 @@
 		A8B6C3C421E42E6900676A58 /* LeanplumEnvCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B6C3C221E42E6900676A58 /* LeanplumEnvCreateViewController.xib */; };
 		A8BBDE7D21ED2DB900A24E72 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = A8BBDE7C21ED2DB900A24E72 /* NotificationService.m */; };
 		A8BBDE8121ED2DB900A24E72 /* Rondo-RichPush.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A8BBDE7921ED2DB900A24E72 /* Rondo-RichPush.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B365FB0C2284CB93008E32A6 /* CopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B365FB0B2284CB93008E32A6 /* CopyLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +156,8 @@
 		A8BBDE7B21ED2DB900A24E72 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
 		A8BBDE7C21ED2DB900A24E72 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
 		A8BBDE7E21ED2DB900A24E72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B365FB0A2284CB93008E32A6 /* CopyLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyLabel.h; sourceTree = "<group>"; };
+		B365FB0B2284CB93008E32A6 /* CopyLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CopyLabel.m; sourceTree = "<group>"; };
 		C00C8E1D6C4FDF56EF95E4DF /* Pods-Rondo-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOSTests/Pods-Rondo-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		CDBDE9BDB90BFFB0DE41A4A8 /* Pods-Rondo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -255,6 +258,8 @@
 				A83D722F2202503E00569B95 /* RondoProductionMode.m */,
 				A84E663221D69BD30063EC78 /* AppSetupViewController.h */,
 				A84E663321D69BD30063EC78 /* AppSetupViewController.m */,
+				B365FB0A2284CB93008E32A6 /* CopyLabel.h */,
+				B365FB0B2284CB93008E32A6 /* CopyLabel.m */,
 				A807310F21E924890099EA45 /* AppInboxTableViewCell.h */,
 				A807311021E924890099EA45 /* AppInboxTableViewCell.m */,
 				A807311121E924890099EA45 /* AppInboxTableViewCell.xib */,
@@ -538,6 +543,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A84E663421D69BD30063EC78 /* AppSetupViewController.m in Sources */,
+				B365FB0C2284CB93008E32A6 /* CopyLabel.m in Sources */,
 				A889994621D6AC6C00AA1F72 /* LeanplumEnv.m in Sources */,
 				A84E663121D696D30063EC78 /* RondoTabBarViewController.m in Sources */,
 				A81D2384217BE70C006DFAC5 /* SdkQaViewController.m in Sources */,

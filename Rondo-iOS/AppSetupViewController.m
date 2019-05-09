@@ -11,6 +11,7 @@
 #import "RondoState.h"
 #import "LeanplumApp.h"
 #import "LeanplumEnv.h"
+#import "CopyLabel.h"
 #import <UserNotifications/UserNotifications.h>
 #import "RondoProductionMode.h"
 
@@ -20,8 +21,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *devKeyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *prodKeyLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *userIdLabel;
-@property (weak, nonatomic) IBOutlet UILabel *deviceIdLabel;
+@property (weak, nonatomic) IBOutlet CopyLabel *userIdLabel;
+@property (weak, nonatomic) IBOutlet CopyLabel *deviceIdLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *sdkVersionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *apiHostLabel;
