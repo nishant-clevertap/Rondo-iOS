@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Leanplum/Leanplum.h>
+#import "DeeplinkViewController.h"
 
 @interface AppDelegate ()
 
@@ -50,6 +51,17 @@
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     completionHandler(UIBackgroundFetchResultNewData);
+}
+
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    if ([[url host] isEqualToString:@"deep_link_page"]) {
+        DeeplinkViewController *vc = [[DeeplinkViewController alloc] initWithNibName:@"DeeplinkViewController" bundle:[NSBundle mainBundle]];
+        UITabBarController *tabBar = (UITabBarController *)self.window.rootViewController;
+        UINavigationController *navController = (UINavigationController *)tabBar.selectedViewController;
+        [navController pushViewController:vc animated:NO];
+        return YES;
+    }
+    return NO;
 }
 
 @end
