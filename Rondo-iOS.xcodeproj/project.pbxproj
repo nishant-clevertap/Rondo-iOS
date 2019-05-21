@@ -29,6 +29,8 @@
 		A889994321D6AC6100AA1F72 /* LeanplumApp.m in Sources */ = {isa = PBXBuildFile; fileRef = A889994221D6AC6100AA1F72 /* LeanplumApp.m */; };
 		A889994621D6AC6C00AA1F72 /* LeanplumEnv.m in Sources */ = {isa = PBXBuildFile; fileRef = A889994521D6AC6C00AA1F72 /* LeanplumEnv.m */; };
 		A889994921D6AF2B00AA1F72 /* AdhocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A889994821D6AF2B00AA1F72 /* AdhocViewController.m */; };
+		A8A78D76228D28970083AEF1 /* DeeplinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A78D74228D28970083AEF1 /* DeeplinkViewController.m */; };
+		A8A78D77228D28970083AEF1 /* DeeplinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8A78D75228D28970083AEF1 /* DeeplinkViewController.xib */; };
 		A8B0A39B2182D70000E6C3A7 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B0A39A2182D70000E6C3A7 /* MessagesViewController.m */; };
 		A8B0A39E2182E29900E6C3A7 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B0A39D2182E29900E6C3A7 /* PushViewController.m */; };
 		A8B38EB621E01893003FC10A /* LeanplumAppPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EB521E01893003FC10A /* LeanplumAppPersistence.m */; };
@@ -131,6 +133,9 @@
 		A889994521D6AC6C00AA1F72 /* LeanplumEnv.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumEnv.m; sourceTree = "<group>"; };
 		A889994721D6AF2B00AA1F72 /* AdhocViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdhocViewController.h; sourceTree = "<group>"; };
 		A889994821D6AF2B00AA1F72 /* AdhocViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdhocViewController.m; sourceTree = "<group>"; };
+		A8A78D73228D28970083AEF1 /* DeeplinkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeeplinkViewController.h; sourceTree = "<group>"; };
+		A8A78D74228D28970083AEF1 /* DeeplinkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeeplinkViewController.m; sourceTree = "<group>"; };
+		A8A78D75228D28970083AEF1 /* DeeplinkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeeplinkViewController.xib; sourceTree = "<group>"; };
 		A8B0A3992182D70000E6C3A7 /* MessagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
 		A8B0A39A2182D70000E6C3A7 /* MessagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
 		A8B0A39C2182E29900E6C3A7 /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
@@ -265,6 +270,9 @@
 				A807311121E924890099EA45 /* AppInboxTableViewCell.xib */,
 				A889994721D6AF2B00AA1F72 /* AdhocViewController.h */,
 				A889994821D6AF2B00AA1F72 /* AdhocViewController.m */,
+				A8A78D73228D28970083AEF1 /* DeeplinkViewController.h */,
+				A8A78D74228D28970083AEF1 /* DeeplinkViewController.m */,
+				A8A78D75228D28970083AEF1 /* DeeplinkViewController.xib */,
 				A8B38EBF21E025D6003FC10A /* LeanplumAppPickerTableViewController.h */,
 				A8B38EC021E025D6003FC10A /* LeanplumAppPickerTableViewController.m */,
 				A8B38EC221E025E5003FC10A /* LeanplumEnvPickerTableViewController.h */,
@@ -402,6 +410,9 @@
 							com.apple.Push = {
 								enabled = 1;
 							};
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
 						};
 					};
 					A81D2393217BE70F006DFAC5 = {
@@ -444,6 +455,7 @@
 				A8B38EC921E036B6003FC10A /* LeanplumAppCreateViewController.xib in Resources */,
 				A807311321E924890099EA45 /* AppInboxTableViewCell.xib in Resources */,
 				A8B38EBE21E022D1003FC10A /* Podfile in Resources */,
+				A8A78D77228D28970083AEF1 /* DeeplinkViewController.xib in Resources */,
 				A81D2387217BE70C006DFAC5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,6 +577,7 @@
 				A8B38EC121E025D6003FC10A /* LeanplumAppPickerTableViewController.m in Sources */,
 				A8B38EB921E01B72003FC10A /* LeanplumEnvPersistence.m in Sources */,
 				A8B38EC821E036B6003FC10A /* LeanplumAppCreateViewController.m in Sources */,
+				A8A78D76228D28970083AEF1 /* DeeplinkViewController.m in Sources */,
 				A8B38EBC21E01D1A003FC10A /* RondoPreferences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
