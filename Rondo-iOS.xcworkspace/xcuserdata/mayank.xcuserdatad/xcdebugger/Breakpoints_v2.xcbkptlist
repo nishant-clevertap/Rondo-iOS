@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/Leanplum-iOS-SDK/Leanplum-SDK/Classes/LPMessageTemplates.m"
-            timestampString = "579679326.8500479"
+            timestampString = "579679331.238555"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "375"
-            endingLineNumber = "375"
-            landmarkName = "-defineActions"
+            startingLineNumber = "1162"
+            endingLineNumber = "1162"
+            landmarkName = "-refreshPopupContent"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,93 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/Leanplum-iOS-SDK/Leanplum-SDK/Classes/LPMessageTemplates.m"
-            timestampString = "579679331.238555"
+            filePath = "Pods/Leanplum-iOS-SDK/Leanplum-SDK/Classes/Managers/Networking/LPRequestFactory.m"
+            timestampString = "580298021.843359"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1162"
-            endingLineNumber = "1162"
-            landmarkName = "-refreshPopupContent"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "-multiWithParams:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/Leanplum-iOS-SDK/Leanplum-SDK/Classes/Managers/Networking/LPRequestSender.m"
+            timestampString = "581000706.418088"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "351"
+            endingLineNumber = "351"
+            landmarkName = "-sendRequests:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Leanplum-iOS-SDK/Leanplum-SDK/Classes/Features/Actions/LPActionManager.m"
+            timestampString = "582606711.0061671"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "429"
+            endingLineNumber = "429"
+            landmarkName = "-isDuplicateNotification:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rondo-iOS/AppDelegate.m"
+            timestampString = "582607557.851208"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "-application:didReceiveRemoteNotification:fetchCompletionHandler:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Leanplum-iOS-SDK/Leanplum-SDK/Classes/Managers/Networking/LeanplumRequest.m"
+            timestampString = "582765611.980202"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "666"
+            endingLineNumber = "666"
+            landmarkName = "-operationForDownloadFile:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Leanplum-iOS-SDK/Leanplum-SDK/Classes/Internal/Leanplum.m"
+            timestampString = "582765638.291959"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2802"
+            endingLineNumber = "2802"
+            landmarkName = "+parseFileURLsFromResponse:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

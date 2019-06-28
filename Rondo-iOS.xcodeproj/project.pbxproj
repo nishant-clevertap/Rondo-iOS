@@ -534,12 +534,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Leanplum-iOS-Location/LeanplumLocation.framework",
+				"${BUILT_PRODUCTS_DIR}/Leanplum-iOS-LocationAndBeacons/LeanplumLocationAndBeacons.framework",
 				"${BUILT_PRODUCTS_DIR}/Leanplum-iOS-SDK/Leanplum.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LeanplumLocation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LeanplumLocationAndBeacons.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Leanplum.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
