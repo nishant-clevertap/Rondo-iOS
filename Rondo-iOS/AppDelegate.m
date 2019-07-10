@@ -51,16 +51,19 @@
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
+    // Needs to be called if swizzling is disabled in Info.plist otherwise it wont affect SDK if swizzling is enabled.
     [Leanplum didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
+    // Needs to be called if swizzling is disabled in Info.plist otherwise it wont affect SDK if swizzling is enabled.
     [Leanplum didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
+    // Needs to be called if swizzling is disabled in Info.plist otherwise it wont affect SDK if swizzling is enabled.
     [Leanplum didFailToRegisterForRemoteNotificationsWithError:error];
 }
 
