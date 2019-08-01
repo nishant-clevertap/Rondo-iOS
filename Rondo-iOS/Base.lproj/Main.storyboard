@@ -153,6 +153,41 @@
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="0Gr-hV-CnU"/>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Set UserId:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crQ-od-kXN">
+                                <rect key="frame" x="8" y="443" width="64.5" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <color key="textColor" red="1" green="0.0081869199099999998" blue="0.85055696260000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Attribute" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eiF-cS-GKZ">
+                                <rect key="frame" x="88" y="466" width="278.5" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAt-Na-8wR">
+                                <rect key="frame" x="8" y="556" width="359" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Force Content Update"/>
+                                <connections>
+                                    <action selector="forceContentUpdate" destination="Zjz-eS-t2P" eventType="touchUpInside" id="yFi-vW-yZp"/>
+                                    <action selector="leanplumStartPressed:" destination="1XP-7i-nXz" eventType="touchUpInside" id="t8S-hk-EFu"/>
+                                    <action selector="setUserAttrib:" destination="Zjz-eS-t2P" eventType="touchUpInside" id="pFj-Dx-FDE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V78-mm-SRh">
+                                <rect key="frame" x="8" y="512" width="359" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Set UserId"/>
+                                <connections>
+                                    <action selector="leanplumStartPressed:" destination="1XP-7i-nXz" eventType="touchUpInside" id="kbm-Bc-UsJ"/>
+                                    <action selector="setUserAttrib:" destination="Zjz-eS-t2P" eventType="touchUpInside" id="0sS-vs-LLD"/>
+                                    <action selector="setUserId:" destination="Zjz-eS-t2P" eventType="touchUpInside" id="RGc-Yn-ZlE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -168,10 +203,12 @@
                     <tabBarItem key="tabBarItem" title="Adhoc" id="zow-QU-khU"/>
                     <navigationItem key="navigationItem" id="wLf-ET-Nc4"/>
                     <connections>
+                        <outlet property="forceContentUpdateButton" destination="GAt-Na-8wR" id="2a6-7S-Mi6"/>
                         <outlet property="stateTextField" destination="HhI-mN-8ir" id="tpo-cs-ypV"/>
                         <outlet property="trackTextField" destination="J90-jZ-1eJ" id="yKC-l3-wX9"/>
                         <outlet property="userAttribTextField" destination="btG-lA-F10" id="dJl-1F-Cgo"/>
                         <outlet property="userAttribValueTextField" destination="K5o-ZW-deF" id="eCS-6Y-FyQ"/>
+                        <outlet property="userIdTextField" destination="eiF-cS-GKZ" id="bY0-4K-Azz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWM-7u-56s" userLabel="First Responder" sceneMemberID="firstResponder"/>
