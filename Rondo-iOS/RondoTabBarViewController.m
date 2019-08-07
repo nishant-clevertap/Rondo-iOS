@@ -8,7 +8,7 @@
 
 #import "RondoTabBarViewController.h"
 #import <Leanplum/Leanplum.h>
-#import <LeanplumLocation/LPLocationManager.h>
+#import <LeanplumLocationAndBeacons/LPLocationManager.h>
 #import "RondoState.h"
 #import "LeanplumApp.h"
 #import "LeanplumEnv.h"
@@ -38,12 +38,6 @@
     //    if(LPLocation.needsAuthorization){
     [LPLocation authorize];
     //    }
-
-    CLLocationManager *locManager = [[CLLocationManager alloc]init];
-    //    self.locManager.delegate = self;
-    [locManager requestAlwaysAuthorization];
-    //    [self updateConfigLabels];
-
     [self setupInitialAppState];
 
 
