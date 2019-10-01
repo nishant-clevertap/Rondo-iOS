@@ -109,23 +109,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3941207E-146A-4A0B-9E95-DEEECC0CF464"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../Leanplum-iOS-SDK/Leanplum-SDK/Classes/Managers/Networking/LeanplumRequest.m"
-            timestampString = "582765611.980202"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "666"
-            endingLineNumber = "666"
-            landmarkName = "-operationForDownloadFile:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "FFCD171F-612D-4A8D-BBF2-39ECB2F8A0D4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -307,23 +290,6 @@
             startingLineNumber = "181"
             endingLineNumber = "181"
             landmarkName = "-requestAuthorization"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "370B5D76-D4BC-4799-A86B-017B11CD10E4"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Rondo-iOS/AdhocViewController.m"
-            timestampString = "0"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "-sendTrack:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
