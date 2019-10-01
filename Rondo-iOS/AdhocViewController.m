@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *stateTextField;
 @property (weak, nonatomic) IBOutlet UITextField *userAttribTextField;
 @property (weak, nonatomic) IBOutlet UITextField *userAttribValueTextField;
+@property (weak, nonatomic) IBOutlet UITextField *userIdTextField;
+@property (weak, nonatomic) IBOutlet UIButton *forceContentUpdateButton;
 
 @end
 
@@ -29,6 +31,8 @@
     [self.view addGestureRecognizer:tap];
     self.trackTextField.text = [self retrieveLastUsedTrackString];
     self.stateTextField.text = [self retrieveLastUsedStateString];
+    self.forceContentUpdateButton.layer.borderWidth = 2.0f;
+    self.forceContentUpdateButton.layer.borderColor = [UIColor grayColor].CGColor;
 }
 
 -(void)tap:(id)sender {
@@ -50,6 +54,14 @@
   @{
     self.userAttribTextField.text : self.userAttribValueTextField.text
     }];
+}
+
+- (IBAction)setUserId:(NSString *)userId {
+    [Leanplum setUserId:userId];
+}
+
+- (IBAction)forceContentUpdate {
+    [Leanplum forceContentUpdate];
 }
 
 -(void)persistLastUsedTrackString:(NSString *)track {
