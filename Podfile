@@ -6,8 +6,8 @@ target 'Rondo-iOS' do
   pod 'Crashlytics'
 
   ## Released Packages
-  pod 'Leanplum-iOS-SDK', '2.5.1'
-  pod 'Leanplum-iOS-LocationAndBeacons', '2.5.1'
+  pod 'Leanplum-iOS-SDK', '2.6.2'
+  pod 'Leanplum-iOS-LocationAndBeacons', '2.6.2'
 
   ## Source
 #  pod 'Leanplum-iOS-SDK', :path => '../Leanplum-iOS-SDK'
