@@ -28,18 +28,19 @@
     return apps;
 }
 
-+(LeanplumApp *)rondoQAProduction {
-    RLMResults<LeanplumApp *> *results = [LeanplumApp objectsWhere:@"displayName = 'Rondo QA Production'"];
-    return results.firstObject;
-}
-
 +(void)seedDatabase {
     if (![self rondoQAProduction]) {
         RLMRealm *realm = [RLMRealm defaultRealm];
         [realm transactionWithBlock:^{
             [realm addObject:[self rondoQAProductionSeed]];
+            [realm addObject:[self musalaQASeed]];
         }];
     }
+}
+
++(LeanplumApp *)rondoQAProduction {
+    RLMResults<LeanplumApp *> *results = [LeanplumApp objectsWhere:@"displayName = 'Rondo QA Production'"];
+    return results.firstObject;
 }
 
 +(LeanplumApp *)rondoQAProductionSeed {
@@ -48,6 +49,20 @@
     app.appId = @"app_ve9UCNlqI8dy6Omzfu1rEh6hkWonNHVZJIWtLLt6aLs";
     app.devKey = @"dev_cKF5HMpLGqhbovlEGMKjgTuf8AHfr2Jar6rrnNhtzQ0";
     app.prodKey = @"prod_D5ECYBLrRrrOYaFZvAFFHTg1JyZ2Llixe5s077Lw3rM";
+    return app;
+}
+
++(LeanplumApp *)musalaQA {
+    RLMResults<LeanplumApp *> *results = [LeanplumApp objectsWhere:@"displayName = 'Musala QA'"];
+    return results.firstObject;
+}
+
++(LeanplumApp *)musalaQASeed {
+    LeanplumApp *app = [LeanplumApp new];
+    app.displayName = @"Musala QA";
+    app.appId = @"app_qA781mPlJYjzlZLDlTh68cdNDUOf31kcTg1TCbSXSS0";
+    app.devKey = @"dev_WqNqX0qOOHyTEQtwKXs5ldhqErHfixvcSAMlYgyIL0U";
+    app.prodKey = @"prod_kInQHXLJ0Dju7QJRocsD5DYMdYAVbdGGwhl6doTfH0k";
     return app;
 }
 

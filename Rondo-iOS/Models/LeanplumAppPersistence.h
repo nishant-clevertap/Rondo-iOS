@@ -13,8 +13,12 @@
 
 +(void)saveLeanplumApp:(LeanplumApp *)app;
 +(NSArray <LeanplumApp *> *)loadLeanplumApps;
-+(LeanplumApp *)rondoQAProduction;
 +(void)seedDatabase;
+
++(LeanplumApp *)rondoQAProduction;
 +(LeanplumApp *)rondoQAProductionSeed;
+
++(LeanplumApp *)musalaQA;
++(LeanplumApp *)musalaQASeed;
 
 @end
