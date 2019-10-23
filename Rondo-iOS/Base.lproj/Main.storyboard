@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v5U-3S-D01">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v5U-3S-D01">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lFS-hw-Hfv">
-                                <rect key="frame" x="8" y="101" width="359" height="372"/>
+                                <rect key="frame" x="8" y="101" width="359" height="498"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kZw-0r-fWN">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="130"/>
@@ -127,8 +127,38 @@
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="Iyb-J4-0sq"/>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Bha-67-YCd">
+                                        <rect key="frame" x="0.0" y="242" width="359" height="64"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="uPF-J3-lBT">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Set UserId:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crQ-od-kXN">
+                                                        <rect key="frame" x="0.0" y="20.5" width="63" height="13.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                                        <color key="textColor" red="1" green="0.0081869199099999998" blue="0.85055696260000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Attribute" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eiF-cS-GKZ">
+                                                        <rect key="frame" x="79" y="0.0" width="280" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V78-mm-SRh">
+                                                <rect key="frame" x="0.0" y="34" width="359" height="30"/>
+                                                <state key="normal" title="Set UserId"/>
+                                                <connections>
+                                                    <action selector="leanplumStartPressed:" destination="1XP-7i-nXz" eventType="touchUpInside" id="kbm-Bc-UsJ"/>
+                                                    <action selector="setUserAttrib:" destination="Zjz-eS-t2P" eventType="touchUpInside" id="0sS-vs-LLD"/>
+                                                    <action selector="setUserId:" destination="Zjz-eS-t2P" eventType="touchUpInside" id="RGc-Yn-ZlE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="sxk-vz-1kL">
-                                        <rect key="frame" x="0.0" y="242" width="359" height="130"/>
+                                        <rect key="frame" x="0.0" y="322" width="359" height="130"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="IU9-vq-1TB">
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="84"/>
@@ -168,43 +198,19 @@
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="ofC-Ix-2IK"/>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAt-Na-8wR">
+                                        <rect key="frame" x="0.0" y="468" width="359" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Force Content Update"/>
+                                        <connections>
+                                            <action selector="forceContentUpdate" destination="Zjz-eS-t2P" eventType="touchUpInside" id="yFi-vW-yZp"/>
+                                            <action selector="leanplumStartPressed:" destination="1XP-7i-nXz" eventType="touchUpInside" id="t8S-hk-EFu"/>
+                                            <action selector="setUserAttrib:" destination="Zjz-eS-t2P" eventType="touchUpInside" id="pFj-Dx-FDE"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="0Gr-hV-CnU"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Set UserId:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crQ-od-kXN">
-                                <rect key="frame" x="8" y="443" width="64.5" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
-                                <color key="textColor" red="1" green="0.0081869199099999998" blue="0.85055696260000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Attribute" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eiF-cS-GKZ">
-                                <rect key="frame" x="88" y="466" width="278.5" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAt-Na-8wR">
-                                <rect key="frame" x="8" y="556" width="359" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Force Content Update"/>
-                                <connections>
-                                    <action selector="forceContentUpdate" destination="Zjz-eS-t2P" eventType="touchUpInside" id="yFi-vW-yZp"/>
-                                    <action selector="leanplumStartPressed:" destination="1XP-7i-nXz" eventType="touchUpInside" id="t8S-hk-EFu"/>
-                                    <action selector="setUserAttrib:" destination="Zjz-eS-t2P" eventType="touchUpInside" id="pFj-Dx-FDE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V78-mm-SRh">
-                                <rect key="frame" x="8" y="512" width="359" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Set UserId"/>
-                                <connections>
-                                    <action selector="leanplumStartPressed:" destination="1XP-7i-nXz" eventType="touchUpInside" id="kbm-Bc-UsJ"/>
-                                    <action selector="setUserAttrib:" destination="Zjz-eS-t2P" eventType="touchUpInside" id="0sS-vs-LLD"/>
-                                    <action selector="setUserId:" destination="Zjz-eS-t2P" eventType="touchUpInside" id="RGc-Yn-ZlE"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>

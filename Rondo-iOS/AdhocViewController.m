@@ -68,8 +68,8 @@
     }];
 }
 
-- (IBAction)setUserId:(NSString *)userId {
-    [Leanplum setUserId:userId];
+- (IBAction)setUserId:(id)sender {
+    [Leanplum setUserId:self.userIdTextField.text];
 }
 
 - (IBAction)forceContentUpdate {
