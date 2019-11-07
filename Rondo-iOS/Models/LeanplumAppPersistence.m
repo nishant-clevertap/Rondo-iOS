@@ -33,6 +33,7 @@
         RLMRealm *realm = [RLMRealm defaultRealm];
         [realm transactionWithBlock:^{
             [realm addObject:[self rondoQAProductionSeed]];
+            [realm addObject:[self rondoQAAutomationSeed]];
             [realm addObject:[self musalaQASeed]];
         }];
     }
@@ -65,5 +66,20 @@
     app.prodKey = @"prod_kInQHXLJ0Dju7QJRocsD5DYMdYAVbdGGwhl6doTfH0k";
     return app;
 }
+
++(LeanplumApp *)rondoQAAutomation {
+    RLMResults<LeanplumApp *> *results = [LeanplumApp objectsWhere:@"displayName = 'Rondo QA Automation'"];
+    return results.firstObject;
+}
+
++(LeanplumApp *)rondoQAAutomationSeed {
+    LeanplumApp *app = [LeanplumApp new];
+    app.displayName = @"Rondo QA Automation";
+    app.appId = @"app_UQcFGVeXzOCVsovrlUebad9R67hFJqzDegfQPZRnVZM";
+    app.devKey = @"dev_b9qX0tcazL5PCQFuZ7pxsfT6XHA7xQkaFtYVrgt4Kq0";
+    app.prodKey = @"prod_lL8RSFzmHy0iVYXQpzjUVEHDlaUz5idT0H7BVs6Bn1Q";
+    return app;
+}
+
 
 @end

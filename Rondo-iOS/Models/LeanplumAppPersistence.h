@@ -21,4 +21,7 @@
 +(LeanplumApp *)musalaQA;
 +(LeanplumApp *)musalaQASeed;
 
++(LeanplumApp *)rondoQAAutomation;
++(LeanplumApp *)rondoQAAutomationSeed;
+
 @end
