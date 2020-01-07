@@ -92,23 +92,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6458F6D5-70D9-43D0-934C-3EBC18F84641"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Rondo-iOS/AppDelegate.m"
-            timestampString = "582607557.851208"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "-application:didReceiveRemoteNotification:fetchCompletionHandler:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "FFCD171F-612D-4A8D-BBF2-39ECB2F8A0D4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -117,10 +100,10 @@
             timestampString = "582765638.291959"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2802"
-            endingLineNumber = "2802"
-            landmarkName = "+setDeviceLocationWithLatitude:longitude:type:"
-            landmarkType = "7">
+            startingLineNumber = "2808"
+            endingLineNumber = "2808"
+            landmarkName = "Leanplum"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
