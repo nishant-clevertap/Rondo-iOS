@@ -8,9 +8,10 @@
 
 #import "AppDelegate.h"
 #import <Leanplum/Leanplum.h>
+#import <UserNotifications/UserNotifications.h>
 #import "DeeplinkViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UNUserNotificationCenterDelegate>
 
 @end
 
@@ -19,6 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    [UNUserNotificationCenter currentNotificationCenter].delegate = self;
     return YES;
 }
 
@@ -77,5 +79,15 @@
     }
     return NO;
 }
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
+//    Leanplum willpres
+}
+
+// The method will be called on the delegate when the user responded to the notification by opening the application, dismissing the notification or choosing a UNNotificationAction. The delegate must be set before the application returns from application:didFinishLaunchingWithOptions:.
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)(void))completionHandler {
+
+}
+
 
 @end
