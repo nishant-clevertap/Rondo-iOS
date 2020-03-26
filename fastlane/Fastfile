@@ -42,7 +42,6 @@ platform :ios do
       xcodeproj: "Rondo-iOS.xcodeproj",
       build_number: latest_testflight_build_number + 1)
     version = ENV["LEANPLUM_SDK_VERSION"]
-    a = ENV["PATH1"]
     if version == nil
       version = get_version_number(
         xcodeproj: "Rondo-iOS.xcodeproj",
