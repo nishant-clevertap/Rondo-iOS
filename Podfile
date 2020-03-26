@@ -10,8 +10,8 @@ target 'Rondo-iOS' do
     # pod 'Leanplum-iOS-SDK', ENV['LEANPLUM_SDK_VERSION']
     # pod 'Leanplum-iOS-LocationAndBeacons', ENV['LEANPLUM_SDK_VERSION']
   # else
-  pod 'Leanplum-iOS-SDK', '2.7.0-beta2'
-  pod 'Leanplum-iOS-LocationAndBeacons', '2.7.0-beta2'
+    pod 'Leanplum-iOS-SDK', '2.7.0-beta2'
+    pod 'Leanplum-iOS-Location', '2.7.0-beta2'
   # end
 
   ## Source

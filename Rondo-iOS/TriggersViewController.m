@@ -8,7 +8,7 @@
 
 #import "TriggersViewController.h"
 #import <Leanplum/Leanplum.h>
-#import <LeanplumLocationAndBeacons/LPLocationManager.h>
+#import <LeanplumLocation/LPLocationManager.h>
 
 @interface TriggersViewController ()
 
