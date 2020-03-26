@@ -17,6 +17,7 @@ install:
 
 script:
   - echo -e "machine github.com\n  login $GITHUB_TOKEN" >> ~/.netrc
+  - bundle exec fastlane match appstore
   - bundle exec fastlane beta
 
 after_success:
