@@ -52,7 +52,18 @@ platform :ios do
       xcodeproj: "Rondo-iOS.xcodeproj",
       version_number: version
     )
-    build_app(workspace: "Rondo-iOS.xcworkspace", scheme: "Rondo-iOS")
+    disable_automatic_code_signing
+    build_app(
+      workspace: "Rondo-iOS.xcworkspace", 
+      scheme: "Rondo-iOS", 
+      export_options: {
+        method: "app-store",
+        provisioningProfiles: { 
+          "com.leanplum.Rondo-iOS" => "match AppStore com.leanplum.Rondo-iOS",
+          "com.leanplum.Rondo-iOS.RichPush" => "match AppStore com.leanplum.Rondo-iOS.RichPush"
+        }
+      })
+    enable_automatic_code_signing
     upload_to_testflight
   end
 end
