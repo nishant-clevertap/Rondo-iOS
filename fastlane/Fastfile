@@ -38,7 +38,7 @@ platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
 	install_certificates  	
-    increment_build_number(xcodeproj: "Rondo-iOS.xcodeproj")
+    increment_build_number(xcodeproj: "Rondo-iOS.xcodeproj", build_number: latest_testflight_build_number + 1)
     build_app(workspace: "Rondo-iOS.xcworkspace", scheme: "Rondo-iOS")
     upload_to_testflight
   end
