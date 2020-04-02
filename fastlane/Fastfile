@@ -41,13 +41,13 @@ platform :ios do
       xcodeproj: "Rondo-iOS.xcodeproj",
       build_number: latest_testflight_build_number + 1)
     version = ENV["LEANPLUM_SDK_VERSION"]
-    version = version.tr("alpha-", "")
-    version = version.tr("beta-", "")
     if version == nil
       version = get_version_number(
         xcodeproj: "Rondo-iOS.xcodeproj",
         target: "Rondo-iOS"
       )
+    version = version.tr("alpha-", "")
+    version = version.tr("beta-", "")
     end
     increment_version_number(
       xcodeproj: "Rondo-iOS.xcodeproj",
