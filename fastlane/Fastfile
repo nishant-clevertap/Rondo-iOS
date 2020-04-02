@@ -36,8 +36,7 @@ platform :ios do
   end
   
   desc "Push a new beta build to TestFlight"
-  lane :beta do
-	install_certificates  	
+  lane :release do
     increment_build_number(
       xcodeproj: "Rondo-iOS.xcodeproj",
       build_number: latest_testflight_build_number + 1)
@@ -55,17 +54,13 @@ platform :ios do
       version_number: version
     )
     disable_automatic_code_signing
-    build_app(
-      workspace: "Rondo-iOS.xcworkspace", 
-      scheme: "Rondo-iOS", 
-      export_options: {
-        method: "app-store",
-        provisioningProfiles: { 
-          "com.leanplum.Rondo-iOS" => "match AppStore com.leanplum.Rondo-iOS",
-          "com.leanplum.Rondo-iOS.RichPush" => "match AppStore com.leanplum.Rondo-iOS.RichPush"
-        }
-      })
+    build_app
     enable_automatic_code_signing
+  end
+
+  desc "Push a new beta build to TestFlight"
+  lane :testflight do
     upload_to_testflight
   end
+
 end
