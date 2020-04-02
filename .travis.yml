@@ -21,9 +21,7 @@ script:
   - bundle exec fastlane release
 
 deploy:
+  if: branch = master AND env(LEANPLUM_SDK_VERSION) IS present
   skip_cleanup: true
   provider: script
   script: bundle exec fastlane testflight
-  on:
-    branch: master
-    condition: '-n "$LEANPLUM_SDK_VERSION"'
