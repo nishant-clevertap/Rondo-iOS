@@ -46,9 +46,9 @@ platform :ios do
         xcodeproj: "Rondo-iOS.xcodeproj",
         target: "Rondo-iOS"
       )
+    end
     version = version.tr("alpha-", "")
     version = version.tr("beta-", "")
-    end
     increment_version_number(
       xcodeproj: "Rondo-iOS.xcodeproj",
       version_number: version
