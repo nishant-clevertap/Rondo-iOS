@@ -32,9 +32,9 @@
     if (![self rondoQAProduction]) {
         RLMRealm *realm = [RLMRealm defaultRealm];
         [realm transactionWithBlock:^{
-            [realm addObject:[self rondoQAProductionSeed]];
-            [realm addObject:[self rondoQAAutomationSeed]];
-            [realm addObject:[self musalaQASeed]];
+            [realm addOrUpdateObject:[self rondoQAProductionSeed]];
+            [realm addOrUpdateObject:[self rondoQAAutomationSeed]];
+            [realm addOrUpdateObject:[self musalaQASeed]];
         }];
     }
 }
