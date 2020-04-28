@@ -6,16 +6,15 @@ target 'Rondo-iOS' do
   pod 'Crashlytics'
 
   ## Released Packages
-  # if ENV['LEANPLUM_SDK_VERSION'] != nil
-    # pod 'Leanplum-iOS-SDK', ENV['LEANPLUM_SDK_VERSION']
-    # pod 'Leanplum-iOS-LocationAndBeacons', ENV['LEANPLUM_SDK_VERSION']
-  # else
-    pod 'Leanplum-iOS-SDK', '2.7.0'
-    pod 'Leanplum-iOS-Location', '2.7.0'
-  # end
+  version = ENV['LEANPLUM_SDK_VERSION']
+  if version == nil
+    version = "2.7.0"
+  end
+  pod 'Leanplum-iOS-SDK', version
+  pod 'Leanplum-iOS-LocationAndBeacons', version
 
   ## Source
- # pod 'Leanplum-iOS-SDK', :path => '../Leanplum-iOS-SDK'
+#  pod 'Leanplum-iOS-SDK', :path => '../Leanplum-iOS-SDK'
 #    pod 'Leanplum-iOS-Location', :path => '../Leanplum-iOS-Location'
  # pod 'Leanplum-iOS-LocationAndBeacons', :path => '../Leanplum-iOS-Location'
 

@@ -8,7 +8,7 @@
 
 #import "RondoTabBarViewController.h"
 #import <Leanplum/Leanplum.h>
-#import <LeanplumLocation/LPLocationManager.h>
+#import <LeanplumLocationAndBeacons/LPLocationManager.h>
 #import "RondoState.h"
 #import "LeanplumApp.h"
 #import "LPConstants.h"
