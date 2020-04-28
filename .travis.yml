@@ -16,6 +16,7 @@ install:
   - pod install --repo-update
   - echo -e "machine github.com\n  login $GITHUB_TOKEN" >> ~/.netrc
   - bundle exec fastlane install_certificates
+  - bundle exec fastlane match appstore
 
 script:
   - bundle exec fastlane release
