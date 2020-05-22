@@ -63,6 +63,8 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Location please</string>
+	<string>For testing location based messaging</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>For testing location based messaging</string>
 </dict>
 </plist>
