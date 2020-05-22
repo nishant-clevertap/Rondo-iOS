@@ -60,7 +60,7 @@ platform :ios do
       export_options: {
         method: "app-store",
         provisioningProfiles: { 
-          "com.leanplum.Rondo-iOS" => "match AppStore com.leanplum.Rondo",
+          "com.leanplum.Rondo-iOS" => "match AppStore com.leanplum.Rondo-iOS",
         }
       })
     enable_automatic_code_signing
