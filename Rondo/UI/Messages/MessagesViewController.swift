@@ -11,7 +11,8 @@ import Eureka
 import Leanplum
 
 class MessagesViewController: FormViewController {
-
+    private let segmentedControl = UISegmentedControl(items: ["IAM", "Push"])
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +23,81 @@ class MessagesViewController: FormViewController {
                 Leanplum.track(row.tag)
             }
         }
-
-        build()
+        
+        addSegmentedControl()
+        buildPush()
     }
 
-    func build() {
+    func addSegmentedControl() {
+        segmentedControl.addTarget(self, action: #selector(MessagesViewController.didChangeSegment), for: .valueChanged)
+        segmentedControl.selectedSegmentIndex = 0;
+        segmentedControl.sizeToFit()
+
+        navigationItem.titleView = segmentedControl
+    }
+
+    @objc func didChangeSegment() {
+        title = segmentedControl.titleForSegment(at: segmentedControl.selectedSegmentIndex)
+        if segmentedControl.selectedSegmentIndex == 0 {
+            buildIAM()
+        } else {
+            buildPush()
+        }
+    }
+
+    func buildIAM() {
+        form.removeAll()
         buildTemplateMessages()
         buildActions()
         buildRichMessages()
+    }
+
+    func buildPush() {
+        form.removeAll()
+        let section = Section("Push Notifications")
+
+        section <<< LabelRow {
+            $0.title = "Push with Emoji"
+            $0.tag = "pushRender"
+        }
+        section <<< LabelRow {
+            $0.title = "Push with Image"
+            $0.tag = "pushImage"
+        }
+        section <<< LabelRow {
+            $0.title = "Push with New IAM"
+            $0.tag = "pushAction"
+        }
+        section <<< LabelRow {
+            $0.title = "Push with Existing IAM"
+            $0.tag = "pushExistingAction"
+        }
+        section <<< LabelRow {
+            $0.title = "Push with Open URL"
+            $0.tag = "pushURL"
+        }
+        section <<< LabelRow {
+            $0.title = "Push with Text Formatting"
+            $0.tag = "pushOptions"
+        }
+        section <<< LabelRow {
+            $0.title = "Local Push"
+            $0.tag = "pushLocal"
+        }
+        section <<< LabelRow {
+            $0.title = "Muted Push"
+            $0.tag = "pushMuted"
+        }
+        section <<< LabelRow {
+            $0.title = "Local Push with Same Priority"
+            $0.tag = "pushLocalSamePriorityTime"
+        }
+        section <<< LabelRow {
+            $0.title = "Local Push with Same Priority Different Time"
+            $0.tag = "pushLocalSamePriorityDifferentTime"
+        }
+
+        form +++ section
     }
 
     func buildTemplateMessages() {
