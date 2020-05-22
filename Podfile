@@ -16,7 +16,7 @@ def shared_pods
   pod 'Eureka'
 end
 
-target 'Rondo' do
+target 'Rondo-iOS' do
   use_frameworks!
 
   # Release pods

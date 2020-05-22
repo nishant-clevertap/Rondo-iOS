@@ -1,8 +1,8 @@
 language: objective-c
 osx_image: xcode11.3
 
-xcode_workspace: Rondo.xcworkspace
-xcode_scheme: Rondo
+xcode_workspace: Rondo-iOS.xcworkspace
+xcode_scheme: Rondo-iOS
 xcode_destination: platform=iOS Simulator,OS=12.0,name=iPhone X
 
 cache: cocoapods

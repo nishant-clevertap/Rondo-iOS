@@ -31,13 +31,13 @@
 		07869B72243CBB83005E7E94 /* AppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07869B71243CBB83005E7E94 /* AppsViewController.swift */; };
 		078D587F243CDACB00D088BD /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078D587E243CDACB00D088BD /* ScannerViewController.swift */; };
 		078D5881243CEC8000D088BD /* UserDefaultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078D5880243CEC8000D088BD /* UserDefaultExtension.swift */; };
-		8F2E108634D325EC25D03659 /* Pods_Rondo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5402F8D26750C3D771B2244 /* Pods_Rondo.framework */; };
+		8C0B0D93D1B61FAC21A6FC4C /* Pods_Rondo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDAFBDF6F1A75C834118A65 /* Pods_Rondo_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0340FE885431577C10079969 /* Pods-LPFeatures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPFeatures.debug.xcconfig"; path = "Target Support Files/Pods-LPFeatures/Pods-LPFeatures.debug.xcconfig"; sourceTree = "<group>"; };
 		07022BC32425407300EAF3D3 /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
-		074C65C923A399D200EC586B /* Rondo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rondo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		074C65C923A399D200EC586B /* Rondo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rondo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		074C65CC23A399D200EC586B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		074C65CE23A399D200EC586B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		074C65D323A399D200EC586B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,13 +62,15 @@
 		07869B71243CBB83005E7E94 /* AppsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsViewController.swift; sourceTree = "<group>"; };
 		078D587E243CDACB00D088BD /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		078D5880243CEC8000D088BD /* UserDefaultExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtension.swift; sourceTree = "<group>"; };
+		0DDAFBDF6F1A75C834118A65 /* Pods_Rondo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rondo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A30DB21F1C88ACDBA8FB48C /* Pods-LPFeatures Sources.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPFeatures Sources.debug.xcconfig"; path = "Target Support Files/Pods-LPFeatures Sources/Pods-LPFeatures Sources.debug.xcconfig"; sourceTree = "<group>"; };
 		4A5DC6724D7D0A582D7E5CF7 /* Pods-LPFeatures.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPFeatures.release.xcconfig"; path = "Target Support Files/Pods-LPFeatures/Pods-LPFeatures.release.xcconfig"; sourceTree = "<group>"; };
 		527645EA8B8AA65DB9CD3848 /* Pods-Rondo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo.debug.xcconfig"; path = "Target Support Files/Pods-Rondo/Pods-Rondo.debug.xcconfig"; sourceTree = "<group>"; };
 		871B813E40B9D5721DE92AC4 /* Pods-Rondo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo.release.xcconfig"; path = "Target Support Files/Pods-Rondo/Pods-Rondo.release.xcconfig"; sourceTree = "<group>"; };
+		88A45896E92697F830BDDD12 /* Pods-Rondo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.release.xcconfig"; path = "Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		BD028D529A5A9E174D492CBE /* Pods-LPFeatures Sources.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPFeatures Sources.release.xcconfig"; path = "Target Support Files/Pods-LPFeatures Sources/Pods-LPFeatures Sources.release.xcconfig"; sourceTree = "<group>"; };
-		C5402F8D26750C3D771B2244 /* Pods_Rondo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rondo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5682E911E4DA8B24364D333 /* Pods_LPFeatures_Sources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LPFeatures_Sources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D647E832B0D526E395A3F79C /* Pods-Rondo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F2E108634D325EC25D03659 /* Pods_Rondo.framework in Frameworks */,
+				8C0B0D93D1B61FAC21A6FC4C /* Pods_Rondo_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +106,7 @@
 		074C65CA23A399D200EC586B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				074C65C923A399D200EC586B /* Rondo.app */,
+				074C65C923A399D200EC586B /* Rondo-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,6 +232,8 @@
 				BD028D529A5A9E174D492CBE /* Pods-LPFeatures Sources.release.xcconfig */,
 				527645EA8B8AA65DB9CD3848 /* Pods-Rondo.debug.xcconfig */,
 				871B813E40B9D5721DE92AC4 /* Pods-Rondo.release.xcconfig */,
+				D647E832B0D526E395A3F79C /* Pods-Rondo-iOS.debug.xcconfig */,
+				88A45896E92697F830BDDD12 /* Pods-Rondo-iOS.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -238,7 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				D5682E911E4DA8B24364D333 /* Pods_LPFeatures_Sources.framework */,
-				C5402F8D26750C3D771B2244 /* Pods_Rondo.framework */,
+				0DDAFBDF6F1A75C834118A65 /* Pods_Rondo_iOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -246,9 +250,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		074C65C823A399D200EC586B /* Rondo */ = {
+		074C65C823A399D200EC586B /* Rondo-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 074C65DD23A399D400EC586B /* Build configuration list for PBXNativeTarget "Rondo" */;
+			buildConfigurationList = 074C65DD23A399D400EC586B /* Build configuration list for PBXNativeTarget "Rondo-iOS" */;
 			buildPhases = (
 				60787AA64799D9E7F63A220F /* [CP] Check Pods Manifest.lock */,
 				074C65C523A399D200EC586B /* Sources */,
@@ -260,9 +264,9 @@
 			);
 			dependencies = (
 			);
-			name = Rondo;
+			name = "Rondo-iOS";
 			productName = LPFeatures;
-			productReference = 074C65C923A399D200EC586B /* Rondo.app */;
+			productReference = 074C65C923A399D200EC586B /* Rondo-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -280,7 +284,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 074C65C423A399D200EC586B /* Build configuration list for PBXProject "Rondo" */;
+			buildConfigurationList = 074C65C423A399D200EC586B /* Build configuration list for PBXProject "Rondo-iOS" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -293,7 +297,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				074C65C823A399D200EC586B /* Rondo */,
+				074C65C823A399D200EC586B /* Rondo-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -330,7 +334,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Rondo-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Rondo-iOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -343,15 +347,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Rondo/Pods-Rondo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Rondo/Pods-Rondo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rondo/Pods-Rondo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -520,7 +524,7 @@
 		};
 		074C65DE23A399D400EC586B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 527645EA8B8AA65DB9CD3848 /* Pods-Rondo.debug.xcconfig */;
+			baseConfigurationReference = D647E832B0D526E395A3F79C /* Pods-Rondo-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,7 +543,7 @@
 		};
 		074C65DF23A399D400EC586B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 871B813E40B9D5721DE92AC4 /* Pods-Rondo.release.xcconfig */;
+			baseConfigurationReference = 88A45896E92697F830BDDD12 /* Pods-Rondo-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -559,7 +563,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		074C65C423A399D200EC586B /* Build configuration list for PBXProject "Rondo" */ = {
+		074C65C423A399D200EC586B /* Build configuration list for PBXProject "Rondo-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				074C65DB23A399D400EC586B /* Debug */,
@@ -568,7 +572,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		074C65DD23A399D400EC586B /* Build configuration list for PBXNativeTarget "Rondo" */ = {
+		074C65DD23A399D400EC586B /* Build configuration list for PBXNativeTarget "Rondo-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				074C65DE23A399D400EC586B /* Debug */,
