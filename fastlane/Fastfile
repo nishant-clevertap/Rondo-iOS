@@ -61,7 +61,6 @@ platform :ios do
         method: "app-store",
         provisioningProfiles: { 
           "com.leanplum.Rondo-iOS" => "match AppStore com.leanplum.Rondo-iOS",
-          "com.leanplum.Rondo-iOS.RichPush" => "match AppStore com.leanplum.Rondo-iOS.RichPush"
         }
       })
     enable_automatic_code_signing

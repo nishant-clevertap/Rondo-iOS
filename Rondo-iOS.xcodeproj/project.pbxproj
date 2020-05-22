@@ -7,427 +7,284 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		076A1B97D98D2A014EAD9592 /* Pods_Rondo_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B2FED934BBD1490DFA4011 /* Pods_Rondo_iOSTests.framework */; };
-		38962800FAF7EBCA23281AD4 /* Pods_Rondo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40EB60B072509CA9186DE640 /* Pods_Rondo_iOS.framework */; };
-		A807311221E924890099EA45 /* AppInboxTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A807311021E924890099EA45 /* AppInboxTableViewCell.m */; };
-		A807311321E924890099EA45 /* AppInboxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A807311121E924890099EA45 /* AppInboxTableViewCell.xib */; };
-		A81D2381217BE70C006DFAC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D2380217BE70C006DFAC5 /* AppDelegate.m */; };
-		A81D2384217BE70C006DFAC5 /* SdkQaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D2383217BE70C006DFAC5 /* SdkQaViewController.m */; };
-		A81D2387217BE70C006DFAC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A81D2385217BE70C006DFAC5 /* Main.storyboard */; };
-		A81D2389217BE70F006DFAC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A81D2388217BE70F006DFAC5 /* Assets.xcassets */; };
-		A81D238C217BE70F006DFAC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A81D238A217BE70F006DFAC5 /* LaunchScreen.storyboard */; };
-		A81D238F217BE70F006DFAC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D238E217BE70F006DFAC5 /* main.m */; };
-		A81D2399217BE70F006DFAC5 /* Rondo_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D2398217BE70F006DFAC5 /* Rondo_iOSTests.m */; };
-		A81D23A9217C1227006DFAC5 /* TriggersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D23A8217C1227006DFAC5 /* TriggersViewController.m */; };
-		A81D23AC217C1230006DFAC5 /* VariablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D23AB217C1230006DFAC5 /* VariablesViewController.m */; };
-		A81D23B2217C1746006DFAC5 /* AppInboxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81D23B1217C1746006DFAC5 /* AppInboxTableViewController.m */; };
-		A83D72302202503E00569B95 /* RondoProductionMode.m in Sources */ = {isa = PBXBuildFile; fileRef = A83D722F2202503E00569B95 /* RondoProductionMode.m */; };
-		A84E663121D696D30063EC78 /* RondoTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A84E663021D696D30063EC78 /* RondoTabBarViewController.m */; };
-		A84E663421D69BD30063EC78 /* AppSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A84E663321D69BD30063EC78 /* AppSetupViewController.m */; };
-		A883169021F327C800FAA926 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A883168D21F3276A00FAA926 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A889994021D6AC5600AA1F72 /* RondoState.m in Sources */ = {isa = PBXBuildFile; fileRef = A889993F21D6AC5600AA1F72 /* RondoState.m */; };
-		A889994321D6AC6100AA1F72 /* LeanplumApp.m in Sources */ = {isa = PBXBuildFile; fileRef = A889994221D6AC6100AA1F72 /* LeanplumApp.m */; };
-		A889994621D6AC6C00AA1F72 /* LeanplumEnv.m in Sources */ = {isa = PBXBuildFile; fileRef = A889994521D6AC6C00AA1F72 /* LeanplumEnv.m */; };
-		A889994921D6AF2B00AA1F72 /* AdhocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A889994821D6AF2B00AA1F72 /* AdhocViewController.m */; };
-		A8A78D76228D28970083AEF1 /* DeeplinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A78D74228D28970083AEF1 /* DeeplinkViewController.m */; };
-		A8A78D77228D28970083AEF1 /* DeeplinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8A78D75228D28970083AEF1 /* DeeplinkViewController.xib */; };
-		A8B0A39B2182D70000E6C3A7 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B0A39A2182D70000E6C3A7 /* MessagesViewController.m */; };
-		A8B0A39E2182E29900E6C3A7 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B0A39D2182E29900E6C3A7 /* PushViewController.m */; };
-		A8B38EB621E01893003FC10A /* LeanplumAppPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EB521E01893003FC10A /* LeanplumAppPersistence.m */; };
-		A8B38EB921E01B72003FC10A /* LeanplumEnvPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EB821E01B72003FC10A /* LeanplumEnvPersistence.m */; };
-		A8B38EBC21E01D1A003FC10A /* RondoPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EBB21E01D1A003FC10A /* RondoPreferences.m */; };
-		A8B38EBE21E022D1003FC10A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A8B38EBD21E022D1003FC10A /* Podfile */; };
-		A8B38EC121E025D6003FC10A /* LeanplumAppPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EC021E025D6003FC10A /* LeanplumAppPickerTableViewController.m */; };
-		A8B38EC421E025E5003FC10A /* LeanplumEnvPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EC321E025E5003FC10A /* LeanplumEnvPickerTableViewController.m */; };
-		A8B38EC821E036B6003FC10A /* LeanplumAppCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B38EC621E036B6003FC10A /* LeanplumAppCreateViewController.m */; };
-		A8B38EC921E036B6003FC10A /* LeanplumAppCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B38EC721E036B6003FC10A /* LeanplumAppCreateViewController.xib */; };
-		A8B6C3C321E42E6900676A58 /* LeanplumEnvCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B6C3C121E42E6900676A58 /* LeanplumEnvCreateViewController.m */; };
-		A8B6C3C421E42E6900676A58 /* LeanplumEnvCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B6C3C221E42E6900676A58 /* LeanplumEnvCreateViewController.xib */; };
-		A8BBDE7D21ED2DB900A24E72 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = A8BBDE7C21ED2DB900A24E72 /* NotificationService.m */; };
-		A8BBDE8121ED2DB900A24E72 /* Rondo-RichPush.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A8BBDE7921ED2DB900A24E72 /* Rondo-RichPush.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B365FB0C2284CB93008E32A6 /* CopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B365FB0B2284CB93008E32A6 /* CopyLabel.m */; };
+		07022BC42425407300EAF3D3 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07022BC32425407300EAF3D3 /* DebugViewController.swift */; };
+		074C65CD23A399D200EC586B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074C65CC23A399D200EC586B /* AppDelegate.swift */; };
+		074C65CF23A399D200EC586B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074C65CE23A399D200EC586B /* SceneDelegate.swift */; };
+		074C65D423A399D200EC586B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 074C65D223A399D200EC586B /* Main.storyboard */; };
+		074C65D623A399D400EC586B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 074C65D523A399D400EC586B /* Assets.xcassets */; };
+		074C65D923A399D400EC586B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 074C65D723A399D400EC586B /* LaunchScreen.storyboard */; };
+		074C65E323A39EE000EC586B /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074C65E223A39EE000EC586B /* TabViewController.swift */; };
+		074C65E623A3C72F00EC586B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074C65E523A3C72F00EC586B /* HomeViewController.swift */; };
+		074C65E923A3C82A00EC586B /* LeanplumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074C65E823A3C82A00EC586B /* LeanplumApp.swift */; };
+		074C65ED23A3CB0500EC586B /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074C65EC23A3CB0500EC586B /* AppContext.swift */; };
+		075A17482422A89B007C6B72 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A17472422A89B007C6B72 /* EventsViewController.swift */; };
+		075A174C2422AF99007C6B72 /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A174B2422AF99007C6B72 /* InboxViewController.swift */; };
+		075A174F2422C8E4007C6B72 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 075A174E2422C8E4007C6B72 /* MessageTableViewCell.xib */; };
+		075A17512422C9EE007C6B72 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A17502422C9EE007C6B72 /* MessageTableViewCell.swift */; };
+		075A17562422D32B007C6B72 /* VariablesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A17552422D32B007C6B72 /* VariablesViewController.swift */; };
+		075A17592422D5ED007C6B72 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A17572422D5ED007C6B72 /* ImageTableViewCell.swift */; };
+		075A175A2422D5ED007C6B72 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 075A17582422D5ED007C6B72 /* ImageTableViewCell.xib */; };
+		075A175D2422DB20007C6B72 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A175C2422DB20007C6B72 /* MessagesViewController.swift */; };
+		075A17602422E777007C6B72 /* KeyValueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A175E2422E777007C6B72 /* KeyValueTableViewCell.swift */; };
+		075A17612422E777007C6B72 /* KeyValueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 075A175F2422E777007C6B72 /* KeyValueTableViewCell.xib */; };
+		07869B70243CBA4F005E7E94 /* AddAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07869B6F243CBA4F005E7E94 /* AddAppViewController.swift */; };
+		07869B72243CBB83005E7E94 /* AppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07869B71243CBB83005E7E94 /* AppsViewController.swift */; };
+		078D587F243CDACB00D088BD /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078D587E243CDACB00D088BD /* ScannerViewController.swift */; };
+		078D5881243CEC8000D088BD /* UserDefaultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078D5880243CEC8000D088BD /* UserDefaultExtension.swift */; };
+		8C0B0D93D1B61FAC21A6FC4C /* Pods_Rondo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDAFBDF6F1A75C834118A65 /* Pods_Rondo_iOS.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		A81D2395217BE70F006DFAC5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A81D2374217BE70C006DFAC5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A81D237B217BE70C006DFAC5;
-			remoteInfo = "Rondo-iOS";
-		};
-		A8BBDE7F21ED2DB900A24E72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A81D2374217BE70C006DFAC5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A8BBDE7821ED2DB900A24E72;
-			remoteInfo = "Rondo-RichPush";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A883169121F327C800FAA926 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A883169021F327C800FAA926 /* Realm.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A8BBDE8521ED2DB900A24E72 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				A8BBDE8121ED2DB900A24E72 /* Rondo-RichPush.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		15F973582855629A676E97E6 /* Pods-Rondo-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOSTests/Pods-Rondo-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3A9928E675741FDB447B060A /* Pods-Rondo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		40EB60B072509CA9186DE640 /* Pods_Rondo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rondo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		43B2FED934BBD1490DFA4011 /* Pods_Rondo_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rondo_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A807310F21E924890099EA45 /* AppInboxTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInboxTableViewCell.h; sourceTree = "<group>"; };
-		A807311021E924890099EA45 /* AppInboxTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppInboxTableViewCell.m; sourceTree = "<group>"; };
-		A807311121E924890099EA45 /* AppInboxTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppInboxTableViewCell.xib; sourceTree = "<group>"; };
-		A81D237C217BE70C006DFAC5 /* Rondo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rondo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A81D237F217BE70C006DFAC5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A81D2380217BE70C006DFAC5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A81D2382217BE70C006DFAC5 /* SdkQaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SdkQaViewController.h; sourceTree = "<group>"; };
-		A81D2383217BE70C006DFAC5 /* SdkQaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SdkQaViewController.m; sourceTree = "<group>"; };
-		A81D2386217BE70C006DFAC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A81D2388217BE70F006DFAC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A81D238B217BE70F006DFAC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A81D238D217BE70F006DFAC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A81D238E217BE70F006DFAC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A81D2394217BE70F006DFAC5 /* Rondo-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rondo-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A81D2398217BE70F006DFAC5 /* Rondo_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rondo_iOSTests.m; sourceTree = "<group>"; };
-		A81D239A217BE70F006DFAC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A81D23A6217C0D80006DFAC5 /* Rondo-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Rondo-iOS.entitlements"; sourceTree = "<group>"; };
-		A81D23A7217C1227006DFAC5 /* TriggersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriggersViewController.h; sourceTree = "<group>"; };
-		A81D23A8217C1227006DFAC5 /* TriggersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TriggersViewController.m; sourceTree = "<group>"; };
-		A81D23AA217C1230006DFAC5 /* VariablesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VariablesViewController.h; sourceTree = "<group>"; };
-		A81D23AB217C1230006DFAC5 /* VariablesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VariablesViewController.m; sourceTree = "<group>"; };
-		A81D23B0217C1746006DFAC5 /* AppInboxTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInboxTableViewController.h; sourceTree = "<group>"; };
-		A81D23B1217C1746006DFAC5 /* AppInboxTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppInboxTableViewController.m; sourceTree = "<group>"; };
-		A83D722E2202503E00569B95 /* RondoProductionMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RondoProductionMode.h; sourceTree = "<group>"; };
-		A83D722F2202503E00569B95 /* RondoProductionMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RondoProductionMode.m; sourceTree = "<group>"; };
-		A84E662F21D696D30063EC78 /* RondoTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RondoTabBarViewController.h; sourceTree = "<group>"; };
-		A84E663021D696D30063EC78 /* RondoTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RondoTabBarViewController.m; sourceTree = "<group>"; };
-		A84E663221D69BD30063EC78 /* AppSetupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppSetupViewController.h; sourceTree = "<group>"; };
-		A84E663321D69BD30063EC78 /* AppSetupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppSetupViewController.m; sourceTree = "<group>"; };
-		A883168D21F3276A00FAA926 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		A889993E21D6AC5600AA1F72 /* RondoState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RondoState.h; sourceTree = "<group>"; };
-		A889993F21D6AC5600AA1F72 /* RondoState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RondoState.m; sourceTree = "<group>"; };
-		A889994121D6AC6100AA1F72 /* LeanplumApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumApp.h; sourceTree = "<group>"; };
-		A889994221D6AC6100AA1F72 /* LeanplumApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumApp.m; sourceTree = "<group>"; };
-		A889994421D6AC6C00AA1F72 /* LeanplumEnv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumEnv.h; sourceTree = "<group>"; };
-		A889994521D6AC6C00AA1F72 /* LeanplumEnv.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumEnv.m; sourceTree = "<group>"; };
-		A889994721D6AF2B00AA1F72 /* AdhocViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdhocViewController.h; sourceTree = "<group>"; };
-		A889994821D6AF2B00AA1F72 /* AdhocViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdhocViewController.m; sourceTree = "<group>"; };
-		A8A78D73228D28970083AEF1 /* DeeplinkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeeplinkViewController.h; sourceTree = "<group>"; };
-		A8A78D74228D28970083AEF1 /* DeeplinkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeeplinkViewController.m; sourceTree = "<group>"; };
-		A8A78D75228D28970083AEF1 /* DeeplinkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeeplinkViewController.xib; sourceTree = "<group>"; };
-		A8B0A3992182D70000E6C3A7 /* MessagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
-		A8B0A39A2182D70000E6C3A7 /* MessagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
-		A8B0A39C2182E29900E6C3A7 /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
-		A8B0A39D2182E29900E6C3A7 /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
-		A8B38EB421E01893003FC10A /* LeanplumAppPersistence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumAppPersistence.h; sourceTree = "<group>"; };
-		A8B38EB521E01893003FC10A /* LeanplumAppPersistence.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumAppPersistence.m; sourceTree = "<group>"; };
-		A8B38EB721E01B72003FC10A /* LeanplumEnvPersistence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumEnvPersistence.h; sourceTree = "<group>"; };
-		A8B38EB821E01B72003FC10A /* LeanplumEnvPersistence.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumEnvPersistence.m; sourceTree = "<group>"; };
-		A8B38EBA21E01D1A003FC10A /* RondoPreferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RondoPreferences.h; sourceTree = "<group>"; };
-		A8B38EBB21E01D1A003FC10A /* RondoPreferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RondoPreferences.m; sourceTree = "<group>"; };
-		A8B38EBD21E022D1003FC10A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A8B38EBF21E025D6003FC10A /* LeanplumAppPickerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumAppPickerTableViewController.h; sourceTree = "<group>"; };
-		A8B38EC021E025D6003FC10A /* LeanplumAppPickerTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumAppPickerTableViewController.m; sourceTree = "<group>"; };
-		A8B38EC221E025E5003FC10A /* LeanplumEnvPickerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumEnvPickerTableViewController.h; sourceTree = "<group>"; };
-		A8B38EC321E025E5003FC10A /* LeanplumEnvPickerTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumEnvPickerTableViewController.m; sourceTree = "<group>"; };
-		A8B38EC521E036B6003FC10A /* LeanplumAppCreateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumAppCreateViewController.h; sourceTree = "<group>"; };
-		A8B38EC621E036B6003FC10A /* LeanplumAppCreateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumAppCreateViewController.m; sourceTree = "<group>"; };
-		A8B38EC721E036B6003FC10A /* LeanplumAppCreateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeanplumAppCreateViewController.xib; sourceTree = "<group>"; };
-		A8B6C3C021E42E6900676A58 /* LeanplumEnvCreateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanplumEnvCreateViewController.h; sourceTree = "<group>"; };
-		A8B6C3C121E42E6900676A58 /* LeanplumEnvCreateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeanplumEnvCreateViewController.m; sourceTree = "<group>"; };
-		A8B6C3C221E42E6900676A58 /* LeanplumEnvCreateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeanplumEnvCreateViewController.xib; sourceTree = "<group>"; };
-		A8BBDE7921ED2DB900A24E72 /* Rondo-RichPush.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Rondo-RichPush.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8BBDE7B21ED2DB900A24E72 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
-		A8BBDE7C21ED2DB900A24E72 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
-		A8BBDE7E21ED2DB900A24E72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B365FB0A2284CB93008E32A6 /* CopyLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyLabel.h; sourceTree = "<group>"; };
-		B365FB0B2284CB93008E32A6 /* CopyLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CopyLabel.m; sourceTree = "<group>"; };
-		C00C8E1D6C4FDF56EF95E4DF /* Pods-Rondo-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOSTests/Pods-Rondo-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		CDBDE9BDB90BFFB0DE41A4A8 /* Pods-Rondo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		0340FE885431577C10079969 /* Pods-LPFeatures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPFeatures.debug.xcconfig"; path = "Target Support Files/Pods-LPFeatures/Pods-LPFeatures.debug.xcconfig"; sourceTree = "<group>"; };
+		07022BC32425407300EAF3D3 /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
+		074C65C923A399D200EC586B /* Rondo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rondo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		074C65CC23A399D200EC586B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		074C65CE23A399D200EC586B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		074C65D323A399D200EC586B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		074C65D523A399D400EC586B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		074C65D823A399D400EC586B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		074C65DA23A399D400EC586B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		074C65E223A39EE000EC586B /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		074C65E523A3C72F00EC586B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		074C65E823A3C82A00EC586B /* LeanplumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeanplumApp.swift; sourceTree = "<group>"; };
+		074C65EC23A3CB0500EC586B /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
+		075A17472422A89B007C6B72 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		075A174B2422AF99007C6B72 /* InboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
+		075A174E2422C8E4007C6B72 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
+		075A17502422C9EE007C6B72 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		075A17552422D32B007C6B72 /* VariablesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariablesViewController.swift; sourceTree = "<group>"; };
+		075A17572422D5ED007C6B72 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		075A17582422D5ED007C6B72 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		075A175C2422DB20007C6B72 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		075A175E2422E777007C6B72 /* KeyValueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueTableViewCell.swift; sourceTree = "<group>"; };
+		075A175F2422E777007C6B72 /* KeyValueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyValueTableViewCell.xib; sourceTree = "<group>"; };
+		07869B6F243CBA4F005E7E94 /* AddAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppViewController.swift; sourceTree = "<group>"; };
+		07869B71243CBB83005E7E94 /* AppsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsViewController.swift; sourceTree = "<group>"; };
+		078D587E243CDACB00D088BD /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		078D5880243CEC8000D088BD /* UserDefaultExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtension.swift; sourceTree = "<group>"; };
+		0DDAFBDF6F1A75C834118A65 /* Pods_Rondo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rondo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A30DB21F1C88ACDBA8FB48C /* Pods-LPFeatures Sources.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPFeatures Sources.debug.xcconfig"; path = "Target Support Files/Pods-LPFeatures Sources/Pods-LPFeatures Sources.debug.xcconfig"; sourceTree = "<group>"; };
+		4A5DC6724D7D0A582D7E5CF7 /* Pods-LPFeatures.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPFeatures.release.xcconfig"; path = "Target Support Files/Pods-LPFeatures/Pods-LPFeatures.release.xcconfig"; sourceTree = "<group>"; };
+		527645EA8B8AA65DB9CD3848 /* Pods-Rondo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo.debug.xcconfig"; path = "Target Support Files/Pods-Rondo/Pods-Rondo.debug.xcconfig"; sourceTree = "<group>"; };
+		871B813E40B9D5721DE92AC4 /* Pods-Rondo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo.release.xcconfig"; path = "Target Support Files/Pods-Rondo/Pods-Rondo.release.xcconfig"; sourceTree = "<group>"; };
+		88A45896E92697F830BDDD12 /* Pods-Rondo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.release.xcconfig"; path = "Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		BD028D529A5A9E174D492CBE /* Pods-LPFeatures Sources.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPFeatures Sources.release.xcconfig"; path = "Target Support Files/Pods-LPFeatures Sources/Pods-LPFeatures Sources.release.xcconfig"; sourceTree = "<group>"; };
+		D5682E911E4DA8B24364D333 /* Pods_LPFeatures_Sources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LPFeatures_Sources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D647E832B0D526E395A3F79C /* Pods-Rondo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A81D2379217BE70C006DFAC5 /* Frameworks */ = {
+		074C65C623A399D200EC586B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38962800FAF7EBCA23281AD4 /* Pods_Rondo_iOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A81D2391217BE70F006DFAC5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				076A1B97D98D2A014EAD9592 /* Pods_Rondo_iOSTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A8BBDE7621ED2DB900A24E72 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				8C0B0D93D1B61FAC21A6FC4C /* Pods_Rondo_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0659116C3945ED606A8EEADC /* Frameworks */ = {
+		07022BC22425405C00EAF3D3 /* Debug */ = {
 			isa = PBXGroup;
 			children = (
-				A883168D21F3276A00FAA926 /* Realm.framework */,
-				40EB60B072509CA9186DE640 /* Pods_Rondo_iOS.framework */,
-				43B2FED934BBD1490DFA4011 /* Pods_Rondo_iOSTests.framework */,
+				07022BC32425407300EAF3D3 /* DebugViewController.swift */,
 			);
-			name = Frameworks;
+			path = Debug;
 			sourceTree = "<group>";
 		};
-		0AAAE905BB1BEDE8A62A364E /* Pods */ = {
+		074C65C023A399D200EC586B = {
 			isa = PBXGroup;
 			children = (
-				CDBDE9BDB90BFFB0DE41A4A8 /* Pods-Rondo-iOS.debug.xcconfig */,
-				3A9928E675741FDB447B060A /* Pods-Rondo-iOS.release.xcconfig */,
-				15F973582855629A676E97E6 /* Pods-Rondo-iOSTests.debug.xcconfig */,
-				C00C8E1D6C4FDF56EF95E4DF /* Pods-Rondo-iOSTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		A81D2373217BE70C006DFAC5 = {
-			isa = PBXGroup;
-			children = (
-				A81D237E217BE70C006DFAC5 /* Rondo-iOS */,
-				A8B38EBD21E022D1003FC10A /* Podfile */,
-				A81D2397217BE70F006DFAC5 /* Rondo-iOSTests */,
-				A8BBDE7A21ED2DB900A24E72 /* Rondo-RichPush */,
-				A81D237D217BE70C006DFAC5 /* Products */,
-				0AAAE905BB1BEDE8A62A364E /* Pods */,
-				0659116C3945ED606A8EEADC /* Frameworks */,
+				074C65CB23A399D200EC586B /* Rondo */,
+				074C65CA23A399D200EC586B /* Products */,
+				DC160EBF7ABA375EC345F8F6 /* Pods */,
+				E28FCFA7B56C134F2F17DD7B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		A81D237D217BE70C006DFAC5 /* Products */ = {
+		074C65CA23A399D200EC586B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A81D237C217BE70C006DFAC5 /* Rondo-iOS.app */,
-				A81D2394217BE70F006DFAC5 /* Rondo-iOSTests.xctest */,
-				A8BBDE7921ED2DB900A24E72 /* Rondo-RichPush.appex */,
+				074C65C923A399D200EC586B /* Rondo-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A81D237E217BE70C006DFAC5 /* Rondo-iOS */ = {
+		074C65CB23A399D200EC586B /* Rondo */ = {
 			isa = PBXGroup;
 			children = (
-				A81D23A6217C0D80006DFAC5 /* Rondo-iOS.entitlements */,
-				A889993D21D6AC4000AA1F72 /* Models */,
-				A81D237F217BE70C006DFAC5 /* AppDelegate.h */,
-				A81D2380217BE70C006DFAC5 /* AppDelegate.m */,
-				A84E662F21D696D30063EC78 /* RondoTabBarViewController.h */,
-				A84E663021D696D30063EC78 /* RondoTabBarViewController.m */,
-				A81D2382217BE70C006DFAC5 /* SdkQaViewController.h */,
-				A81D2383217BE70C006DFAC5 /* SdkQaViewController.m */,
-				A81D23A7217C1227006DFAC5 /* TriggersViewController.h */,
-				A81D23A8217C1227006DFAC5 /* TriggersViewController.m */,
-				A81D23AA217C1230006DFAC5 /* VariablesViewController.h */,
-				A81D23AB217C1230006DFAC5 /* VariablesViewController.m */,
-				A81D23B0217C1746006DFAC5 /* AppInboxTableViewController.h */,
-				A81D23B1217C1746006DFAC5 /* AppInboxTableViewController.m */,
-				A8B0A3992182D70000E6C3A7 /* MessagesViewController.h */,
-				A8B0A39A2182D70000E6C3A7 /* MessagesViewController.m */,
-				A8B0A39C2182E29900E6C3A7 /* PushViewController.h */,
-				A8B0A39D2182E29900E6C3A7 /* PushViewController.m */,
-				A83D722E2202503E00569B95 /* RondoProductionMode.h */,
-				A83D722F2202503E00569B95 /* RondoProductionMode.m */,
-				A84E663221D69BD30063EC78 /* AppSetupViewController.h */,
-				A84E663321D69BD30063EC78 /* AppSetupViewController.m */,
-				B365FB0A2284CB93008E32A6 /* CopyLabel.h */,
-				B365FB0B2284CB93008E32A6 /* CopyLabel.m */,
-				A807310F21E924890099EA45 /* AppInboxTableViewCell.h */,
-				A807311021E924890099EA45 /* AppInboxTableViewCell.m */,
-				A807311121E924890099EA45 /* AppInboxTableViewCell.xib */,
-				A889994721D6AF2B00AA1F72 /* AdhocViewController.h */,
-				A889994821D6AF2B00AA1F72 /* AdhocViewController.m */,
-				A8A78D73228D28970083AEF1 /* DeeplinkViewController.h */,
-				A8A78D74228D28970083AEF1 /* DeeplinkViewController.m */,
-				A8A78D75228D28970083AEF1 /* DeeplinkViewController.xib */,
-				A8B38EBF21E025D6003FC10A /* LeanplumAppPickerTableViewController.h */,
-				A8B38EC021E025D6003FC10A /* LeanplumAppPickerTableViewController.m */,
-				A8B38EC221E025E5003FC10A /* LeanplumEnvPickerTableViewController.h */,
-				A8B38EC321E025E5003FC10A /* LeanplumEnvPickerTableViewController.m */,
-				A8B38EC521E036B6003FC10A /* LeanplumAppCreateViewController.h */,
-				A8B38EC621E036B6003FC10A /* LeanplumAppCreateViewController.m */,
-				A8B38EC721E036B6003FC10A /* LeanplumAppCreateViewController.xib */,
-				A8B6C3C021E42E6900676A58 /* LeanplumEnvCreateViewController.h */,
-				A8B6C3C121E42E6900676A58 /* LeanplumEnvCreateViewController.m */,
-				A8B6C3C221E42E6900676A58 /* LeanplumEnvCreateViewController.xib */,
-				A81D2385217BE70C006DFAC5 /* Main.storyboard */,
-				A81D2388217BE70F006DFAC5 /* Assets.xcassets */,
-				A81D238A217BE70F006DFAC5 /* LaunchScreen.storyboard */,
-				A81D238D217BE70F006DFAC5 /* Info.plist */,
-				A81D238E217BE70F006DFAC5 /* main.m */,
+				074C65EC23A3CB0500EC586B /* AppContext.swift */,
+				074C65CC23A399D200EC586B /* AppDelegate.swift */,
+				074C65CE23A399D200EC586B /* SceneDelegate.swift */,
+				074C65E723A3C80F00EC586B /* Data */,
+				074C65E123A39E4C00EC586B /* Resources */,
+				074C65E023A39E4400EC586B /* UI */,
 			);
-			path = "Rondo-iOS";
+			path = Rondo;
 			sourceTree = "<group>";
 		};
-		A81D2397217BE70F006DFAC5 /* Rondo-iOSTests */ = {
+		074C65E023A39E4400EC586B /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				A81D2398217BE70F006DFAC5 /* Rondo_iOSTests.m */,
-				A81D239A217BE70F006DFAC5 /* Info.plist */,
+				07869B6E243CBA38005E7E94 /* Apps */,
+				07022BC22425405C00EAF3D3 /* Debug */,
+				075A174D2422C8D3007C6B72 /* Cells */,
+				075A175B2422DB0B007C6B72 /* Messages */,
+				075A17542422D312007C6B72 /* Variables */,
+				075A174A2422AF8E007C6B72 /* Inbox */,
+				075A17462422A880007C6B72 /* Events */,
+				074C65E423A3C71500EC586B /* Home */,
+				074C65D223A399D200EC586B /* Main.storyboard */,
+				074C65E223A39EE000EC586B /* TabViewController.swift */,
 			);
-			path = "Rondo-iOSTests";
+			path = UI;
 			sourceTree = "<group>";
 		};
-		A889993D21D6AC4000AA1F72 /* Models */ = {
+		074C65E123A39E4C00EC586B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A889993E21D6AC5600AA1F72 /* RondoState.h */,
-				A889993F21D6AC5600AA1F72 /* RondoState.m */,
-				A889994121D6AC6100AA1F72 /* LeanplumApp.h */,
-				A889994221D6AC6100AA1F72 /* LeanplumApp.m */,
-				A8B38EB421E01893003FC10A /* LeanplumAppPersistence.h */,
-				A8B38EB521E01893003FC10A /* LeanplumAppPersistence.m */,
-				A889994421D6AC6C00AA1F72 /* LeanplumEnv.h */,
-				A889994521D6AC6C00AA1F72 /* LeanplumEnv.m */,
-				A8B38EB721E01B72003FC10A /* LeanplumEnvPersistence.h */,
-				A8B38EB821E01B72003FC10A /* LeanplumEnvPersistence.m */,
-				A8B38EBA21E01D1A003FC10A /* RondoPreferences.h */,
-				A8B38EBB21E01D1A003FC10A /* RondoPreferences.m */,
+				074C65D523A399D400EC586B /* Assets.xcassets */,
+				074C65D723A399D400EC586B /* LaunchScreen.storyboard */,
+				074C65DA23A399D400EC586B /* Info.plist */,
 			);
-			path = Models;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		A8BBDE7A21ED2DB900A24E72 /* Rondo-RichPush */ = {
+		074C65E423A3C71500EC586B /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				A8BBDE7B21ED2DB900A24E72 /* NotificationService.h */,
-				A8BBDE7C21ED2DB900A24E72 /* NotificationService.m */,
-				A8BBDE7E21ED2DB900A24E72 /* Info.plist */,
+				074C65E523A3C72F00EC586B /* HomeViewController.swift */,
 			);
-			path = "Rondo-RichPush";
+			path = Home;
+			sourceTree = "<group>";
+		};
+		074C65E723A3C80F00EC586B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				074C65E823A3C82A00EC586B /* LeanplumApp.swift */,
+				078D5880243CEC8000D088BD /* UserDefaultExtension.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		075A17462422A880007C6B72 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				075A17472422A89B007C6B72 /* EventsViewController.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		075A174A2422AF8E007C6B72 /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				075A174B2422AF99007C6B72 /* InboxViewController.swift */,
+			);
+			path = Inbox;
+			sourceTree = "<group>";
+		};
+		075A174D2422C8D3007C6B72 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				075A17572422D5ED007C6B72 /* ImageTableViewCell.swift */,
+				075A17582422D5ED007C6B72 /* ImageTableViewCell.xib */,
+				075A17502422C9EE007C6B72 /* MessageTableViewCell.swift */,
+				075A174E2422C8E4007C6B72 /* MessageTableViewCell.xib */,
+				075A175E2422E777007C6B72 /* KeyValueTableViewCell.swift */,
+				075A175F2422E777007C6B72 /* KeyValueTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		075A17542422D312007C6B72 /* Variables */ = {
+			isa = PBXGroup;
+			children = (
+				075A17552422D32B007C6B72 /* VariablesViewController.swift */,
+			);
+			path = Variables;
+			sourceTree = "<group>";
+		};
+		075A175B2422DB0B007C6B72 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				075A175C2422DB20007C6B72 /* MessagesViewController.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		07869B6E243CBA38005E7E94 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				07869B71243CBB83005E7E94 /* AppsViewController.swift */,
+				07869B6F243CBA4F005E7E94 /* AddAppViewController.swift */,
+				078D587E243CDACB00D088BD /* ScannerViewController.swift */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		DC160EBF7ABA375EC345F8F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0340FE885431577C10079969 /* Pods-LPFeatures.debug.xcconfig */,
+				4A5DC6724D7D0A582D7E5CF7 /* Pods-LPFeatures.release.xcconfig */,
+				3A30DB21F1C88ACDBA8FB48C /* Pods-LPFeatures Sources.debug.xcconfig */,
+				BD028D529A5A9E174D492CBE /* Pods-LPFeatures Sources.release.xcconfig */,
+				527645EA8B8AA65DB9CD3848 /* Pods-Rondo.debug.xcconfig */,
+				871B813E40B9D5721DE92AC4 /* Pods-Rondo.release.xcconfig */,
+				D647E832B0D526E395A3F79C /* Pods-Rondo-iOS.debug.xcconfig */,
+				88A45896E92697F830BDDD12 /* Pods-Rondo-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E28FCFA7B56C134F2F17DD7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5682E911E4DA8B24364D333 /* Pods_LPFeatures_Sources.framework */,
+				0DDAFBDF6F1A75C834118A65 /* Pods_Rondo_iOS.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A81D237B217BE70C006DFAC5 /* Rondo-iOS */ = {
+		074C65C823A399D200EC586B /* Rondo-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A81D239D217BE70F006DFAC5 /* Build configuration list for PBXNativeTarget "Rondo-iOS" */;
+			buildConfigurationList = 074C65DD23A399D400EC586B /* Build configuration list for PBXNativeTarget "Rondo-iOS" */;
 			buildPhases = (
-				434FE7C81EDCB1C99C55D66F /* [CP] Check Pods Manifest.lock */,
-				A81D2378217BE70C006DFAC5 /* Sources */,
-				A81D2379217BE70C006DFAC5 /* Frameworks */,
-				A81D237A217BE70C006DFAC5 /* Resources */,
-				DD2AE4A29E4F50C7D9A58AB9 /* [CP] Embed Pods Frameworks */,
-				A8BBDE8521ED2DB900A24E72 /* Embed App Extensions */,
-				A883169121F327C800FAA926 /* Embed Frameworks */,
-				A883169221F328D100FAA926 /* Strip Realm signing */,
+				60787AA64799D9E7F63A220F /* [CP] Check Pods Manifest.lock */,
+				074C65C523A399D200EC586B /* Sources */,
+				074C65C623A399D200EC586B /* Frameworks */,
+				074C65C723A399D200EC586B /* Resources */,
+				C43E4AEB49019780D9456685 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A8BBDE8021ED2DB900A24E72 /* PBXTargetDependency */,
 			);
 			name = "Rondo-iOS";
-			productName = "Rondo-iOS";
-			productReference = A81D237C217BE70C006DFAC5 /* Rondo-iOS.app */;
+			productName = LPFeatures;
+			productReference = 074C65C923A399D200EC586B /* Rondo-iOS.app */;
 			productType = "com.apple.product-type.application";
-		};
-		A81D2393217BE70F006DFAC5 /* Rondo-iOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A81D23A0217BE70F006DFAC5 /* Build configuration list for PBXNativeTarget "Rondo-iOSTests" */;
-			buildPhases = (
-				55CD5395518DDD54D288DB71 /* [CP] Check Pods Manifest.lock */,
-				A81D2390217BE70F006DFAC5 /* Sources */,
-				A81D2391217BE70F006DFAC5 /* Frameworks */,
-				A81D2392217BE70F006DFAC5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A81D2396217BE70F006DFAC5 /* PBXTargetDependency */,
-			);
-			name = "Rondo-iOSTests";
-			productName = "Rondo-iOSTests";
-			productReference = A81D2394217BE70F006DFAC5 /* Rondo-iOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		A8BBDE7821ED2DB900A24E72 /* Rondo-RichPush */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A8BBDE8421ED2DB900A24E72 /* Build configuration list for PBXNativeTarget "Rondo-RichPush" */;
-			buildPhases = (
-				A8BBDE7521ED2DB900A24E72 /* Sources */,
-				A8BBDE7621ED2DB900A24E72 /* Frameworks */,
-				A8BBDE7721ED2DB900A24E72 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Rondo-RichPush";
-			productName = "Rondo-RichPush";
-			productReference = A8BBDE7921ED2DB900A24E72 /* Rondo-RichPush.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A81D2374217BE70C006DFAC5 /* Project object */ = {
+		074C65C123A399D200EC586B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1000;
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = Leanplum;
 				TargetAttributes = {
-					A81D237B217BE70C006DFAC5 = {
-						CreatedOnToolsVersion = 10.0;
-						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.BackgroundModes = {
-								enabled = 1;
-							};
-							com.apple.Push = {
-								enabled = 1;
-							};
-							com.apple.SafariKeychain = {
-								enabled = 1;
-							};
-						};
-					};
-					A81D2393217BE70F006DFAC5 = {
-						CreatedOnToolsVersion = 10.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = A81D237B217BE70C006DFAC5;
-					};
-					A8BBDE7821ED2DB900A24E72 = {
-						CreatedOnToolsVersion = 10.1;
-						ProvisioningStyle = Automatic;
+					074C65C823A399D200EC586B = {
+						CreatedOnToolsVersion = 11.3;
 					};
 				};
 			};
-			buildConfigurationList = A81D2377217BE70C006DFAC5 /* Build configuration list for PBXProject "Rondo-iOS" */;
+			buildConfigurationList = 074C65C423A399D200EC586B /* Build configuration list for PBXProject "Rondo-iOS" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -435,61 +292,47 @@
 				en,
 				Base,
 			);
-			mainGroup = A81D2373217BE70C006DFAC5;
-			productRefGroup = A81D237D217BE70C006DFAC5 /* Products */;
+			mainGroup = 074C65C023A399D200EC586B;
+			productRefGroup = 074C65CA23A399D200EC586B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A81D237B217BE70C006DFAC5 /* Rondo-iOS */,
-				A81D2393217BE70F006DFAC5 /* Rondo-iOSTests */,
-				A8BBDE7821ED2DB900A24E72 /* Rondo-RichPush */,
+				074C65C823A399D200EC586B /* Rondo-iOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A81D237A217BE70C006DFAC5 /* Resources */ = {
+		074C65C723A399D200EC586B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8B6C3C421E42E6900676A58 /* LeanplumEnvCreateViewController.xib in Resources */,
-				A81D238C217BE70F006DFAC5 /* LaunchScreen.storyboard in Resources */,
-				A81D2389217BE70F006DFAC5 /* Assets.xcassets in Resources */,
-				A8B38EC921E036B6003FC10A /* LeanplumAppCreateViewController.xib in Resources */,
-				A807311321E924890099EA45 /* AppInboxTableViewCell.xib in Resources */,
-				A8B38EBE21E022D1003FC10A /* Podfile in Resources */,
-				A8A78D77228D28970083AEF1 /* DeeplinkViewController.xib in Resources */,
-				A81D2387217BE70C006DFAC5 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A81D2392217BE70F006DFAC5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A8BBDE7721ED2DB900A24E72 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				075A175A2422D5ED007C6B72 /* ImageTableViewCell.xib in Resources */,
+				075A174F2422C8E4007C6B72 /* MessageTableViewCell.xib in Resources */,
+				074C65D923A399D400EC586B /* LaunchScreen.storyboard in Resources */,
+				074C65D623A399D400EC586B /* Assets.xcassets in Resources */,
+				074C65D423A399D200EC586B /* Main.storyboard in Resources */,
+				075A17612422E777007C6B72 /* KeyValueTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		434FE7C81EDCB1C99C55D66F /* [CP] Check Pods Manifest.lock */ = {
+		60787AA64799D9E7F63A220F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Rondo-iOS-checkManifestLockResult.txt",
 			);
@@ -498,39 +341,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		55CD5395518DDD54D288DB71 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Rondo-iOSTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A883169221F328D100FAA926 /* Strip Realm signing */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Strip Realm signing";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"\n";
-		};
-		DD2AE4A29E4F50C7D9A58AB9 /* [CP] Embed Pods Frameworks */ = {
+		C43E4AEB49019780D9456685 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -550,82 +361,46 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A81D2378217BE70C006DFAC5 /* Sources */ = {
+		074C65C523A399D200EC586B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A84E663421D69BD30063EC78 /* AppSetupViewController.m in Sources */,
-				B365FB0C2284CB93008E32A6 /* CopyLabel.m in Sources */,
-				A889994621D6AC6C00AA1F72 /* LeanplumEnv.m in Sources */,
-				A84E663121D696D30063EC78 /* RondoTabBarViewController.m in Sources */,
-				A81D2384217BE70C006DFAC5 /* SdkQaViewController.m in Sources */,
-				A81D23A9217C1227006DFAC5 /* TriggersViewController.m in Sources */,
-				A81D23AC217C1230006DFAC5 /* VariablesViewController.m in Sources */,
-				A83D72302202503E00569B95 /* RondoProductionMode.m in Sources */,
-				A81D238F217BE70F006DFAC5 /* main.m in Sources */,
-				A81D23B2217C1746006DFAC5 /* AppInboxTableViewController.m in Sources */,
-				A889994321D6AC6100AA1F72 /* LeanplumApp.m in Sources */,
-				A81D2381217BE70C006DFAC5 /* AppDelegate.m in Sources */,
-				A8B6C3C321E42E6900676A58 /* LeanplumEnvCreateViewController.m in Sources */,
-				A889994921D6AF2B00AA1F72 /* AdhocViewController.m in Sources */,
-				A807311221E924890099EA45 /* AppInboxTableViewCell.m in Sources */,
-				A8B38EC421E025E5003FC10A /* LeanplumEnvPickerTableViewController.m in Sources */,
-				A8B0A39E2182E29900E6C3A7 /* PushViewController.m in Sources */,
-				A8B0A39B2182D70000E6C3A7 /* MessagesViewController.m in Sources */,
-				A8B38EB621E01893003FC10A /* LeanplumAppPersistence.m in Sources */,
-				A889994021D6AC5600AA1F72 /* RondoState.m in Sources */,
-				A8B38EC121E025D6003FC10A /* LeanplumAppPickerTableViewController.m in Sources */,
-				A8B38EB921E01B72003FC10A /* LeanplumEnvPersistence.m in Sources */,
-				A8B38EC821E036B6003FC10A /* LeanplumAppCreateViewController.m in Sources */,
-				A8A78D76228D28970083AEF1 /* DeeplinkViewController.m in Sources */,
-				A8B38EBC21E01D1A003FC10A /* RondoPreferences.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A81D2390217BE70F006DFAC5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A81D2399217BE70F006DFAC5 /* Rondo_iOSTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A8BBDE7521ED2DB900A24E72 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A8BBDE7D21ED2DB900A24E72 /* NotificationService.m in Sources */,
+				074C65E623A3C72F00EC586B /* HomeViewController.swift in Sources */,
+				075A17562422D32B007C6B72 /* VariablesViewController.swift in Sources */,
+				07869B70243CBA4F005E7E94 /* AddAppViewController.swift in Sources */,
+				075A175D2422DB20007C6B72 /* MessagesViewController.swift in Sources */,
+				075A17482422A89B007C6B72 /* EventsViewController.swift in Sources */,
+				074C65E323A39EE000EC586B /* TabViewController.swift in Sources */,
+				078D587F243CDACB00D088BD /* ScannerViewController.swift in Sources */,
+				07869B72243CBB83005E7E94 /* AppsViewController.swift in Sources */,
+				075A17512422C9EE007C6B72 /* MessageTableViewCell.swift in Sources */,
+				075A174C2422AF99007C6B72 /* InboxViewController.swift in Sources */,
+				074C65ED23A3CB0500EC586B /* AppContext.swift in Sources */,
+				07022BC42425407300EAF3D3 /* DebugViewController.swift in Sources */,
+				074C65CD23A399D200EC586B /* AppDelegate.swift in Sources */,
+				075A17602422E777007C6B72 /* KeyValueTableViewCell.swift in Sources */,
+				078D5881243CEC8000D088BD /* UserDefaultExtension.swift in Sources */,
+				075A17592422D5ED007C6B72 /* ImageTableViewCell.swift in Sources */,
+				074C65CF23A399D200EC586B /* SceneDelegate.swift in Sources */,
+				074C65E923A3C82A00EC586B /* LeanplumApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		A81D2396217BE70F006DFAC5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A81D237B217BE70C006DFAC5 /* Rondo-iOS */;
-			targetProxy = A81D2395217BE70F006DFAC5 /* PBXContainerItemProxy */;
-		};
-		A8BBDE8021ED2DB900A24E72 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A8BBDE7821ED2DB900A24E72 /* Rondo-RichPush */;
-			targetProxy = A8BBDE7F21ED2DB900A24E72 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		A81D2385217BE70C006DFAC5 /* Main.storyboard */ = {
+		074C65D223A399D200EC586B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A81D2386217BE70C006DFAC5 /* Base */,
+				074C65D323A399D200EC586B /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		A81D238A217BE70F006DFAC5 /* LaunchScreen.storyboard */ = {
+		074C65D723A399D400EC586B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A81D238B217BE70F006DFAC5 /* Base */,
+				074C65D823A399D400EC586B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -633,7 +408,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		A81D239B217BE70F006DFAC5 /* Debug */ = {
+		074C65DB23A399D400EC586B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -665,9 +440,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 14;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -685,16 +458,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				VERSIONING_SYSTEM = "apple-generic";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		A81D239C217BE70F006DFAC5 /* Release */ = {
+		074C65DC23A399D400EC586B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -726,9 +500,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 14;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -740,155 +512,54 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
-		A81D239E217BE70F006DFAC5 /* Debug */ = {
+		074C65DE23A399D400EC586B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDBDE9BDB90BFFB0DE41A4A8 /* Pods-Rondo-iOS.debug.xcconfig */;
+			baseConfigurationReference = D647E832B0D526E395A3F79C /* Pods-Rondo-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Rondo-iOS/Rondo-iOS.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
-				ENABLE_BITCODE = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				INFOPLIST_FILE = "Rondo-iOS/Info.plist";
+				INFOPLIST_FILE = Rondo/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.265;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.leanplum.Rondo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.leanplum.Rondo-iOS";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		A81D239F217BE70F006DFAC5 /* Release */ = {
+		074C65DF23A399D400EC586B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A9928E675741FDB447B060A /* Pods-Rondo-iOS.release.xcconfig */;
+			baseConfigurationReference = 88A45896E92697F830BDDD12 /* Pods-Rondo-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Rondo-iOS/Rondo-iOS.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
-				ENABLE_BITCODE = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				INFOPLIST_FILE = "Rondo-iOS/Info.plist";
+				INFOPLIST_FILE = Rondo/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.265;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.leanplum.Rondo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.leanplum.Rondo-iOS";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		A81D23A1217BE70F006DFAC5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15F973582855629A676E97E6 /* Pods-Rondo-iOSTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4XLWYATZ5P;
-				INFOPLIST_FILE = "Rondo-iOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.leanplum.Rondo-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rondo-iOS.app/Rondo-iOS";
-			};
-			name = Debug;
-		};
-		A81D23A2217BE70F006DFAC5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C00C8E1D6C4FDF56EF95E4DF /* Pods-Rondo-iOSTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4XLWYATZ5P;
-				INFOPLIST_FILE = "Rondo-iOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.leanplum.Rondo-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rondo-iOS.app/Rondo-iOS";
-			};
-			name = Release;
-		};
-		A8BBDE8221ED2DB900A24E72 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_TEAM = 4XLWYATZ5P;
-				ENABLE_BITCODE = YES;
-				INFOPLIST_FILE = "Rondo-RichPush/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.262;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.leanplum.Rondo-iOS.RichPush";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.leanplum.Rondo-iOS.RichPush";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		A8BBDE8321ED2DB900A24E72 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_TEAM = 4XLWYATZ5P;
-				ENABLE_BITCODE = YES;
-				INFOPLIST_FILE = "Rondo-RichPush/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.262;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.leanplum.Rondo-iOS.RichPush";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.leanplum.Rondo-iOS.RichPush";
-				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -896,43 +567,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A81D2377217BE70C006DFAC5 /* Build configuration list for PBXProject "Rondo-iOS" */ = {
+		074C65C423A399D200EC586B /* Build configuration list for PBXProject "Rondo-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A81D239B217BE70F006DFAC5 /* Debug */,
-				A81D239C217BE70F006DFAC5 /* Release */,
+				074C65DB23A399D400EC586B /* Debug */,
+				074C65DC23A399D400EC586B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A81D239D217BE70F006DFAC5 /* Build configuration list for PBXNativeTarget "Rondo-iOS" */ = {
+		074C65DD23A399D400EC586B /* Build configuration list for PBXNativeTarget "Rondo-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A81D239E217BE70F006DFAC5 /* Debug */,
-				A81D239F217BE70F006DFAC5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A81D23A0217BE70F006DFAC5 /* Build configuration list for PBXNativeTarget "Rondo-iOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A81D23A1217BE70F006DFAC5 /* Debug */,
-				A81D23A2217BE70F006DFAC5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A8BBDE8421ED2DB900A24E72 /* Build configuration list for PBXNativeTarget "Rondo-RichPush" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A8BBDE8221ED2DB900A24E72 /* Debug */,
-				A8BBDE8321ED2DB900A24E72 /* Release */,
+				074C65DE23A399D400EC586B /* Debug */,
+				074C65DF23A399D400EC586B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A81D2374217BE70C006DFAC5 /* Project object */;
+	rootObject = 074C65C123A399D200EC586B /* Project object */;
 }
