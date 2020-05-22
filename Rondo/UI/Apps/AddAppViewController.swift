@@ -12,6 +12,7 @@ import Eureka
 class AddAppViewController: FormViewController {
 
     let context = UIApplication.shared.appDelegate.context
+    var appsViewController: AppsViewController?
 
     private enum Tags: String {
         case name
@@ -91,15 +92,21 @@ class AddAppViewController: FormViewController {
 
     @objc func done() {
         let errors = form.validate()
+        if errors.count == form.allSections.first?.allRows.count {
+            self.dismiss(animated: true) {
+                if let viewController = self.appsViewController {
+                    viewController.apps = self.context.apps
+                }
+            }
+        }
         if errors.count == 0 {
             let app = LeanplumApp(name: formValue(tag: .name),
                                   appId: formValue(tag: .appId),
                                   productionKey: formValue(tag: .production),
                                   developmentKey: formValue(tag: .development))
             context.apps.append(app)
-            
             self.dismiss(animated: true) {
-                if let viewController = self.presentingViewController as? AppsViewController {
+                if let viewController = self.appsViewController {
                     viewController.apps = self.context.apps
                 }
             }

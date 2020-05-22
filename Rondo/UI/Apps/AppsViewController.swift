@@ -51,7 +51,9 @@ class AppsViewController: FormViewController {
     }
 
     @objc func addApp() {
-        let viewController = UINavigationController(rootViewController: AddAppViewController())
+        let addAppViewController = AddAppViewController()
+        addAppViewController.appsViewController = self
+        let viewController = UINavigationController(rootViewController: addAppViewController)
         present(viewController, animated: true)
     }
 }

@@ -35,11 +35,11 @@ class InboxViewController: FormViewController {
 
         build()
 
-        Leanplum.inbox()?.onChanged {
+        Leanplum.inbox().onChanged {
             self.build()
         }
 
-        Leanplum.inbox()?.onForceContentUpdate{ success in
+        Leanplum.inbox().onForceContentUpdate{ success in
             self.build()
             self.refreshControl.endRefreshing()
         }

@@ -31,15 +31,15 @@ class AppContext {
         defer {
             if apps.isEmpty {
                 apps = [
-                    LeanplumApp(name: "LPFeatures",
+                    LeanplumApp(name: "Rondo QA Production",
                                 appId: "app_ve9UCNlqI8dy6Omzfu1rEh6hkWonNHVZJIWtLLt6aLs",
                                 productionKey: "prod_D5ECYBLrRrrOYaFZvAFFHTg1JyZ2Llixe5s077Lw3rM",
                                 developmentKey: "dev_cKF5HMpLGqhbovlEGMKjgTuf8AHfr2Jar6rrnNhtzQ0"),
-                    LeanplumApp(name: "LPFeatures Automation",
+                    LeanplumApp(name: "Rondo QA Automation",
                                 appId: "app_UQcFGVeXzOCVsovrlUebad9R67hFJqzDegfQPZRnVZM",
                                 productionKey: "prod_lL8RSFzmHy0iVYXQpzjUVEHDlaUz5idT0H7BVs6Bn1Q",
                                 developmentKey: "dev_b9qX0tcazL5PCQFuZ7pxsfT6XHA7xQkaFtYVrgt4Kq0"),
-                    LeanplumApp(name: "LPFeatures Musala",
+                    LeanplumApp(name: "Musala QA",
                                 appId: "app_UQcFGVeXzOCVsovrlUebad9R67hFJqzDegfQPZRnVZM",
                                 productionKey: "prod_lL8RSFzmHy0iVYXQpzjUVEHDlaUz5idT0H7BVs6Bn1Q",
                                 developmentKey: "dev_b9qX0tcazL5PCQFuZ7pxsfT6XHA7xQkaFtYVrgt4Kq0")
