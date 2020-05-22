@@ -11,7 +11,7 @@ import Eureka
 
 class AddAppViewController: FormViewController {
 
-    let context = UIApplication.shared.appDelegate.context
+    let context = UIApplication.shared.appDelegate.appContext
     var appsViewController: AppsViewController?
 
     private enum Tags: String {

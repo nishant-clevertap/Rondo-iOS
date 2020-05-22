@@ -11,7 +11,7 @@ import Eureka
 
 class AppsViewController: FormViewController {
 
-    let context = UIApplication.shared.appDelegate.context
+    let context = UIApplication.shared.appDelegate.appContext
     var apps: [LeanplumApp] = [] {
         didSet {
             if apps != oldValue {
@@ -26,7 +26,7 @@ class AppsViewController: FormViewController {
         title = "Choose an App"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(AppsViewController.addApp))
 
-        apps = UIApplication.shared.appDelegate.context.apps
+        apps = UIApplication.shared.appDelegate.appContext.apps
     }
 
     func build() {

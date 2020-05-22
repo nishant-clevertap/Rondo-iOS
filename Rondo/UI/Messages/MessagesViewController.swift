@@ -20,12 +20,28 @@ class MessagesViewController: FormViewController {
             cell.selectionStyle = .default
             row.onCellSelection { (cell, row) in
                 row.deselect(animated: true)
-                Leanplum.track(row.tag)
+                if row.tag == "systemPush" {
+                    self.requestSystemPushPermission()
+                } else {
+                    Leanplum.track(row.tag)
+                }
             }
         }
         
         addSegmentedControl()
-        buildPush()
+        buildIAM()
+    }
+
+    func requestSystemPushPermission() {
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+
+            if let error = error {
+                // Handle the error here.
+            }
+
+            // Enable or disable features based on the authorization.
+        }
     }
 
     func addSegmentedControl() {
@@ -54,6 +70,27 @@ class MessagesViewController: FormViewController {
 
     func buildPush() {
         form.removeAll()
+
+        buildPushPermissions()
+        buildPushTriggers()
+    }
+    func buildPushPermissions() {
+        let section = Section("Push Permissions")
+
+        section <<< LabelRow {
+            $0.title = "Push Permissions Through Leanplum"
+            $0.tag = "registerPush"
+        }
+
+        section <<< LabelRow {
+            $0.title = "System Push Permission"
+            $0.tag = "systemPush"
+        }
+
+        form +++ section
+    }
+
+    func buildPushTriggers() {
         let section = Section("Push Notifications")
 
         section <<< LabelRow {

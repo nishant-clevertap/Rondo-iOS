@@ -32,6 +32,8 @@
 		078D587F243CDACB00D088BD /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078D587E243CDACB00D088BD /* ScannerViewController.swift */; };
 		078D5881243CEC8000D088BD /* UserDefaultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078D5880243CEC8000D088BD /* UserDefaultExtension.swift */; };
 		8C0B0D93D1B61FAC21A6FC4C /* Pods_Rondo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDAFBDF6F1A75C834118A65 /* Pods_Rondo_iOS.framework */; };
+		A82BBF5F24783AB300B99FA0 /* LeanplumEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82BBF5E24783AB300B99FA0 /* LeanplumEnv.swift */; };
+		A82BBF6124783B9300B99FA0 /* EnvContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82BBF6024783B9300B99FA0 /* EnvContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +71,8 @@
 		871B813E40B9D5721DE92AC4 /* Pods-Rondo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo.release.xcconfig"; path = "Target Support Files/Pods-Rondo/Pods-Rondo.release.xcconfig"; sourceTree = "<group>"; };
 		88A45896E92697F830BDDD12 /* Pods-Rondo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.release.xcconfig"; path = "Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A82BBF5D24782B4F00B99FA0 /* Rondo-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Rondo-iOS.entitlements"; sourceTree = "<group>"; };
+		A82BBF5E24783AB300B99FA0 /* LeanplumEnv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeanplumEnv.swift; sourceTree = "<group>"; };
+		A82BBF6024783B9300B99FA0 /* EnvContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvContext.swift; sourceTree = "<group>"; };
 		BD028D529A5A9E174D492CBE /* Pods-LPFeatures Sources.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPFeatures Sources.release.xcconfig"; path = "Target Support Files/Pods-LPFeatures Sources/Pods-LPFeatures Sources.release.xcconfig"; sourceTree = "<group>"; };
 		D5682E911E4DA8B24364D333 /* Pods_LPFeatures_Sources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LPFeatures_Sources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D647E832B0D526E395A3F79C /* Pods-Rondo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				074C65EC23A3CB0500EC586B /* AppContext.swift */,
+				A82BBF6024783B9300B99FA0 /* EnvContext.swift */,
 				074C65CC23A399D200EC586B /* AppDelegate.swift */,
 				074C65CE23A399D200EC586B /* SceneDelegate.swift */,
 				074C65E723A3C80F00EC586B /* Data */,
@@ -165,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				074C65E823A3C82A00EC586B /* LeanplumApp.swift */,
+				A82BBF5E24783AB300B99FA0 /* LeanplumEnv.swift */,
 				078D5880243CEC8000D088BD /* UserDefaultExtension.swift */,
 			);
 			path = Data;
@@ -380,10 +386,12 @@
 				074C65ED23A3CB0500EC586B /* AppContext.swift in Sources */,
 				07022BC42425407300EAF3D3 /* DebugViewController.swift in Sources */,
 				074C65CD23A399D200EC586B /* AppDelegate.swift in Sources */,
+				A82BBF6124783B9300B99FA0 /* EnvContext.swift in Sources */,
 				075A17602422E777007C6B72 /* KeyValueTableViewCell.swift in Sources */,
 				078D5881243CEC8000D088BD /* UserDefaultExtension.swift in Sources */,
 				075A17592422D5ED007C6B72 /* ImageTableViewCell.swift in Sources */,
 				074C65CF23A399D200EC586B /* SceneDelegate.swift in Sources */,
+				A82BBF5F24783AB300B99FA0 /* LeanplumEnv.swift in Sources */,
 				074C65E923A3C82A00EC586B /* LeanplumApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,8 +538,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Rondo-iOS.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
 				INFOPLIST_FILE = Rondo/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -540,7 +548,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.leanplum.Rondo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.leanplum.Rondo-iOS";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -552,8 +560,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Rondo-iOS.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
 				INFOPLIST_FILE = Rondo/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -562,7 +570,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.leanplum.Rondo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.leanplum.Rondo-iOS";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

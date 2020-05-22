@@ -10,7 +10,7 @@ import Foundation
 
 struct LeanplumApp: Equatable, Codable {
 
-    enum Environment: String, CaseIterable, Codable {
+    enum Mode: String, CaseIterable, Codable {
         case production
         case development
     }
@@ -20,7 +20,7 @@ struct LeanplumApp: Equatable, Codable {
     let productionKey: String
     let developmentKey: String
 
-    var environment: Environment = .development
+    var mode: Mode = .development
 }
 
 extension LeanplumApp: CustomStringConvertible {

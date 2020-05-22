@@ -20,12 +20,22 @@ class HomeViewController: FormViewController {
         }
     }
 
-    let context = UIApplication.shared.appDelegate.context
+    var env: LeanplumEnv? {
+        didSet {
+            if env != oldValue {
+                build()
+            }
+        }
+    }
+
+    let appContext = UIApplication.shared.appDelegate.appContext
+    let envContext = UIApplication.shared.appDelegate.envContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        app = context.app
+        app = appContext.app
+        env = envContext.env
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "bug"),
                                                             style: .plain,
@@ -35,7 +45,8 @@ class HomeViewController: FormViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        app = context.app
+        app = appContext.app
+        env = envContext.env
     }
 
     @objc func didTapDebugButton() {
@@ -52,7 +63,7 @@ class HomeViewController: FormViewController {
         buildAppInfo()
         buildSettingsInfo()
 
-        UIApplication.shared.appDelegate.context.start(with: app) { success in
+        UIApplication.shared.appDelegate.appContext.start(with: app) { success in
              self.buildUserInfo()
         }
     }
@@ -72,15 +83,27 @@ class HomeViewController: FormViewController {
             }
         }
 
-        section <<< ActionSheetRow<LeanplumApp.Environment> {
+        section <<< ButtonRow() {
             $0.title = "Environment"
-            $0.value = app?.environment
+            $0.cellStyle = .value1
+            $0.value = env?.apiHostName
+            $0.presentationMode = .show(controllerProvider: .callback(builder: { () -> UIViewController in
+                return AppsViewController()
+            }), onDismiss: nil)
+            $0.displayValueFor = {
+                return $0
+            }
+        }
+
+        section <<< ActionSheetRow<LeanplumApp.Mode> {
+            $0.title = "Mode"
+            $0.value = app?.mode
             $0.options = [.development, .production]
-            $0.selectorTitle = "Choose environment"
+            $0.selectorTitle = "Choose mode"
         }.onPresent { from, to in
             to.popoverPresentationController?.permittedArrowDirections = .up
         }.onChange { row in
-            self.app?.environment = row.value ?? .development
+            self.app?.mode = row.value ?? .development
             self.build()
         }.cellUpdate { (cell, row) in
             cell.accessoryType = .disclosureIndicator
