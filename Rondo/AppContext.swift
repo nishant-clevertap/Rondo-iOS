@@ -61,9 +61,9 @@ class AppContext {
 
         switch app.mode {
         case .development:
-            Leanplum.setAppId(app.appId, withProductionKey: app.productionKey)
-        case .production:
             Leanplum.setAppId(app.appId, withDevelopmentKey: app.developmentKey)
+        case .production:
+            Leanplum.setAppId(app.appId, withProductionKey: app.productionKey)
         }
         
         Leanplum.onStartResponse { (success) in
