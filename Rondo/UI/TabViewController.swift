@@ -48,15 +48,15 @@ class TabViewController: UITabBarController {
 
         switch tab {
         case .home:
-            vc = HomeViewController()
+            vc = HomeViewController(style: .insetGrouped)
         case .messages:
-            vc = MessagesViewController()
+            vc = MessagesViewController(style: .insetGrouped)
         case .variables:
-            vc = VariablesViewController()
+            vc = VariablesViewController(style: .insetGrouped)
         case .inbox:
-            vc = InboxViewController()
+            vc = InboxViewController(style: .insetGrouped)
         case .events:
-            vc = EventsViewController()
+            vc = EventsViewController(style: .insetGrouped)
         }
 
         vc.title = tab.name

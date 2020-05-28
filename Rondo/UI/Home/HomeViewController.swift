@@ -11,6 +11,7 @@ import Eureka
 import Leanplum
 
 class HomeViewController: FormViewController {
+    let context = UIApplication.shared.appDelegate.context
 
     var app: LeanplumApp? {
         didSet {
@@ -19,23 +20,19 @@ class HomeViewController: FormViewController {
             }
         }
     }
-
     var env: LeanplumEnv? {
         didSet {
             if env != oldValue {
-                build()
+                form.rowBy(tag: "env")?.reload()
             }
         }
     }
 
-    let appContext = UIApplication.shared.appDelegate.appContext
-    let envContext = UIApplication.shared.appDelegate.envContext
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        app = appContext.app
-        env = envContext.env
+        env = context.env
+        app = context.app
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "bug"),
                                                             style: .plain,
@@ -45,8 +42,8 @@ class HomeViewController: FormViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        app = appContext.app
-        env = envContext.env
+        env = context.env
+        app = context.app
     }
 
     @objc func didTapDebugButton() {
@@ -63,8 +60,13 @@ class HomeViewController: FormViewController {
         buildAppInfo()
         buildSettingsInfo()
 
-        UIApplication.shared.appDelegate.appContext.start(with: app) { success in
-             self.buildUserInfo()
+        do {
+            try UIApplication.shared.appDelegate.context.start(with: app, environment: env) { success in
+                self.buildUserInfo()
+                self.form.allSections.forEach { $0.reload() }
+            }
+        } catch {
+            // add alert
         }
     }
 
@@ -73,10 +75,11 @@ class HomeViewController: FormViewController {
 
         section <<< ButtonRow() {
             $0.title = "App"
+            $0.tag = "app"
             $0.cellStyle = .value1
             $0.value = app?.name
             $0.presentationMode = .show(controllerProvider: .callback(builder: { () -> UIViewController in
-                return AppsViewController()
+                return AppsViewController(style: .insetGrouped)
             }), onDismiss: nil)
             $0.displayValueFor = {
                 return $0
@@ -85,15 +88,18 @@ class HomeViewController: FormViewController {
 
         section <<< ButtonRow() {
             $0.title = "Environment"
+            $0.tag = "env"
             $0.cellStyle = .value1
             $0.value = env?.apiHostName
             $0.presentationMode = .show(controllerProvider: .callback(builder: { () -> UIViewController in
-                return AppsViewController()
+                return EnvironmentsViewController(style: .insetGrouped)
             }), onDismiss: nil)
             $0.displayValueFor = {
                 return $0
             }
-        }
+        }.cellUpdate({ (cell, row) in
+            row.value = self.env?.apiHostName
+        })
 
         section <<< ActionSheetRow<LeanplumApp.Mode> {
             $0.title = "Mode"
@@ -162,6 +168,8 @@ class HomeViewController: FormViewController {
         section <<< LabelRow {
             $0.title = "Development mode"
             $0.value = LPConstantsState.shared()?.isDevelopmentModeEnabled.description
+        }.cellUpdate { (cell, row) in
+            row.value = LPConstantsState.shared()?.isDevelopmentModeEnabled.description
         }
 
         form +++ section

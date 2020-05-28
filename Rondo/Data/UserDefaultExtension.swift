@@ -81,6 +81,7 @@ extension UserDefaults {
             }
         }
     }
+
     var env: LeanplumEnv? {
         get {
             if let data = self[.env] as? Data {

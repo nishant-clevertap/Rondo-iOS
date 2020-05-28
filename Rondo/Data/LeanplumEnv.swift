@@ -9,7 +9,6 @@
 import Foundation
 
 struct LeanplumEnv: Equatable, Codable {
-
     let apiHostName: String
     let ssl: Bool
     let socketHostName: String

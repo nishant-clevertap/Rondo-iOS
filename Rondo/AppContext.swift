@@ -27,7 +27,24 @@ class AppContext {
         }
     }
 
+    var envs: [LeanplumEnv] = UserDefaults.standard.envs {
+        didSet {
+            if envs != oldValue {
+                UserDefaults.standard.envs = envs
+            }
+        }
+    }
+
+    var env: LeanplumEnv? = UserDefaults.standard.env {
+        didSet {
+            if env != oldValue {
+                UserDefaults.standard.env = env
+            }
+        }
+    }
+
     init() {
+        // defer to force didSet
         defer {
             if apps.isEmpty {
                 apps = [
@@ -49,15 +66,40 @@ class AppContext {
             if app == nil {
                 app = apps.first
             }
+
+            if envs.isEmpty {
+                envs = [
+                    LeanplumEnv(
+                        apiHostName: "api.leanplum.com",
+                        ssl: true,
+                        socketHostName: "dev.leanplum.com",
+                        socketPort: 443),
+                    LeanplumEnv(
+                        apiHostName: "leanplum-qa-1372.appspot.com",
+                        ssl: true,
+                        socketHostName: "dev-qa.leanplum.com",
+                        socketPort: 80),
+                    LeanplumEnv(
+                        apiHostName: "leanplum-staging.appspot.com",
+                        ssl: true,
+                        socketHostName: "dev-staging.leanplum.com",
+                        socketPort: 80),
+                ]
+            }
+
+            if env == nil {
+                env = envs.first
+            }
         }
     }
 
-    func start(with app: LeanplumApp?, callback: ((Bool) -> Void)?) {
-        guard let app = app else {
+    func start(with app: LeanplumApp?, environment: LeanplumEnv?, callback: ((Bool) -> Void)?) throws {
+        guard let app = app, let env = env else {
             return
         }
 
         self.app = app
+        self.env = env
 
         switch app.mode {
         case .development:
@@ -69,6 +111,14 @@ class AppContext {
         Leanplum.onStartResponse { (success) in
             callback?(success)
         }
-        Leanplum.start()
+
+        Leanplum.setApiHostName(env.apiHostName, withServletName: "api", usingSsl: env.ssl)
+
+        LPConstantsState.shared()?.socketHost = env.socketHostName
+        LPConstantsState.shared()?.socketPort = Int32(env.socketPort)
+
+        try LPExceptionCatcher.catchException {
+            Leanplum.start()
+        }
     }
 }

@@ -11,7 +11,7 @@ import Eureka
 
 class AddAppViewController: FormViewController {
 
-    let context = UIApplication.shared.appDelegate.appContext
+    let context = UIApplication.shared.appDelegate.context
     var appsViewController: AppsViewController?
 
     private enum Tags: String {
@@ -105,11 +105,7 @@ class AddAppViewController: FormViewController {
                                   productionKey: formValue(tag: .production),
                                   developmentKey: formValue(tag: .development))
             context.apps.append(app)
-            self.dismiss(animated: true) {
-                if let viewController = self.appsViewController {
-                    viewController.apps = self.context.apps
-                }
-            }
+            self.dismiss(animated: true)
         }
     }
 
@@ -137,6 +133,15 @@ class AddAppViewController: FormViewController {
             } catch {
                 print(error.localizedDescription)
             }
+        }
+    }
+}
+
+extension AddAppViewController {
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        super.dismiss(animated: flag, completion: completion)
+        if let presentationController = navigationController?.presentationController {
+            presentationController.delegate?.presentationControllerDidDismiss?(presentationController)
         }
     }
 }

@@ -11,7 +11,7 @@ import Eureka
 
 class AppsViewController: FormViewController {
 
-    let context = UIApplication.shared.appDelegate.appContext
+    let context = UIApplication.shared.appDelegate.context
     var apps: [LeanplumApp] = [] {
         didSet {
             if apps != oldValue {
@@ -26,7 +26,7 @@ class AppsViewController: FormViewController {
         title = "Choose an App"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(AppsViewController.addApp))
 
-        apps = UIApplication.shared.appDelegate.appContext.apps
+        apps = UIApplication.shared.appDelegate.context.apps
     }
 
     func build() {
@@ -51,9 +51,15 @@ class AppsViewController: FormViewController {
     }
 
     @objc func addApp() {
-        let addAppViewController = AddAppViewController()
-        addAppViewController.appsViewController = self
-        let viewController = UINavigationController(rootViewController: addAppViewController)
+        let viewController = UINavigationController(rootViewController: AddAppViewController())
+        viewController.presentationController?.delegate = self
         present(viewController, animated: true)
+    }
+}
+
+extension AppsViewController: UIAdaptivePresentationControllerDelegate {
+
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        apps = UIApplication.shared.appDelegate.context.apps
     }
 }
