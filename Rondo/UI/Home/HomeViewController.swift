@@ -147,29 +147,29 @@ class HomeViewController: FormViewController {
 
         section <<< LabelRow {
             $0.title = "SDK version"
-            $0.value = LPConstantsState.shared()?.sdkVersion
+            $0.value = Leanplum.Constants.shared().sdkVersion
         }
         section <<< LabelRow {
             $0.title = "API host"
-            $0.value = LPConstantsState.shared()?.apiHostName
+            $0.value = Leanplum.Constants.shared().apiHostName
         }
         section <<< LabelRow {
             $0.title = "API SSL"
-            $0.value = LPConstantsState.shared()?.apiSSL.description
+            $0.value = Leanplum.Constants.shared().apiSSL.description
         }
         section <<< LabelRow {
             $0.title = "Socket host"
-            $0.value = LPConstantsState.shared()?.socketHost
+            $0.value = Leanplum.Constants.shared().socketHost
         }
         section <<< LabelRow {
             $0.title = "Socket port"
-            $0.value = LPConstantsState.shared()?.socketPort.description
+            $0.value = Leanplum.Constants.shared().socketPort.description
         }
         section <<< LabelRow {
             $0.title = "Development mode"
-            $0.value = LPConstantsState.shared()?.isDevelopmentModeEnabled.description
+            $0.value = Leanplum.Constants.shared().isDevelopmentModeEnabled.description
         }.cellUpdate { (cell, row) in
-            row.value = LPConstantsState.shared()?.isDevelopmentModeEnabled.description
+            row.value = Leanplum.Constants.shared().isDevelopmentModeEnabled.description
         }
 
         form +++ section

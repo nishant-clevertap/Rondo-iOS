@@ -35,7 +35,7 @@ class InboxViewController: FormViewController {
 
         build()
 
-        Leanplum.inbox().onChanged {
+        Leanplum.inbox().onInboxChanged {
             self.build()
         }
 
@@ -72,15 +72,14 @@ class InboxViewController: FormViewController {
     func build() {
         messagesSection.removeAll()
 
-        let messages = segmentedControl.selectedSegmentIndex == 0 ? Leanplum.inbox().allMessages() : Leanplum.inbox().unreadMessages()
+        let messages = segmentedControl.selectedSegmentIndex == 0 ? Leanplum.inbox().allMessages : Leanplum.inbox().unreadMessages as [LeanplumInbox.Message]
 
-        if let messages = messages as? [LPInboxMessage] {
-            for message in messages {
-                buildMessage(message: message)
-            }
+        for message in messages {
+            buildMessage(message: message)
         }
-    }
 
+    }
+    
     override func insertAnimation(forRows rows: [BaseRow]) -> UITableView.RowAnimation {
         return .none
     }
@@ -93,7 +92,7 @@ class InboxViewController: FormViewController {
         return .none
     }
 
-    func buildMessage(message: LPInboxMessage) {
+    func buildMessage(message: LeanplumInbox.Message) {
         messagesSection <<< MessageRow {
             $0.value = message
         }.onCellSelection { cell, row in

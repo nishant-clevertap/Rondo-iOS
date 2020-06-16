@@ -17,7 +17,7 @@ final class MessageRow: Row<MessageTableViewCell>, RowType {
     }
 }
 
-final class MessageTableViewCell: Cell<LPInboxMessage>, CellType {
+final class MessageTableViewCell: Cell<LeanplumInbox.Message>, CellType {
 
     @IBOutlet weak var messageImageView: UIImageView!
     @IBOutlet weak var messageTitleLabel: UILabel!
@@ -45,9 +45,9 @@ final class MessageTableViewCell: Cell<LPInboxMessage>, CellType {
             return
         }
 
-        messageTitleLabel.text = message.title()
-        messageSubtitleLabel.text = message.subtitle()
-        if let image = fetchImage(url: message.imageURL()!) {
+        messageTitleLabel.text = message.title
+        messageSubtitleLabel.text = message.subtitle
+        if let image = fetchImage(url: message.imageURL!) {
             messageImageView.image = image
         }
     }

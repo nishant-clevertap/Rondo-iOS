@@ -12,10 +12,10 @@ import Leanplum
 
 class VariablesViewController: FormViewController {
 
-    let varString = LPVar.define("varString", with: "This is a local string.")
-    let varNumber = LPVar.define("varNumber", with: 0)
-    let varBool = LPVar.define("varBool", with: false)
-    let varFile = LPVar.define("varFile", withFile: nil)
+    let varString = Var(name: "varString", string: "This is a local string.")
+    let varNumber = Var(name: "varNumber", number: 0)
+    let varBool = Var(name: "varBool", boolean: false)
+    let varFile = Var(name: "varFile", file: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
