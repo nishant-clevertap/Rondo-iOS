@@ -72,7 +72,7 @@ class InboxViewController: FormViewController {
     func build() {
         messagesSection.removeAll()
 
-        let messages = segmentedControl.selectedSegmentIndex == 0 ? Leanplum.inbox()?.allMessages() : Leanplum.inbox()?.unreadMessages()
+        let messages = segmentedControl.selectedSegmentIndex == 0 ? Leanplum.inbox().allMessages() : Leanplum.inbox().unreadMessages()
 
         if let messages = messages as? [LPInboxMessage] {
             for message in messages {

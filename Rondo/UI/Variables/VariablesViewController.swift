@@ -34,26 +34,26 @@ class VariablesViewController: FormViewController {
 
         section <<< LabelRow {
             $0.title = "varString"
-            $0.value = varString?.stringValue
+            $0.value = varString.stringValue
         }
 
         section <<< LabelRow {
             $0.title = "varNumber"
-            $0.value = varNumber?.numberValue.stringValue
+            $0.value = varNumber.numberValue?.stringValue
         }
 
         section <<< LabelRow {
             $0.title = "varBool"
-            $0.value = varNumber?.boolValue().description
+            $0.value = varNumber.boolValue().description
         }
 
         section <<< LabelRow {
             $0.title = "varFile"
-            $0.value = varFile?.stringValue
+            $0.value = varFile.stringValue
         }
 
         section <<< ImageRow {
-            $0.value = varFile?.imageValue()
+            $0.value = varFile.imageValue()
         }
 
         form +++ section
