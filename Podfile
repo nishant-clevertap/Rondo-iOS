@@ -11,7 +11,7 @@ end
 def use_lp_release
   version = ENV['LEANPLUM_SDK_VERSION']
   if version == nil
-    version = "2.7.0"
+    version = "2.7.2"
   end
   pod 'Leanplum-iOS-SDK', version
   pod 'Leanplum-iOS-LocationAndBeacons', version
