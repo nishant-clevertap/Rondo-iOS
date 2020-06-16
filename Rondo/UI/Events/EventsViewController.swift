@@ -196,9 +196,9 @@ extension EventsViewController {
 
         section <<< LabelRow {
             $0.title = "SetUserAttribute"
-            $0.value = "{ age: \"5\" }"
+            $0.value = "{ age: \"(random)\" }"
         }.onCellSelection { row, cell in
-            Leanplum.setUserAttributes(["age": "5"])
+            Leanplum.setUserAttributes(["age": String(arc4random())])
         }
 
         form +++ section
