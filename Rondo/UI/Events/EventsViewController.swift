@@ -96,7 +96,7 @@ extension EventsViewController {
                 }
             }
 
-            Leanplum.track(event, withParameters: params)
+            Leanplum.track(event!, withParameters: params)
         }
 
         form +++ sendSection
@@ -184,14 +184,14 @@ extension EventsViewController {
             $0.title = "Track"
             $0.value = "testEvent"
         }.onCellSelection { row, cell in
-            Leanplum.track(cell.value)
+            Leanplum.track(cell.value!)
         }
 
         section <<< LabelRow {
             $0.title = "Advance"
             $0.value = "testState"
         }.onCellSelection { row, cell in
-            Leanplum.advance(to: cell.value)
+            Leanplum.advance(to: cell.value!)
         }
 
         section <<< LabelRow {
@@ -235,7 +235,7 @@ extension EventsViewController {
             $0.title = "Chained message"
             $0.value = "chainedInApp"
         }.onCellSelection { row, cell in
-            Leanplum.track(cell.value)
+            Leanplum.track(cell.value!)
         }
 
         form +++ section
@@ -248,7 +248,7 @@ extension EventsViewController {
             $0.title = "Track"
             $0.value = "DifferentPrioritySameTime"
         }.onCellSelection { row, cell in
-            Leanplum.track(cell.value)
+            Leanplum.track(cell.value!)
         }
 
         form +++ section

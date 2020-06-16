@@ -47,7 +47,7 @@ final class MessageTableViewCell: Cell<LPInboxMessage>, CellType {
 
         messageTitleLabel.text = message.title()
         messageSubtitleLabel.text = message.subtitle()
-        if let image = fetchImage(url: message.imageURL()) {
+        if let image = fetchImage(url: message.imageURL()!) {
             messageImageView.image = image
         }
     }
