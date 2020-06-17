@@ -26,5 +26,4 @@ deploy:
   provider: script
   script: bundle exec fastlane testflight
   on:
-    branch: master
     condition: '-n "$LEANPLUM_SDK_VERSION"'
