@@ -27,3 +27,4 @@ deploy:
   script: bundle exec fastlane testflight
   on:
     condition: '-n "$LEANPLUM_SDK_VERSION"'
+    all_branches: true
