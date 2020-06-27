@@ -23,7 +23,7 @@ class MessagesViewController: FormViewController {
                 if row.tag == "systemPush" {
                     self.requestSystemPushPermission()
                 } else {
-                    Leanplum.track(event: row.tag!)
+                    Leanplum.track(row.tag!)
                 }
             }
         }
