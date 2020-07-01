@@ -151,19 +151,19 @@ class HomeViewController: FormViewController {
         }
         section <<< LabelRow {
             $0.title = "API host"
-            $0.value = Leanplum.Constants.shared().apiHostName
+            $0.value = env?.apiHostName
         }
         section <<< LabelRow {
             $0.title = "API SSL"
-            $0.value = Leanplum.Constants.shared().apiSSL.description
+            $0.value = env?.ssl.description
         }
         section <<< LabelRow {
             $0.title = "Socket host"
-            $0.value = Leanplum.Constants.shared().socketHost
+            $0.value = env?.socketHostName
         }
         section <<< LabelRow {
             $0.title = "Socket port"
-            $0.value = Leanplum.Constants.shared().socketPort.description
+            $0.value = env?.socketPort.description
         }
         section <<< LabelRow {
             $0.title = "Development mode"

@@ -98,8 +98,12 @@ class AppContext {
             return
         }
 
-        self.app = app
         self.env = env
+        self.app = app
+
+        Leanplum.setApiHostName(env.apiHostName, servletName: "api", ssl: env.ssl)
+        Leanplum.Constants.shared().socketHost = env.socketHostName
+        Leanplum.Constants.shared().socketPort = Int32(env.socketPort)
 
         switch app.mode {
         case .development:
@@ -111,11 +115,6 @@ class AppContext {
         Leanplum.onStartResponse { (success) in
             callback?(success)
         }
-
-        Leanplum.setApiHostName(env.apiHostName, servletName: "api", ssl: env.ssl)
-
-        Leanplum.Constants.shared().socketHost = env.socketHostName
-        Leanplum.Constants.shared().socketPort = Int32(env.socketPort)
 
         try LPExceptionCatcher.catchException {
             Leanplum.start()

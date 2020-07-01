@@ -24,7 +24,7 @@ class EnvironmentsViewController: FormViewController {
         super.viewDidLoad()
 
         title = "Choose an env"
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(EnvironmentsViewController.addEnvironment))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(EnvironmentsViewController.addEnvironment))
 
         envs = UIApplication.shared.appDelegate.context.envs
     }
@@ -53,16 +53,16 @@ class EnvironmentsViewController: FormViewController {
     }
 
     @objc func addEnvironment() {
-//        let viewController = UINavigationController(rootViewController: AddAppViewController())
-//        viewController.presentationController?.delegate = self
-//        present(viewController, animated: true)
+        let viewController = UINavigationController(rootViewController: AddEnvironmentViewController())
+        viewController.presentationController?.delegate = self
+        present(viewController, animated: true)
     }
 }
 
 extension EnvironmentsViewController: UIAdaptivePresentationControllerDelegate {
 
     func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-//        apps = UIApplication.shared.appDelegate.context.apps
+        envs = UIApplication.shared.appDelegate.context.envs
     }
 }
 

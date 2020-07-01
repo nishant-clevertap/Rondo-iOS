@@ -35,6 +35,7 @@
 		078D5881243CEC8000D088BD /* UserDefaultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078D5880243CEC8000D088BD /* UserDefaultExtension.swift */; };
 		8C0B0D93D1B61FAC21A6FC4C /* Pods_Rondo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDAFBDF6F1A75C834118A65 /* Pods_Rondo_iOS.framework */; };
 		A82BBF5F24783AB300B99FA0 /* LeanplumEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82BBF5E24783AB300B99FA0 /* LeanplumEnv.swift */; };
+		A8B533E424AC192F009F53F3 /* AddEnvironmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B533E324AC192F009F53F3 /* AddEnvironmentViewController.swift */; };
 		A8C78A5D24992B46004729A1 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C78A5C24992B46004729A1 /* NotificationService.swift */; };
 		A8C78A6124992B46004729A1 /* RichPush.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A8C78A5A24992B46004729A1 /* RichPush.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -103,6 +104,7 @@
 		88A45896E92697F830BDDD12 /* Pods-Rondo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.release.xcconfig"; path = "Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A82BBF5D24782B4F00B99FA0 /* Rondo-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Rondo-iOS.entitlements"; sourceTree = "<group>"; };
 		A82BBF5E24783AB300B99FA0 /* LeanplumEnv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeanplumEnv.swift; sourceTree = "<group>"; };
+		A8B533E324AC192F009F53F3 /* AddEnvironmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEnvironmentViewController.swift; sourceTree = "<group>"; };
 		A8C78A5A24992B46004729A1 /* RichPush.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RichPush.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C78A5C24992B46004729A1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		A8C78A5E24992B46004729A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				0739F941248066DC00B12A6E /* EnvironmentsViewController.swift */,
+				A8B533E324AC192F009F53F3 /* AddEnvironmentViewController.swift */,
 			);
 			path = Environments;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				078D587F243CDACB00D088BD /* ScannerViewController.swift in Sources */,
 				07869B72243CBB83005E7E94 /* AppsViewController.swift in Sources */,
 				075A17512422C9EE007C6B72 /* MessageTableViewCell.swift in Sources */,
+				A8B533E424AC192F009F53F3 /* AddEnvironmentViewController.swift in Sources */,
 				075A174C2422AF99007C6B72 /* InboxViewController.swift in Sources */,
 				074C65ED23A3CB0500EC586B /* AppContext.swift in Sources */,
 				07022BC42425407300EAF3D3 /* DebugViewController.swift in Sources */,
