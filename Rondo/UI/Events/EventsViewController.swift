@@ -16,11 +16,14 @@ class EventsViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        LabelRow.defaultCellSetup = { row, cell in
-            row.selectionStyle = .default
+        LabelRow.defaultCellSetup = { cell, row in
+            cell.selectionStyle = .default
+            if row.tag == "stateParamsTitle" {
+                cell.selectionStyle = .none
+            }
         }
-        LabelRow.defaultCellUpdate = { row, cell in
-            cell.deselect(animated: true)
+        LabelRow.defaultCellUpdate = { cell, row in
+            row.deselect(animated: true)
         }
 
         addSegmentedControl()
@@ -110,13 +113,44 @@ extension EventsViewController {
             $0.placeholder = "enter state"
             $0.tag = "state"
         }
+        section <<< LabelRow {
+            $0.title = "Add params that will be sent as part of the Advance to state"
+            $0.tag = "stateParamsTitle"
+            $0.disabled = true
+            $0.cell.textLabel?.font = .systemFont(ofSize: 15)
+            $0.cell.textLabel?.numberOfLines = 0
+            $0.cell.textLabel?.textAlignment = .center
+        }
+        section <<< ButtonRow {
+            $0.title = "Add param"
+        }.onCellSelection { (cell, row) in
+            let kvrow = KeyValueRow {
+                $0.value = KeyValue()
+            }
+            try? section.insert(row: kvrow, after: section.allRows[section.allRows.count - 3])
+        }
         section <<< ButtonRow {
             $0.title = "Send state"
         }.onCellSelection { (cell, row) in
-            let accountRow: AccountRow? = section.rowBy(tag: "state")
-            if let value = accountRow?.value {
-                Leanplum.advance(state: value)
+            var state: String?
+            var params: [String: Any] = [:]
+            for row in section.allRows {
+                if let row = row as? AccountRow {
+                    state = row.value
+                }
+                if let row = row as? KeyValueRow {
+                    if let key = row.cell.keyTextField.text, let value = row.cell.valueTextField.text {
+                        params[key] = value
+                    }
+                }
             }
+            
+            if params.isEmpty {
+                Leanplum.advance(state: state)
+            } else {
+                Leanplum.advance(state: state, params: params)
+            }
+            
         }
         form +++ section
     }

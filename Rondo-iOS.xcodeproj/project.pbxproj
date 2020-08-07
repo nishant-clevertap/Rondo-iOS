@@ -38,6 +38,8 @@
 		A8B533E424AC192F009F53F3 /* AddEnvironmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B533E324AC192F009F53F3 /* AddEnvironmentViewController.swift */; };
 		A8C78A5D24992B46004729A1 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C78A5C24992B46004729A1 /* NotificationService.swift */; };
 		A8C78A6124992B46004729A1 /* RichPush.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A8C78A5A24992B46004729A1 /* RichPush.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C90B360424DD819C002B4889 /* Test1.png in Resources */ = {isa = PBXBuildFile; fileRef = C90B360324DD819C002B4889 /* Test1.png */; };
+		C90B360624DD82E5002B4889 /* Primary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C90B360524DD82E5002B4889 /* Primary@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		A8C78A5C24992B46004729A1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		A8C78A5E24992B46004729A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD028D529A5A9E174D492CBE /* Pods-LPFeatures Sources.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPFeatures Sources.release.xcconfig"; path = "Target Support Files/Pods-LPFeatures Sources/Pods-LPFeatures Sources.release.xcconfig"; sourceTree = "<group>"; };
+		C90B360324DD819C002B4889 /* Test1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Test1.png; sourceTree = "<group>"; };
+		C90B360524DD82E5002B4889 /* Primary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Primary@2x.png"; sourceTree = "<group>"; };
 		D5682E911E4DA8B24364D333 /* Pods_LPFeatures_Sources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LPFeatures_Sources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D647E832B0D526E395A3F79C /* Pods-Rondo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,6 +218,8 @@
 		074C65E123A39E4C00EC586B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C90B360524DD82E5002B4889 /* Primary@2x.png */,
+				C90B360324DD819C002B4889 /* Test1.png */,
 				0739F94424806C6C00B12A6E /* Rondo-iOS-Bridging-Header.h */,
 				074C65D523A399D400EC586B /* Assets.xcassets */,
 				074C65D723A399D400EC586B /* LaunchScreen.storyboard */,
@@ -418,6 +424,8 @@
 				074C65D623A399D400EC586B /* Assets.xcassets in Resources */,
 				074C65D423A399D200EC586B /* Main.storyboard in Resources */,
 				075A17612422E777007C6B72 /* KeyValueTableViewCell.xib in Resources */,
+				C90B360424DD819C002B4889 /* Test1.png in Resources */,
+				C90B360624DD82E5002B4889 /* Primary@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
