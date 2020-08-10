@@ -126,6 +126,11 @@ extension EventsViewController {
         }.onCellSelection { (cell, row) in
             let kvrow = KeyValueRow {
                 $0.value = KeyValue()
+                let deleteAction = SwipeAction(style: .destructive, title: "Delete") { (action, row, completionHandler) in
+                    completionHandler?(true)
+                }
+
+                $0.trailingSwipe.actions = [deleteAction]
             }
             try? section.insert(row: kvrow, after: section.allRows[section.allRows.count - 3])
         }

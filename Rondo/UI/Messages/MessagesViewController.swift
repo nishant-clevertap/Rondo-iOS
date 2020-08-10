@@ -51,8 +51,7 @@ class MessagesViewController: FormViewController {
         } else {
             UNUserNotificationCenter.current().delegate = nil
         }
-        UserDefaults.standard.set(on, forKey: "useUNUserNotificationCenterDelegate")
-        UserDefaults.standard.synchronize()
+        UserDefaults.standard.useUNUserNotificationCenterDelegate = on
     }
 
     func requestSystemPushPermission() {
