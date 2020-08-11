@@ -16,11 +16,11 @@ class EventsViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        LabelRow.defaultCellSetup = { row, cell in
-            row.selectionStyle = .default
+        LabelRow.defaultCellSetup = { cell, row in
+            cell.selectionStyle = .default
         }
-        LabelRow.defaultCellUpdate = { row, cell in
-            cell.deselect(animated: true)
+        LabelRow.defaultCellUpdate = { cell, row in
+            row.deselect(animated: true)
         }
 
         addSegmentedControl()
@@ -58,27 +58,28 @@ extension EventsViewController {
     }
 
     func buildTrack() {
-        let section = Section(header: "Track", footer: "Add params that will be sent as part of the track event")
+        let section = Section("Track")
 
         section <<< AccountRow {
             $0.title = "Event name"
             $0.placeholder = "enter name"
         }
-        section <<< KeyValueRow {
-            $0.value = KeyValue()
-        }
+
         section <<< ButtonRow {
             $0.title = "Add param"
         }.onCellSelection { (cell, row) in
             let kvrow = KeyValueRow {
                 $0.value = KeyValue()
-            }
-            try? section.insert(row: kvrow, after: section.allRows[section.allRows.count - 2])
-        }
-        form +++ section
+                let deleteAction = SwipeAction(style: .destructive, title: "Delete") { (action, row, completionHandler) in
+                    completionHandler?(true)
+                }
 
-        let sendSection = Section()
-        sendSection <<< ButtonRow {
+                $0.trailingSwipe.actions = [deleteAction]
+            }
+            try? section.insert(row: kvrow, after: section.allRows[section.allRows.count - 3])
+        }
+
+        section <<< ButtonRow {
             $0.title = "Send event"
         }.onCellSelection { (cell, row) in
 
@@ -96,10 +97,15 @@ extension EventsViewController {
                 }
             }
 
-            Leanplum.track(event!, params: params)
+            guard let _event = event else { return }
+            if params.isEmpty {
+                Leanplum.track(_event)
+            } else {
+                Leanplum.track(_event, params: params)
+            }
         }
 
-        form +++ sendSection
+        form +++ section
     }
 
     func buildAdvance() {
@@ -110,13 +116,43 @@ extension EventsViewController {
             $0.placeholder = "enter state"
             $0.tag = "state"
         }
+
+        section <<< ButtonRow {
+            $0.title = "Add param"
+        }.onCellSelection { (cell, row) in
+            let kvrow = KeyValueRow {
+                $0.value = KeyValue()
+                let deleteAction = SwipeAction(style: .destructive, title: "Delete") { (action, row, completionHandler) in
+                    completionHandler?(true)
+                }
+
+                $0.trailingSwipe.actions = [deleteAction]
+            }
+            try? section.insert(row: kvrow, after: section.allRows[section.allRows.count - 3])
+        }
         section <<< ButtonRow {
             $0.title = "Send state"
         }.onCellSelection { (cell, row) in
-            let accountRow: AccountRow? = section.rowBy(tag: "state")
-            if let value = accountRow?.value {
-                Leanplum.advance(state: value)
+            var state: String?
+            var params: [String: Any] = [:]
+            for row in section.allRows {
+                if let row = row as? AccountRow {
+                    state = row.value
+                }
+                if let row = row as? KeyValueRow {
+                    if let key = row.cell.keyTextField.text, let value = row.cell.valueTextField.text {
+                        params[key] = value
+                    }
+                }
             }
+            
+            guard let _state = state else { return }
+            if params.isEmpty {
+                Leanplum.advance(state: _state)
+            } else {
+                Leanplum.advance(state: _state, params: params)
+            }
+            
         }
         form +++ section
     }

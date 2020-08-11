@@ -95,6 +95,12 @@ class InboxViewController: FormViewController {
     func buildMessage(message: LeanplumInbox.Message) {
         messagesSection <<< MessageRow {
             $0.value = message
+            let deleteAction = SwipeAction(style: .destructive, title: "Delete") { (action, row, completionHandler) in
+                message.remove()
+                completionHandler?(true)
+            }
+
+            $0.trailingSwipe.actions = [deleteAction]
         }.onCellSelection { cell, row in
             message.read()
             row.deselect(animated: true)

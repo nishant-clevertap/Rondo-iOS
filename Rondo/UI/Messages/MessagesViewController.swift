@@ -28,8 +28,30 @@ class MessagesViewController: FormViewController {
             }
         }
         
+        SwitchRow.defaultCellSetup = { cell, row in
+            cell.selectionStyle = .none
+            row.onChange { [weak self] (row) in
+                guard let self = self, let value = row.value else { return }
+                self.setUNUserNotificationCenterDelegate(on: value)
+            }
+            row.onCellSelection { (cell, row) in
+                guard let value = row.value else { return }
+                row.value = !value
+                cell.update()
+            }
+        }
+        
         addSegmentedControl()
         buildIAM()
+    }
+    
+    private func setUNUserNotificationCenterDelegate(on: Bool) {
+        if on {
+            UNUserNotificationCenter.current().delegate = UIApplication.shared.appDelegate
+        } else {
+            UNUserNotificationCenter.current().delegate = nil
+        }
+        UserDefaults.standard.useUNUserNotificationCenterDelegate = on
     }
 
     func requestSystemPushPermission() {
@@ -72,6 +94,7 @@ class MessagesViewController: FormViewController {
         form.removeAll()
 
         buildPushPermissions()
+        buildSetPushDelegate()
         buildPushTriggers()
     }
     func buildPushPermissions() {
@@ -89,6 +112,18 @@ class MessagesViewController: FormViewController {
 
         form +++ section
     }
+    
+    func buildSetPushDelegate() {
+           let section = Section("Set push notification delegate")
+
+           section <<< SwitchRow {
+               $0.title = "UNUserNotificationCenterDelegate"
+               $0.tag = "setPushDelegate"
+               $0.value = UNUserNotificationCenter.current().delegate != nil
+           }
+
+           form +++ section
+       }
 
     func buildPushTriggers() {
         let section = Section("Push Notifications")
