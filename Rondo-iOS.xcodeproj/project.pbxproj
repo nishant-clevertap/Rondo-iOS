@@ -667,7 +667,6 @@
 			baseConfigurationReference = D647E832B0D526E395A3F79C /* Pods-Rondo-iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Rondo-iOS.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -693,7 +692,6 @@
 			baseConfigurationReference = 88A45896E92697F830BDDD12 /* Pods-Rondo-iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Rondo-iOS.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
