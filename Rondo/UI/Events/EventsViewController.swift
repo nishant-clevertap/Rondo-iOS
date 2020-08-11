@@ -18,9 +18,6 @@ class EventsViewController: FormViewController {
 
         LabelRow.defaultCellSetup = { cell, row in
             cell.selectionStyle = .default
-            if row.tag == "stateParamsTitle" {
-                cell.selectionStyle = .none
-            }
         }
         LabelRow.defaultCellUpdate = { cell, row in
             row.deselect(animated: true)
@@ -61,27 +58,28 @@ extension EventsViewController {
     }
 
     func buildTrack() {
-        let section = Section(header: "Track", footer: "Add params that will be sent as part of the track event")
+        let section = Section("Track")
 
         section <<< AccountRow {
             $0.title = "Event name"
             $0.placeholder = "enter name"
         }
-        section <<< KeyValueRow {
-            $0.value = KeyValue()
-        }
+
         section <<< ButtonRow {
             $0.title = "Add param"
         }.onCellSelection { (cell, row) in
             let kvrow = KeyValueRow {
                 $0.value = KeyValue()
-            }
-            try? section.insert(row: kvrow, after: section.allRows[section.allRows.count - 2])
-        }
-        form +++ section
+                let deleteAction = SwipeAction(style: .destructive, title: "Delete") { (action, row, completionHandler) in
+                    completionHandler?(true)
+                }
 
-        let sendSection = Section()
-        sendSection <<< ButtonRow {
+                $0.trailingSwipe.actions = [deleteAction]
+            }
+            try? section.insert(row: kvrow, after: section.allRows[section.allRows.count - 3])
+        }
+
+        section <<< ButtonRow {
             $0.title = "Send event"
         }.onCellSelection { (cell, row) in
 
@@ -99,10 +97,15 @@ extension EventsViewController {
                 }
             }
 
-            Leanplum.track(event!, params: params)
+            guard let _event = event else { return }
+            if params.isEmpty {
+                Leanplum.track(_event)
+            } else {
+                Leanplum.track(_event, params: params)
+            }
         }
 
-        form +++ sendSection
+        form +++ section
     }
 
     func buildAdvance() {
@@ -113,14 +116,7 @@ extension EventsViewController {
             $0.placeholder = "enter state"
             $0.tag = "state"
         }
-        section <<< LabelRow {
-            $0.title = "Add params that will be sent as part of the Advance to state"
-            $0.tag = "stateParamsTitle"
-            $0.disabled = true
-            $0.cell.textLabel?.font = .systemFont(ofSize: 15)
-            $0.cell.textLabel?.numberOfLines = 0
-            $0.cell.textLabel?.textAlignment = .center
-        }
+
         section <<< ButtonRow {
             $0.title = "Add param"
         }.onCellSelection { (cell, row) in
@@ -150,10 +146,11 @@ extension EventsViewController {
                 }
             }
             
+            guard let _state = state else { return }
             if params.isEmpty {
-                Leanplum.advance(state: state)
+                Leanplum.advance(state: _state)
             } else {
-                Leanplum.advance(state: state, params: params)
+                Leanplum.advance(state: _state, params: params)
             }
             
         }
