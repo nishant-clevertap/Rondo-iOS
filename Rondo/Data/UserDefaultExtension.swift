@@ -15,6 +15,7 @@ extension UserDefaults {
         case app
         case envs
         case env
+        case useUNUserNotificationCenterDelegate
     }
 
     static func observerNotificationNameFor(key: DefaultKey) -> Notification.Name {
@@ -94,6 +95,22 @@ extension UserDefaults {
             self[.env] = try? JSONEncoder().encode(newValue)
             if newValue != oldValue {
                 postObserverNotificationFor(key: .env)
+            }
+        }
+    }
+    
+    var useUNUserNotificationCenterDelegate: Bool {
+        get {
+            if let data = self[.useUNUserNotificationCenterDelegate] as? Data {
+                return (try? JSONDecoder().decode(Bool.self, from: data)) ?? false
+            }
+            return false
+        }
+        set {
+            let oldValue = useUNUserNotificationCenterDelegate
+            self[.useUNUserNotificationCenterDelegate] = try? JSONEncoder().encode(newValue)
+            if newValue != oldValue {
+                postObserverNotificationFor(key: .useUNUserNotificationCenterDelegate)
             }
         }
     }
