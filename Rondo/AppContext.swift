@@ -57,9 +57,9 @@ class AppContext {
                                 productionKey: "prod_lL8RSFzmHy0iVYXQpzjUVEHDlaUz5idT0H7BVs6Bn1Q",
                                 developmentKey: "dev_b9qX0tcazL5PCQFuZ7pxsfT6XHA7xQkaFtYVrgt4Kq0"),
                     LeanplumApp(name: "Musala QA",
-                                appId: "app_UQcFGVeXzOCVsovrlUebad9R67hFJqzDegfQPZRnVZM",
-                                productionKey: "prod_lL8RSFzmHy0iVYXQpzjUVEHDlaUz5idT0H7BVs6Bn1Q",
-                                developmentKey: "dev_b9qX0tcazL5PCQFuZ7pxsfT6XHA7xQkaFtYVrgt4Kq0")
+                                appId: "app_qA781mPlJYjzlZLDlTh68cdNDUOf31kcTg1TCbSXSS0",
+                                productionKey: "prod_kInQHXLJ0Dju7QJRocsD5DYMdYAVbdGGwhl6doTfH0k",
+                                developmentKey: "dev_WqNqX0qOOHyTEQtwKXs5ldhqErHfixvcSAMlYgyIL0U")
                 ]
             }
 

@@ -64,6 +64,15 @@ extension EventsViewController {
             $0.title = "Event name"
             $0.placeholder = "enter name"
         }
+        
+        section <<< KeyValueRow {
+            $0.value = KeyValue()
+            let deleteAction = SwipeAction(style: .destructive, title: "Delete") { (action, row, completionHandler) in
+                completionHandler?(true)
+            }
+
+            $0.trailingSwipe.actions = [deleteAction]
+        }
 
         section <<< ButtonRow {
             $0.title = "Add param"
@@ -115,6 +124,15 @@ extension EventsViewController {
             $0.title = "State"
             $0.placeholder = "enter state"
             $0.tag = "state"
+        }
+        
+        section <<< KeyValueRow {
+            $0.value = KeyValue()
+            let deleteAction = SwipeAction(style: .destructive, title: "Delete") { (action, row, completionHandler) in
+                completionHandler?(true)
+            }
+
+            $0.trailingSwipe.actions = [deleteAction]
         }
 
         section <<< ButtonRow {
