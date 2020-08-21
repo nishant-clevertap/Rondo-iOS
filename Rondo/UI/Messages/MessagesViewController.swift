@@ -60,9 +60,15 @@ class MessagesViewController: FormViewController {
 
             if let error = error {
                 // Handle the error here.
+                print("Error: \(error)")
             }
 
             // Enable or disable features based on the authorization.
+            if granted {
+                DispatchQueue.main.async {
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+            }
         }
     }
 

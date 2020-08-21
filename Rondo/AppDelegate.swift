@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         if UserDefaults.standard.useUNUserNotificationCenterDelegate {
             UNUserNotificationCenter.current().delegate = self
         }
+        application.applicationIconBadgeNumber = 0
         return true
     }
 
