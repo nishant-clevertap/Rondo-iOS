@@ -47,7 +47,7 @@ final class MessageTableViewCell: Cell<LeanplumInbox.Message>, CellType {
 
         messageTitleLabel.text = message.title
         messageSubtitleLabel.text = message.subtitle
-        if let image = fetchImage(url: message.imageURL!) {
+        if let url = message.imageURL, let image = fetchImage(url: url) {
             messageImageView.image = image
         }
     }
