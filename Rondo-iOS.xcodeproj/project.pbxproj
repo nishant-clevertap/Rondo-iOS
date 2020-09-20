@@ -33,6 +33,8 @@
 		07869B72243CBB83005E7E94 /* AppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07869B71243CBB83005E7E94 /* AppsViewController.swift */; };
 		078D587F243CDACB00D088BD /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078D587E243CDACB00D088BD /* ScannerViewController.swift */; };
 		078D5881243CEC8000D088BD /* UserDefaultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078D5880243CEC8000D088BD /* UserDefaultExtension.swift */; };
+		6A3752702514E49200BE87D3 /* AdsAskToAskMessageTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A37526F2514E49200BE87D3 /* AdsAskToAskMessageTemplate.swift */; };
+		6A9197D6250A553700B13E05 /* LPAdsAskToAskMessageTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A9197D4250A553700B13E05 /* LPAdsAskToAskMessageTemplate.m */; };
 		8C0B0D93D1B61FAC21A6FC4C /* Pods_Rondo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDAFBDF6F1A75C834118A65 /* Pods_Rondo_iOS.framework */; };
 		A82BBF5F24783AB300B99FA0 /* LeanplumEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82BBF5E24783AB300B99FA0 /* LeanplumEnv.swift */; };
 		A8B533E424AC192F009F53F3 /* AddEnvironmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B533E324AC192F009F53F3 /* AddEnvironmentViewController.swift */; };
@@ -102,6 +104,9 @@
 		3A30DB21F1C88ACDBA8FB48C /* Pods-LPFeatures Sources.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPFeatures Sources.debug.xcconfig"; path = "Target Support Files/Pods-LPFeatures Sources/Pods-LPFeatures Sources.debug.xcconfig"; sourceTree = "<group>"; };
 		4A5DC6724D7D0A582D7E5CF7 /* Pods-LPFeatures.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPFeatures.release.xcconfig"; path = "Target Support Files/Pods-LPFeatures/Pods-LPFeatures.release.xcconfig"; sourceTree = "<group>"; };
 		527645EA8B8AA65DB9CD3848 /* Pods-Rondo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo.debug.xcconfig"; path = "Target Support Files/Pods-Rondo/Pods-Rondo.debug.xcconfig"; sourceTree = "<group>"; };
+		6A37526F2514E49200BE87D3 /* AdsAskToAskMessageTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsAskToAskMessageTemplate.swift; sourceTree = "<group>"; };
+		6A9197D4250A553700B13E05 /* LPAdsAskToAskMessageTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPAdsAskToAskMessageTemplate.m; sourceTree = "<group>"; };
+		6A9197D5250A553700B13E05 /* LPAdsAskToAskMessageTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPAdsAskToAskMessageTemplate.h; sourceTree = "<group>"; };
 		871B813E40B9D5721DE92AC4 /* Pods-Rondo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo.release.xcconfig"; path = "Target Support Files/Pods-Rondo/Pods-Rondo.release.xcconfig"; sourceTree = "<group>"; };
 		88A45896E92697F830BDDD12 /* Pods-Rondo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.release.xcconfig"; path = "Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A82BBF5D24782B4F00B99FA0 /* Rondo-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Rondo-iOS.entitlements"; sourceTree = "<group>"; };
@@ -186,6 +191,7 @@
 		074C65CB23A399D200EC586B /* Rondo */ = {
 			isa = PBXGroup;
 			children = (
+				6A9197D3250A552300B13E05 /* MessageTemplates */,
 				074C65EC23A3CB0500EC586B /* AppContext.swift */,
 				074C65CC23A399D200EC586B /* AppDelegate.swift */,
 				074C65CE23A399D200EC586B /* SceneDelegate.swift */,
@@ -299,6 +305,16 @@
 				078D587E243CDACB00D088BD /* ScannerViewController.swift */,
 			);
 			path = Apps;
+			sourceTree = "<group>";
+		};
+		6A9197D3250A552300B13E05 /* MessageTemplates */ = {
+			isa = PBXGroup;
+			children = (
+				6A9197D5250A553700B13E05 /* LPAdsAskToAskMessageTemplate.h */,
+				6A9197D4250A553700B13E05 /* LPAdsAskToAskMessageTemplate.m */,
+				6A37526F2514E49200BE87D3 /* AdsAskToAskMessageTemplate.swift */,
+			);
+			path = MessageTemplates;
 			sourceTree = "<group>";
 		};
 		A8C78A5B24992B46004729A1 /* RichPush */ = {
@@ -487,6 +503,7 @@
 			files = (
 				074C65E623A3C72F00EC586B /* HomeViewController.swift in Sources */,
 				075A17562422D32B007C6B72 /* VariablesViewController.swift in Sources */,
+				6A3752702514E49200BE87D3 /* AdsAskToAskMessageTemplate.swift in Sources */,
 				07869B70243CBA4F005E7E94 /* AddAppViewController.swift in Sources */,
 				075A175D2422DB20007C6B72 /* MessagesViewController.swift in Sources */,
 				075A17482422A89B007C6B72 /* EventsViewController.swift in Sources */,
@@ -500,6 +517,7 @@
 				07022BC42425407300EAF3D3 /* DebugViewController.swift in Sources */,
 				074C65CD23A399D200EC586B /* AppDelegate.swift in Sources */,
 				0739F94724806C6D00B12A6E /* LPExceptionCatcher.m in Sources */,
+				6A9197D6250A553700B13E05 /* LPAdsAskToAskMessageTemplate.m in Sources */,
 				075A17602422E777007C6B72 /* KeyValueTableViewCell.swift in Sources */,
 				078D5881243CEC8000D088BD /* UserDefaultExtension.swift in Sources */,
 				075A17592422D5ED007C6B72 /* ImageTableViewCell.swift in Sources */,
@@ -670,8 +688,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Rondo-iOS.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
 				INFOPLIST_FILE = Rondo/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -680,7 +698,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.leanplum.Rondo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.leanplum.Rondo-iOS";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Rondo/Resources/Rondo-iOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -696,8 +714,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Rondo-iOS.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
 				INFOPLIST_FILE = Rondo/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -706,7 +724,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.leanplum.Rondo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.leanplum.Rondo-iOS";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Rondo/Resources/Rondo-iOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -716,8 +734,8 @@
 		A8C78A6324992B46004729A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
 				INFOPLIST_FILE = RichPush/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
@@ -728,7 +746,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.leanplum.Rondo-iOS.RichPush";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.leanplum.Rondo-iOS.RichPush";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -738,8 +756,8 @@
 		A8C78A6424992B46004729A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
 				INFOPLIST_FILE = RichPush/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
@@ -750,7 +768,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.leanplum.Rondo-iOS.RichPush";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.leanplum.Rondo-iOS.RichPush";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
