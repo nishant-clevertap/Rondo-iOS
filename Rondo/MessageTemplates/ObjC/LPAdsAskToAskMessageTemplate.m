@@ -62,6 +62,7 @@
             LPAdsAskToAskMessageTemplate *template = [[LPAdsAskToAskMessageTemplate alloc] init];
             template.context = context;
             if (@available(iOS 14, *)) {
+                // If desired, the App settings can be opened if the status is declined
                 if ([ATTrackingManager trackingAuthorizationStatus] == ATTrackingManagerAuthorizationStatusNotDetermined) {
                     [template showPrePermissionMessage];
                     return YES;

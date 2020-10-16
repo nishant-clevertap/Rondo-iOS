@@ -4,3 +4,4 @@
 #import <Leanplum/Leanplum.h>
 #import "LPExceptionCatcher.h"
 #import "LPAdsAskToAskMessageTemplate.h"
+#import "LPAdsTrackingActionTemplate.h"
