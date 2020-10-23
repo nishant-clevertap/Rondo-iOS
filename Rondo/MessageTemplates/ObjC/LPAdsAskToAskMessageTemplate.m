@@ -11,6 +11,7 @@
 
 #import "LPAdsAskToAskMessageTemplate.h"
 #import "LPMessageTemplateUtilities.h"
+#import "LPAdsTrackingManager.h"
 
 @implementation LPAdsAskToAskMessageTemplate
 
@@ -82,43 +83,10 @@
     viewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     viewController.context = context;
     viewController.shouldShowCancelButton = YES;
-    __strong __typeof__(self) strongSelf = self;
     viewController.acceptCompletionBlock = ^{
-        __typeof__(self) weakSelf = strongSelf;
-        [weakSelf showNativeAdsPrompt];
+        [LPAdsTrackingManager showNativeAdsPrompt];
     };
     return viewController;
-}
-
--(void)showNativeAdsPrompt
-{
-    if (@available(iOS 14, *)) {
-        [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
-            switch (status) {
-                case ATTrackingManagerAuthorizationStatusAuthorized: {
-                    NSString *idfa = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
-                    NSLog(@"Authorized. Advertising ID is: %@. Use setDeviceId to set idfa now.", idfa);
-                    [Leanplum setDeviceId:idfa];
-                    break;
-                }
-                case ATTrackingManagerAuthorizationStatusNotDetermined:
-                    NSLog(@"NotDetermined");
-                    break;
-                    
-                case ATTrackingManagerAuthorizationStatusRestricted:
-                    NSLog(@"Restricted");
-                    break;
-                    
-                case ATTrackingManagerAuthorizationStatusDenied:
-                    NSLog(@"Denied");
-                    break;
-                    
-                default:
-                    NSLog(@"Unknown");
-                    break;
-            }
-        }];
-    }
 }
 
 -(void)showPrePermissionMessage

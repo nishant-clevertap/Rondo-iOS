@@ -63,17 +63,18 @@ class HomeViewController: FormViewController {
         buildSettingsInfo()
         
         if #available(iOS 14, *) {
-            LPAdsAskToAskMessageTemplate.defineAction()
+            // Objective-C templates
+            // LPAdsAskToAskMessageTemplate.defineAction()
+            // LPAdsTrackingActionTemplate.defineAction()
             AdsAskToAskMessageTemplate.defineAction()
-            LPAdsTrackingActionTemplate.defineAction()
             AdsTrackingActionTemplate.defineAction()
             
             if ATTrackingManager.trackingAuthorizationStatus == .authorized {
                 // Uncomment to use IDFA
-                // Leanplum.setDeviceId(ASIdentifierManager.shared().advertisingIdentifier.uuidString)
+                // Leanplum.setDeviceId(AdsTrackingManager.advertisingIdentifierString)
             }
         } else {
-            // Leanplum.setDeviceId(ASIdentifierManager.shared().advertisingIdentifier.uuidString)
+            // Leanplum.setDeviceId(AdsTrackingManager.advertisingIdentifierString)
         }
         
         do {
