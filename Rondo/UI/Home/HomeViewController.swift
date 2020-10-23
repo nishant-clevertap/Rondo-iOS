@@ -9,6 +9,8 @@
 import UIKit
 import Eureka
 import Leanplum
+import AppTrackingTransparency
+import AdSupport
 
 class HomeViewController: FormViewController {
     let context = UIApplication.shared.appDelegate.context
@@ -59,7 +61,21 @@ class HomeViewController: FormViewController {
         buildApps()
         buildAppInfo()
         buildSettingsInfo()
-
+        
+        if #available(iOS 14, *) {
+            LPAdsAskToAskMessageTemplate.defineAction()
+            AdsAskToAskMessageTemplate.defineAction()
+            LPAdsTrackingActionTemplate.defineAction()
+            AdsTrackingActionTemplate.defineAction()
+            
+            if ATTrackingManager.trackingAuthorizationStatus == .authorized {
+                // Uncomment to use IDFA
+                // Leanplum.setDeviceId(ASIdentifierManager.shared().advertisingIdentifier.uuidString)
+            }
+        } else {
+            // Leanplum.setDeviceId(ASIdentifierManager.shared().advertisingIdentifier.uuidString)
+        }
+        
         do {
             try UIApplication.shared.appDelegate.context.start(with: app, environment: env) { success in
                 self.buildUserInfo()
