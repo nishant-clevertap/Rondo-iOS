@@ -750,7 +750,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.leanplum.Rondo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.leanplum.Rondo-iOS"
 				SWIFT_OBJC_BRIDGING_HEADER = "Rondo/Resources/Rondo-iOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -772,7 +772,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.leanplum.Rondo-iOS.RichPush";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.leanplum.Rondo-iOS"
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -794,7 +794,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.leanplum.Rondo-iOS.RichPush";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.leanplum.Rondo-iOS"
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
