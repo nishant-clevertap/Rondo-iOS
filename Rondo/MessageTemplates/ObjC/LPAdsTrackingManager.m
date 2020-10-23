@@ -8,7 +8,7 @@
 
 #import <AdSupport/AdSupport.h>
 #import <AppTrackingTransparency/AppTrackingTransparency.h>
-
+#import "Leanplum.h"
 #import "LPAdsTrackingManager.h"
 
 @implementation LPAdsTrackingManager

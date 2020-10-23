@@ -201,6 +201,10 @@ class MessagesViewController: FormViewController {
             $0.title = "Web Interstitial"
             $0.tag = "webInterstitial"
         }
+        section <<< LabelRow {
+            $0.title = "Ads Pre-Permission"
+            $0.tag = "adsAskToAsk"
+        }
 
         form +++ section
     }
@@ -219,6 +223,10 @@ class MessagesViewController: FormViewController {
         section <<< LabelRow {
             $0.title = "Register for Push"
             $0.tag = "registerPush"
+        }
+        section <<< LabelRow {
+            $0.title = "Register for Ads Tracking"
+            $0.tag = "registerAdsTracking"
         }
 
         form +++ section
