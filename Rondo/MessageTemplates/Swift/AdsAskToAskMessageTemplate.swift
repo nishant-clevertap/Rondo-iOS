@@ -19,7 +19,7 @@ class AdsAskToAskMessageTemplate: LPMessageTemplateProtocol {
     }
     
     static func defineAction() {
-        let name = "Ads Pre-Permission Swift"
+        let name = "Ads Pre-Permission"
         let defaultMessage = """
         If you would like to get ads tailored to your preferences,
         you can enable this app to provide personalized ads on this app
@@ -75,42 +75,11 @@ class AdsAskToAskMessageTemplate: LPMessageTemplateProtocol {
         viewController.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         viewController.context = context;
         viewController.shouldShowCancelButton = true;
-        let strongSelf = self;
         viewController.acceptCompletionBlock = {
-            let weakSelf = strongSelf
-            weakSelf.showNativeAdsPrompt()
+            AdsTrackingManager.showNativeAdsPrompt()
         }
         
         return viewController;
-    }
-    
-    func showNativeAdsPrompt() {
-        if #available(iOS 14, *) {
-            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
-                switch (status) {
-                case ATTrackingManager.AuthorizationStatus.authorized:
-                    let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
-                    NSLog("Authorized. Advertising ID is: %@. Use setDeviceId to set idfa now.", idfa);
-                    Leanplum.setDeviceId(idfa)
-                    break;
-                case ATTrackingManager.AuthorizationStatus.notDetermined:
-                    NSLog("NotDetermined");
-                    break;
-                    
-                case ATTrackingManager.AuthorizationStatus.restricted:
-                    NSLog("Restricted");
-                    break;
-                    
-                case ATTrackingManager.AuthorizationStatus.denied:
-                    NSLog("Denied");
-                    break;
-                    
-                default:
-                    NSLog("Unknown");
-                    break;
-                }
-            })
-        }
     }
     
     func showPrePermissionMessage() {
