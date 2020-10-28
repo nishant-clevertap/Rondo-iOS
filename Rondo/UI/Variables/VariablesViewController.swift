@@ -54,7 +54,18 @@ class VariablesViewController: FormViewController {
 
         section <<< ImageRow {
             $0.value = varFile.imageValue()
+        }.cellSetup { (cell, row) in
+            //  Change the cell's height
+            cell.height = { return CGFloat(200) }
         }
+        
+        section <<< ButtonRow {
+            $0.title = "Force Content Update"
+        }.onCellSelection({ (cell, row) in
+            Leanplum.forceContentUpdate({
+                self.build()
+            })
+        })
 
         form +++ section
     }
