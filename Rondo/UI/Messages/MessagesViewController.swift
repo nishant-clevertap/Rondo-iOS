@@ -28,19 +28,6 @@ class MessagesViewController: FormViewController {
             }
         }
         
-        SwitchRow.defaultCellSetup = { cell, row in
-            cell.selectionStyle = .none
-            row.onChange { [weak self] (row) in
-                guard let self = self, let value = row.value else { return }
-                self.setUNUserNotificationCenterDelegate(on: value)
-            }
-            row.onCellSelection { (cell, row) in
-                guard let value = row.value else { return }
-                row.value = !value
-                cell.update()
-            }
-        }
-        
         addSegmentedControl()
         buildIAM()
     }
@@ -92,9 +79,9 @@ class MessagesViewController: FormViewController {
     func buildIAM() {
         form.removeAll()
         buildTemplateMessages()
-        buildDeferIAMs()
         buildActions()
         buildRichMessages()
+        buildDeferIAMs()
     }
     
     func buildPush() {
@@ -128,6 +115,13 @@ class MessagesViewController: FormViewController {
             $0.title = "UNUserNotificationCenterDelegate"
             $0.tag = "setPushDelegate"
             $0.value = UNUserNotificationCenter.current().delegate != nil
+        }.onChange { [weak self] (row) in
+            guard let self = self, let value = row.value else { return }
+            self.setUNUserNotificationCenterDelegate(on: value)
+        }.onCellSelection { (cell, row) in
+            guard let value = row.value else { return }
+            row.value = !value
+            cell.update()
         }
         
         form +++ section
@@ -218,7 +212,7 @@ class MessagesViewController: FormViewController {
         section <<< SwitchRow {
             $0.title = "Defer IAM"
             $0.tag = "deferIAM"
-            $0.value = UserDefaults.standard.bool(forKey: "deferIAM")
+            $0.value = UserDefaults.standard.deferIAM?.enabled
         }.onChange { [weak self] (row) in
             guard let self = self, let value = row.value else { return }
             self.toggleDeferMessages(on: value)
@@ -227,11 +221,13 @@ class MessagesViewController: FormViewController {
         section <<< AccountRow {
             $0.title = "Action Names"
             $0.placeholder = "alert,confirm,html"
+            $0.value = UserDefaults.standard.deferIAM?.actionNames.joined(separator: ",")
         }
         
         section <<< AccountRow {
             $0.title = "View Controllers"
             $0.placeholder = "home,variables,inbox"
+            $0.value = UserDefaults.standard.deferIAM?.viewControllers.joined(separator: ",")
         }
         
         section <<< ButtonRow {
@@ -250,68 +246,22 @@ class MessagesViewController: FormViewController {
                     controllers.append(contentsOf: val.components(separatedBy: ","))
                 }
             }
-            self.deferMessages(names: names, forControllers: controllers)
+            
+            let df = LeanplumDeferIAM(enabled: true, actionNames: names, viewControllers: controllers)
+            UserDefaults.standard.deferIAM = df
         }
         
         form +++ section
     }
     
-    private func deferMessages(names: [String], forControllers: [String]) {
-        if names.count > 0 {
-            var actionNames:[String] = []
-            
-            names.forEach {
-                let lc = $0.lowercased()
-                switch lc {
-                case "alert": actionNames.append("Alert")
-                case "confirm": actionNames.append("Confirm")
-                case "push": actionNames.append("Push Ask to Ask")
-                case "popup": actionNames.append("Center Popup")
-                case "int": actionNames.append("Interstitial")
-                case "webint": actionNames.append("Web Interstitial")
-                case "html": actionNames.append("HTML")
-                default: ()
-                }
-            }
-            
-            Leanplum.deferMessagesWithActionNames(actionNames)
-        }
-        if forControllers.count > 0 {
-            var controllerTypes:[AnyClass] = []
-            
-            forControllers.forEach {
-                let className = "Rondo_iOS.\(capitalizeFirstLetter(word: $0))ViewController"
-                    if let aClass = NSClassFromString(className) as? UIViewController.Type {
-                        controllerTypes.append(aClass)
-                    }
-            }
-            
-            if controllerTypes.count > 0 {
-                Leanplum.deferMessagesForViewControllers(controllerTypes)
-                
-                let section = form.sectionBy(tag: "Defer IAM")
-                let row = section?.first(where: {$0 as? SwitchRow != nil}) as! SwitchRow
-                row.value = true
-                row.reload()
-            }
-        }
-    }
-    
-    private func capitalizeFirstLetter(word:String) -> String {
-        let first = String(word.prefix(1)).capitalized
-                let other = String(word.dropFirst())
-                return first + other
-    }
-    
     private func toggleDeferMessages(on: Bool) {
+        var df:LeanplumDeferIAM? = nil
         if on {
-            Leanplum.deferMessagesForViewControllers([HomeViewController.self])
+            df = LeanplumDeferIAM(enabled: true, actionNames: [], viewControllers: ["home"])
         } else {
-            Leanplum.deferMessagesWithActionNames([])
-            Leanplum.deferMessagesForViewControllers([])
+            df = LeanplumDeferIAM(enabled: false, actionNames: [], viewControllers: [])
         }
-        UserDefaults.standard.set(on, forKey: "deferIAM")
-        //UserDefaults.standard.useUNUserNotificationCenterDelegate = on
+        UserDefaults.standard.deferIAM = df
     }
     
     func buildActions() {
