@@ -16,6 +16,7 @@ extension UserDefaults {
         case envs
         case env
         case useUNUserNotificationCenterDelegate
+        case deferIAM
     }
 
     static func observerNotificationNameFor(key: DefaultKey) -> Notification.Name {
@@ -111,6 +112,22 @@ extension UserDefaults {
             self[.useUNUserNotificationCenterDelegate] = try? JSONEncoder().encode(newValue)
             if newValue != oldValue {
                 postObserverNotificationFor(key: .useUNUserNotificationCenterDelegate)
+            }
+        }
+    }
+    
+    var deferIAM: LeanplumDeferIAM? {
+        get {
+            if let data = self[.deferIAM] as? Data {
+                return try? JSONDecoder().decode(LeanplumDeferIAM.self, from: data)
+            }
+            return nil
+        }
+        set {
+            let oldValue = deferIAM
+            self[.deferIAM] = try? JSONEncoder().encode(newValue)
+            if newValue != oldValue {
+                postObserverNotificationFor(key: .deferIAM)
             }
         }
     }

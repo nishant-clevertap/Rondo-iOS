@@ -69,6 +69,8 @@ class HomeViewController: FormViewController {
             AdsAskToAskMessageTemplate.defineAction()
             AdsTrackingActionTemplate.defineAction()
             
+            LeanplumDeferIAM.setup()
+            
             if ATTrackingManager.trackingAuthorizationStatus == .authorized {
                 // Uncomment to use IDFA
                 // Leanplum.setDeviceId(AdsTrackingManager.advertisingIdentifierString)
