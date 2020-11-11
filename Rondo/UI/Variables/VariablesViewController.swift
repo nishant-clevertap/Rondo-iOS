@@ -11,7 +11,7 @@ import Eureka
 import Leanplum
 
 class VariablesViewController: FormViewController {
-    
+
     let varString = Var(name: "varString", string: "This is a local string.")
     let varNumber = Var(name: "varNumber", number: 0)
     let varBool = Var(name: "varBool", boolean: false)
@@ -138,8 +138,7 @@ class VariablesViewController: FormViewController {
     }
     
     func getImageFile(_ fileName: String) -> UIImage? {
-        let fl = LPFileManager.fileValue(fileName, withDefaultValue: fileName)
-        if let file = fl {
+        if let file = LPFileManager.fileValue(fileName, withDefaultValue: fileName) {
             let img = UIImage.init(contentsOfFile: file)
             return img
         }
