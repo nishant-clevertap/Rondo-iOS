@@ -1,3 +1,10 @@
+![Leanplum - ](Leanplum.svg)
+
+<p align="center">
+    <img src='https://img.shields.io/badge/branch-master-blue.svg'>
+    <img src='https://travis-ci.com/Leanplum/Rondo-iOS.svg?branch=master' alt="Build status">
+</p>
+
 # Rondo-iOS
 Internal QA test app for Leanplum
 ## Installation
