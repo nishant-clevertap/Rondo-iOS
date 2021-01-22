@@ -159,6 +159,14 @@ class MessagesViewController: FormViewController {
             $0.tag = "pushLocal"
         }
         section <<< LabelRow {
+            $0.title = "Local Push with Cancel"
+            $0.tag = "pushLocalCancel"
+        }
+        section <<< LabelRow {
+            $0.title = "Cancel Local Push with Cancel"
+            $0.tag = "Cancel"
+        }
+        section <<< LabelRow {
             $0.title = "Muted Push"
             $0.tag = "pushMuted"
         }
