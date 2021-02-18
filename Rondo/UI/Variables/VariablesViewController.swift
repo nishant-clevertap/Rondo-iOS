@@ -46,7 +46,7 @@ class VariablesViewController: FormViewController {
         
         section <<< LabelRow {
             $0.title = "varBool"
-            $0.value = varNumber.boolValue().description
+            $0.value = varBool.boolValue().description
         }
         
         section <<< LabelRow {
