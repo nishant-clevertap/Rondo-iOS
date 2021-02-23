@@ -55,6 +55,7 @@ extension EventsViewController {
         buildAdvance()
         buildUserId()
         buildUserAttributes()
+        buildForceContentUpdate()
     }
 
     func buildTrack() {
@@ -222,6 +223,20 @@ extension EventsViewController {
                 Leanplum.setUserAttributes(attributes)
             }
         }
+        form +++ section
+    }
+    
+    func buildForceContentUpdate() {
+        let section = Section("Force content update")
+        
+        section <<< ButtonRow {
+            $0.title = "Force Content Update"
+        }.onCellSelection({ (cell, row) in
+            Leanplum.forceContentUpdate({
+                
+            })
+        })
+        
         form +++ section
     }
 }
