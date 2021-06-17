@@ -75,7 +75,7 @@ class AppContext {
                         socketHostName: "dev.leanplum.com",
                         socketPort: 443),
                     LeanplumEnv(
-                        apiHostName: "api-qa.leanplum.com",
+                        apiHostName: "ingester.qa.leanplum.com",
                         ssl: true,
                         socketHostName: "dev-qa.leanplum.com",
                         socketPort: 443),
