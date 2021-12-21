@@ -100,22 +100,6 @@ extension UserDefaults {
         }
     }
     
-    var useUNUserNotificationCenterDelegate: Bool {
-        get {
-            if let data = self[.useUNUserNotificationCenterDelegate] as? Data {
-                return (try? JSONDecoder().decode(Bool.self, from: data)) ?? false
-            }
-            return false
-        }
-        set {
-            let oldValue = useUNUserNotificationCenterDelegate
-            self[.useUNUserNotificationCenterDelegate] = try? JSONEncoder().encode(newValue)
-            if newValue != oldValue {
-                postObserverNotificationFor(key: .useUNUserNotificationCenterDelegate)
-            }
-        }
-    }
-    
     var deferIAM: LeanplumDeferIAM? {
         get {
             if let data = self[.deferIAM] as? Data {

@@ -32,15 +32,6 @@ class MessagesViewController: FormViewController {
         buildIAM()
     }
     
-    private func setUNUserNotificationCenterDelegate(on: Bool) {
-        if on {
-            UNUserNotificationCenter.current().delegate = UIApplication.shared.appDelegate
-        } else {
-            UNUserNotificationCenter.current().delegate = nil
-        }
-        UserDefaults.standard.useUNUserNotificationCenterDelegate = on
-    }
-    
     func requestSystemPushPermission() {
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
@@ -88,7 +79,6 @@ class MessagesViewController: FormViewController {
         form.removeAll()
         
         buildPushPermissions()
-        buildSetPushDelegate()
         buildPushTriggers()
     }
     
@@ -103,25 +93,6 @@ class MessagesViewController: FormViewController {
         section <<< LabelRow {
             $0.title = "System Push Permission"
             $0.tag = "systemPush"
-        }
-        
-        form +++ section
-    }
-    
-    func buildSetPushDelegate() {
-        let section = Section("Set push notification delegate")
-        
-        section <<< SwitchRow {
-            $0.title = "UNUserNotificationCenterDelegate"
-            $0.tag = "setPushDelegate"
-            $0.value = UNUserNotificationCenter.current().delegate != nil
-        }.onChange { [weak self] (row) in
-            guard let self = self, let value = row.value else { return }
-            self.setUNUserNotificationCenterDelegate(on: value)
-        }.onCellSelection { (cell, row) in
-            guard let value = row.value else { return }
-            row.value = !value
-            cell.update()
         }
         
         form +++ section
