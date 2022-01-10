@@ -3,7 +3,7 @@
 //  RichPush
 //
 //  Created by Mayank Sanganeria on 6/16/20.
-//  Copyright © 2020 Leanplum. All rights reserved.
+//  Copyright © 2021 Leanplum. All rights reserved.
 //
 
 import UserNotifications
@@ -39,7 +39,7 @@ class NotificationService: UNNotificationServiceExtension {
                 let LPSession = URLSession(configuration: .default)
                 LPSession.downloadTask(with: mediaUrl!, completionHandler: { temporaryLocation, response, error in
                     if let err = error {
-                        print("Leanplum: Error with downloading rich push: \(String(describing: err.localizedDescription))")
+                        NSLog("[LEANPLUM] Error with downloading rich push: \(String(describing: err.localizedDescription))")
                         contentHandler(bestAttemptContent);
                         return;
                     }
@@ -61,7 +61,7 @@ class NotificationService: UNNotificationServiceExtension {
                             try FileManager.default.removeItem(at: temporaryDirectory)
                         }
                     } catch {
-                        print("Leanplum: Error with the rich push attachment: \(error)")
+                        NSLog("[LEANPLUM] Error with the rich push attachment: \(error)")
                         contentHandler(bestAttemptContent);
                         return;
                     }

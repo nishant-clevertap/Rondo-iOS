@@ -3,7 +3,7 @@
 //  LPFeatures
 //
 //  Created by Milos Jakovljevic on 13/12/2019.
-//  Copyright © 2019 Leanplum. All rights reserved.
+//  Copyright © 2021 Leanplum. All rights reserved.
 //
 
 import UIKit
@@ -79,13 +79,9 @@ class HomeViewController: FormViewController {
             // Leanplum.setDeviceId(AdsTrackingManager.advertisingIdentifierString)
         }
         
-        do {
-            try UIApplication.shared.appDelegate.context.start(with: app, environment: env) { success in
-                self.buildUserInfo()
-                self.form.allSections.forEach { $0.reload() }
-            }
-        } catch {
-            // add alert
+        Leanplum.onStartResponse { success in
+            self.buildUserInfo()
+            self.form.allSections.forEach { $0.reload() }
         }
     }
 
