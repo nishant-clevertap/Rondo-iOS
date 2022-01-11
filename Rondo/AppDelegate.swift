@@ -74,9 +74,3 @@ extension UIApplication {
         return AppDelegate()
     }
 }
-
-enum Log {
-    static func print(_ message: String) {
-        NSLog("[LEANPLUM] [Rondo-iOS] \(message)")
-    }
-}

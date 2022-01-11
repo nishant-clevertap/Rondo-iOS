@@ -39,7 +39,7 @@ class NotificationService: UNNotificationServiceExtension {
                 let LPSession = URLSession(configuration: .default)
                 LPSession.downloadTask(with: mediaUrl!, completionHandler: { temporaryLocation, response, error in
                     if let err = error {
-                        NSLog("[LEANPLUM] Error with downloading rich push: \(String(describing: err.localizedDescription))")
+                        Log.print("Error with downloading rich push: \(String(describing: err.localizedDescription))")
                         contentHandler(bestAttemptContent);
                         return;
                     }
@@ -61,7 +61,7 @@ class NotificationService: UNNotificationServiceExtension {
                             try FileManager.default.removeItem(at: temporaryDirectory)
                         }
                     } catch {
-                        NSLog("[LEANPLUM] Error with the rich push attachment: \(error)")
+                        Log.print("Error with the rich push attachment: \(error)")
                         contentHandler(bestAttemptContent);
                         return;
                     }
