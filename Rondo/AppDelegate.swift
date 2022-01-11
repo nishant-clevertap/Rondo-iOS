@@ -3,7 +3,7 @@
 //  LPFeatures
 //
 //  Created by Milos Jakovljevic on 13/12/2019.
-//  Copyright © 2021 Leanplum. All rights reserved.
+//  Copyright © 2022 Leanplum. All rights reserved.
 //
 
 import UIKit
@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         UNUserNotificationCenter.current().delegate = self
         application.applicationIconBadgeNumber = 0
         
+        Leanplum.setLogLevel(Leanplum.LogLevel.debug)
         // Start Leanplum
         do {
             try context.start(with: context.app, environment: context.env) { success in
