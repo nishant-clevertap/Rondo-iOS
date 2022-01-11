@@ -131,7 +131,7 @@ class AddAppViewController: FormViewController {
                 production?.value = json["production"] as? String
 
             } catch {
-                print(error.localizedDescription)
+                Log.print(error.localizedDescription)
             }
         }
     }

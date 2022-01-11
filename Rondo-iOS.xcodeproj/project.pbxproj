@@ -47,6 +47,8 @@
 		A8C78A6124992B46004729A1 /* RichPush.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A8C78A5A24992B46004729A1 /* RichPush.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C90B360424DD819C002B4889 /* Test1.png in Resources */ = {isa = PBXBuildFile; fileRef = C90B360324DD819C002B4889 /* Test1.png */; };
 		C90B360624DD82E5002B4889 /* Primary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C90B360524DD82E5002B4889 /* Primary@2x.png */; };
+		C9E3A1A6278D7BBB00DFAA58 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E3A1A5278D7BBB00DFAA58 /* Log.swift */; };
+		C9E3A1A7278D7BBB00DFAA58 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E3A1A5278D7BBB00DFAA58 /* Log.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +132,7 @@
 		BD028D529A5A9E174D492CBE /* Pods-LPFeatures Sources.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPFeatures Sources.release.xcconfig"; path = "Target Support Files/Pods-LPFeatures Sources/Pods-LPFeatures Sources.release.xcconfig"; sourceTree = "<group>"; };
 		C90B360324DD819C002B4889 /* Test1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Test1.png; sourceTree = "<group>"; };
 		C90B360524DD82E5002B4889 /* Primary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Primary@2x.png"; sourceTree = "<group>"; };
+		C9E3A1A5278D7BBB00DFAA58 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		D5682E911E4DA8B24364D333 /* Pods_LPFeatures_Sources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LPFeatures_Sources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D647E832B0D526E395A3F79C /* Pods-Rondo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,6 +188,7 @@
 				A82BBF5D24782B4F00B99FA0 /* Rondo-iOS.entitlements */,
 				074C65CB23A399D200EC586B /* Rondo */,
 				A8C78A5B24992B46004729A1 /* RichPush */,
+				C9E3A1A8278D7D8800DFAA58 /* Logging */,
 				074C65CA23A399D200EC586B /* Products */,
 				DC160EBF7ABA375EC345F8F6 /* Pods */,
 				E28FCFA7B56C134F2F17DD7B /* Frameworks */,
@@ -359,6 +363,14 @@
 				A8C78A5E24992B46004729A1 /* Info.plist */,
 			);
 			path = RichPush;
+			sourceTree = "<group>";
+		};
+		C9E3A1A8278D7D8800DFAA58 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				C9E3A1A5278D7BBB00DFAA58 /* Log.swift */,
+			);
+			path = Logging;
 			sourceTree = "<group>";
 		};
 		DC160EBF7ABA375EC345F8F6 /* Pods */ = {
@@ -538,6 +550,7 @@
 			files = (
 				074C65E623A3C72F00EC586B /* HomeViewController.swift in Sources */,
 				075A17562422D32B007C6B72 /* VariablesViewController.swift in Sources */,
+				C9E3A1A6278D7BBB00DFAA58 /* Log.swift in Sources */,
 				6A33382E2542C187005F6097 /* AdsTrackingManager.swift in Sources */,
 				6A3752702514E49200BE87D3 /* AdsAskToAskMessageTemplate.swift in Sources */,
 				6A406C45252785340062E76D /* LPAdsTrackingActionTemplate.m in Sources */,
@@ -572,6 +585,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E3A1A7278D7BBB00DFAA58 /* Log.swift in Sources */,
 				A8C78A5D24992B46004729A1 /* NotificationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -38,7 +38,7 @@ class MessagesViewController: FormViewController {
             
             if let error = error {
                 // Handle the error here.
-                print("Error: \(error)")
+                Log.print("Error: \(error)")
             }
             
             // Enable or disable features based on the authorization.
