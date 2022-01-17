@@ -23,9 +23,18 @@ script:
   - bundle exec fastlane release
 
 deploy:
-  skip_cleanup: true
-  provider: script
-  script: bundle exec fastlane testflight
-  on:
-    condition: '-n "$LEANPLUM_SDK_VERSION"'
-    all_branches: true
+  - provider: script
+    skip_cleanup: true
+    script: bundle exec fastlane testflight
+    on:
+      condition: '-n "$LEANPLUM_SDK_VERSION"'
+      all_branches: true
+  - provider: releases
+    name: "Rondo iOS SDK $LEANPLUM_SDK_VERSION"
+    tag: "$LEANPLUM_SDK_VERSION"
+    api_key: "$GITHUB_TOKEN"
+    file: "/Users/travis/build/Leanplum/Rondo-iOS/Rondo-iOS.ipa"
+    skip_cleanup: true
+    on:
+      branch: master
+      condition: '-n "$LEANPLUM_SDK_VERSION"'
