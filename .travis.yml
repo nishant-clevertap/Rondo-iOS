@@ -32,7 +32,8 @@ deploy:
   - provider: releases
     name: "Rondo iOS SDK $LEANPLUM_SDK_VERSION"
     tag: "$LEANPLUM_SDK_VERSION"
-    api_key: "$GITHUB_TOKEN"
+    api_key: 
+      secure: "PkA6Ar+rfUst4SCakG61kx4oPx9X17y2lhlnAzttFjYRMaqneUsRns5xtIcmQ/3Z8iINpAl45hr8V+Y0tZIZ0EwQTNfL3PkpHs/cTfQIzy0jg8IneoN6zDlA9GtheXgDp3pIzn1iDVQl1y3Ir6Uy7O3vRkRcmQ+zKdyYlSiaxGAyS0gL5EO+QItkFI8hRem7A4W8y+spe1ZToQTWShBsgiOogFwRSomte6+d4ICRHQddmf2j/LbiBxv5Yf5t/rtC07/I3nAa4hrUen0USjl4idzoK1zu9OIpgYrRlMOxrOx5s1gafdiKRfkxh2oJVX2k0gCFHVBK2jVjK8N+Cs3R5gRO8ZjY6CwH6/pQOOYtQ5Do91Dc1M8A7jsT1L4W8EX2Wat4AvNH2el4LBwr3Rw1+oVFNJ5Q56XxVcL6sMmyuyx4Hm477lUPh0mtt0SMmrVvjec+mVEEY7YYb86mp+dn5laDQxX29T3nlE7gD2ZDmI3GW7TJ7lh6c8bH7Z/VTCNFLI6Ncq7B/gENECSsVoDX6BqdZl0CYE/MQCy7SqECBSS6vgq27rQ1i/gtKWscNdalzvYhOe2WpanXTq3qlOCsWFzdzTunBtYlwNeZkhgSw3vVQTZ5y8Ix4s3TQZH3boRvFoEhePBFEOK5xbk3r/QAFdd5wMGzg6h8NnmD3nBx5ak="
     file: "/Users/travis/build/Leanplum/Rondo-iOS/Rondo-iOS.ipa"
     skip_cleanup: true
     on:
