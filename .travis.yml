@@ -21,6 +21,16 @@ install:
 
 script:
   - bundle exec fastlane release
+  
+before_deploy:
+  - >
+    if ! [ "$TAG_ONCE" ]; then
+      export TAG_ONCE=1;
+      git config --local user.email "$GITHUB_EMAIL"
+      git config --local user.name "$GITHUB_NAME"
+      export TRAVIS_TAG=$LEANPLUM_SDK_VERSION
+      git tag $TRAVIS_TAG
+    fi
 
 deploy:
   - provider: script
