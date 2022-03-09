@@ -101,9 +101,8 @@ class AppContext {
         self.env = env
         self.app = app
 
-        Leanplum.setApiHostName(env.apiHostName, servletName: "api", ssl: env.ssl)
-        Leanplum.Constants.shared().socketHost = env.socketHostName
-        Leanplum.Constants.shared().socketPort = Int32(env.socketPort)
+        Leanplum.setApiHostName(env.apiHostName, apiPath: "api", ssl: env.ssl)
+        Leanplum.setSocketHostName(env.socketHostName, port: Int32(env.socketPort))
 
         switch app.mode {
         case .development:
