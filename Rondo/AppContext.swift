@@ -87,9 +87,11 @@ class AppContext {
                 ]
             }
 
-            if env == nil {
-                env = envs.first
-            }
+            env = LeanplumEnv(
+                apiHostName: ApiConfig.shared.apiHostName,
+                ssl: true,
+                socketHostName: ApiConfig.shared.socketHost,
+                socketPort: ApiConfig.shared.socketPort)
         }
     }
 
