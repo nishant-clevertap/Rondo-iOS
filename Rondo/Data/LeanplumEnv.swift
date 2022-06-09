@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Leanplum
 
 struct LeanplumEnv: Equatable, Codable {
     let apiHostName: String
@@ -21,3 +22,11 @@ extension LeanplumEnv: CustomStringConvertible {
         return apiHostName
     }
 }
+
+extension LeanplumEnv {
+    func setNetworkConfig() {
+        Leanplum.setApiHostName(self.apiHostName, apiPath: "api", ssl: self.ssl)
+        Leanplum.setSocketHostName(self.socketHostName, port: Int32(self.socketPort))
+    }
+}
+

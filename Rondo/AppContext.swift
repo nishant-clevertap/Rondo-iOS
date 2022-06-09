@@ -38,7 +38,7 @@ class AppContext {
     var env: LeanplumEnv? = UserDefaults.standard.env {
         didSet {
             if env != oldValue {
-                UserDefaults.standard.env = env
+                env?.setNetworkConfig()
             }
         }
     }
@@ -102,10 +102,7 @@ class AppContext {
 
         self.env = env
         self.app = app
-
-        Leanplum.setApiHostName(env.apiHostName, apiPath: "api", ssl: env.ssl)
-        Leanplum.setSocketHostName(env.socketHostName, port: Int32(env.socketPort))
-
+        
         switch app.mode {
         case .development:
             Leanplum.setAppId(app.appId, developmentKey: app.developmentKey)
