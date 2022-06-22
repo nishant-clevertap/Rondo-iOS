@@ -21,22 +21,22 @@ class AdsTrackingActionTemplate: LPMessageTemplateProtocol {
     static func defineAction() {
         let name = "Register for Ads Tracking"
         
-        Leanplum.defineAction(name: name, kind: .action,
-                              args: [],
-                              completion: { context in
-                                if #available(iOS 14, *) {
-                                    if ATTrackingManager.trackingAuthorizationStatus == ATTrackingManager.AuthorizationStatus.notDetermined {
-                                        AdsTrackingManager.showNativeAdsPrompt()
-                                        return true
-                                    }
-                                    // Open the App Settings if the user has already declined tracking
-                                    if ATTrackingManager.trackingAuthorizationStatus == ATTrackingManager.AuthorizationStatus.denied,
-                                       let url = NSURL(string: UIApplication.openSettingsURLString) as URL? {
-                                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                                        return true
-                                    }
-                                }
-                                return false
-        })
+        Leanplum.defineAction(name: name, kind: .action, args: [], options: [:]) { context in
+            if #available(iOS 14, *) {
+                if ATTrackingManager.trackingAuthorizationStatus == ATTrackingManager.AuthorizationStatus.notDetermined {
+                    AdsTrackingManager.showNativeAdsPrompt()
+                    return true
+                }
+                // Open the App Settings if the user has already declined tracking
+                if ATTrackingManager.trackingAuthorizationStatus == ATTrackingManager.AuthorizationStatus.denied,
+                   let url = NSURL(string: UIApplication.openSettingsURLString) as URL? {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    return true
+                }
+            }
+            return false
+        } dismiss: { context in
+            return false
+        }
     }
 }

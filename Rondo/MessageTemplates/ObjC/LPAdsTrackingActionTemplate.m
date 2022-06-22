@@ -21,7 +21,7 @@
     [Leanplum defineAction:name
                     ofKind:kLeanplumActionKindAction
              withArguments:@[]
-             withResponder:^BOOL(LPActionContext *context) {
+               withOptions:@{} presentHandler:^BOOL(LPActionContext * _Nonnull context) {
         @try {
             if (@available(iOS 14, *)) {
                 if ([ATTrackingManager trackingAuthorizationStatus] == ATTrackingManagerAuthorizationStatusNotDetermined) {
@@ -39,6 +39,8 @@
             NSLog(@"%@: %@\n%@", name, exception, [exception callStackSymbols]);
             return NO;
         }
+    } dismissHandler:^BOOL(LPActionContext * _Nonnull context) {
+        return NO;
     }];
 }
 

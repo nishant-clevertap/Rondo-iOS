@@ -3,7 +3,7 @@
 //  LPFeatures
 //
 //  Created by Milos Jakovljevic on 13/12/2019.
-//  Copyright © 2021 Leanplum. All rights reserved.
+//  Copyright © 2022 Leanplum. All rights reserved.
 //
 
 import UIKit
@@ -68,8 +68,6 @@ class HomeViewController: FormViewController {
             // LPAdsTrackingActionTemplate.defineAction()
             AdsAskToAskMessageTemplate.defineAction()
             AdsTrackingActionTemplate.defineAction()
-            
-            LeanplumDeferIAM.setup()
             
             if ATTrackingManager.trackingAuthorizationStatus == .authorized {
                 // Uncomment to use IDFA

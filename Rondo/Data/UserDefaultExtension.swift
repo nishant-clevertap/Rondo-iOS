@@ -99,20 +99,4 @@ extension UserDefaults {
             }
         }
     }
-    
-    var deferIAM: LeanplumDeferIAM? {
-        get {
-            if let data = self[.deferIAM] as? Data {
-                return try? JSONDecoder().decode(LeanplumDeferIAM.self, from: data)
-            }
-            return nil
-        }
-        set {
-            let oldValue = deferIAM
-            self[.deferIAM] = try? JSONEncoder().encode(newValue)
-            if newValue != oldValue {
-                postObserverNotificationFor(key: .deferIAM)
-            }
-        }
-    }
 }

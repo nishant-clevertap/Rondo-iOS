@@ -3,7 +3,7 @@
 //  LPFeatures
 //
 //  Created by Milos Jakovljevic on 18/03/2020.
-//  Copyright © 2020 Leanplum. All rights reserved.
+//  Copyright © 2022 Leanplum. All rights reserved.
 //
 
 import UIKit
@@ -72,7 +72,6 @@ class MessagesViewController: FormViewController {
         buildTemplateMessages()
         buildActions()
         buildRichMessages()
-        buildDeferIAMs()
     }
     
     func buildPush() {
@@ -182,65 +181,6 @@ class MessagesViewController: FormViewController {
         }
         
         form +++ section
-    }
-    
-    func buildDeferIAMs() {
-        let section = Section("Defer IAM")
-        section.tag = section.header?.title
-        
-        section <<< SwitchRow {
-            $0.title = "Defer IAM"
-            $0.tag = "deferIAM"
-            $0.value = UserDefaults.standard.deferIAM?.enabled
-        }.onChange { [weak self] (row) in
-            guard let self = self, let value = row.value else { return }
-            self.toggleDeferMessages(on: value)
-        }
-        
-        section <<< AccountRow {
-            $0.title = "Action Names"
-            $0.placeholder = "alert,confirm,html"
-            $0.value = UserDefaults.standard.deferIAM?.actionNames.joined(separator: ",")
-        }
-        
-        section <<< AccountRow {
-            $0.title = "View Controllers"
-            $0.placeholder = "home,variables,inbox"
-            $0.value = UserDefaults.standard.deferIAM?.viewControllers.joined(separator: ",")
-        }
-        
-        section <<< ButtonRow {
-            $0.title = "Defer messages"
-        }.onCellSelection { (cell, row) in
-            
-            var names:[String] = []
-            if let row = section.allRows[1] as? AccountRow {
-                if let val = row.value {
-                names.append(contentsOf: val.components(separatedBy: ","))
-                }
-            }
-            var controllers:[String] = []
-            if let row = section.allRows[2] as? AccountRow {
-                if let val = row.value {
-                    controllers.append(contentsOf: val.components(separatedBy: ","))
-                }
-            }
-            
-            let df = LeanplumDeferIAM(enabled: true, actionNames: names, viewControllers: controllers)
-            UserDefaults.standard.deferIAM = df
-        }
-        
-        form +++ section
-    }
-    
-    private func toggleDeferMessages(on: Bool) {
-        var df:LeanplumDeferIAM? = nil
-        if on {
-            df = LeanplumDeferIAM(enabled: true, actionNames: [], viewControllers: ["home"])
-        } else {
-            df = LeanplumDeferIAM(enabled: false, actionNames: [], viewControllers: [])
-        }
-        UserDefaults.standard.deferIAM = df
     }
     
     func buildActions() {

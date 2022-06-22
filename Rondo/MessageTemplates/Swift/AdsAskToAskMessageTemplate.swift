@@ -35,6 +35,8 @@ class AdsAskToAskMessageTemplate: LPMessageTemplateProtocol {
         let width = NSNumber(300)
         let height = NSNumber(250)
         
+        var viewController: UIViewController?
+        
         Leanplum.defineAction(name: name, kind: .message,
                               args: [
                                 ActionArg(name: LPMT_ARG_TITLE_TEXT, string: appName),
@@ -52,20 +54,26 @@ class AdsAskToAskMessageTemplate: LPMessageTemplateProtocol {
                                 ActionArg(name:LPMT_ARG_CANCEL_BUTTON_TEXT_COLOR, color:UIColor.gray),
                                 ActionArg(name:LPMT_ARG_LAYOUT_WIDTH, number:width),
                                 ActionArg(name:LPMT_ARG_LAYOUT_HEIGHT, number:height)
-                              ], completion: { context in
-                                if (context.hasMissingFiles()) {
-                                    return false;
-                                }
-                                
-                                let template = AdsAskToAskMessageTemplate(context: context)
-                                template.context = context
-                                if #available(iOS 14, *),
-                                   ATTrackingManager.trackingAuthorizationStatus == ATTrackingManager.AuthorizationStatus.notDetermined {
-                                    template.showPrePermissionMessage()
-                                    return true
-                                }
-                                return false
-                              })
+                              ], options: [:]) { context in
+                                  if (context.hasMissingFiles()) {
+                                      return false;
+                                  }
+                                  
+                                  let template = AdsAskToAskMessageTemplate(context: context)
+                                  template.context = context
+                                  
+                                  if #available(iOS 14, *),
+                                     ATTrackingManager.trackingAuthorizationStatus == ATTrackingManager.AuthorizationStatus.notDetermined {
+                                      viewController = template.showPrePermissionMessage()
+                                      return true
+                                  }
+                                  return false
+                              } dismiss: { context in
+                                  viewController?.dismiss(animated: true) {
+                                      context.actionDismissed()
+                                  }
+                                  return true
+                              }
     }
     
     func viewControllerWithContext(context:ActionContext) -> LPPopupViewController? {
@@ -82,8 +90,9 @@ class AdsAskToAskMessageTemplate: LPMessageTemplateProtocol {
         return viewController;
     }
     
-    func showPrePermissionMessage() {
-        guard let viewController = self.viewControllerWithContext(context: self.context) else { return }
+    func showPrePermissionMessage() -> UIViewController? {
+        guard let viewController = self.viewControllerWithContext(context: self.context) else { return nil }
         LPMessageTemplateUtilities.presentOverVisible(viewController)
+        return viewController
     }
 }
