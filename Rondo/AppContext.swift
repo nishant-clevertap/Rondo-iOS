@@ -42,6 +42,15 @@ class AppContext {
             }
         }
     }
+    
+    var logLevel: Leanplum.LogLevel = UserDefaults.standard.logLevel {
+        didSet {
+            if logLevel != oldValue {
+                UserDefaults.standard.logLevel = logLevel
+                Leanplum.setLogLevel(logLevel)
+            }
+        }
+    }
 
     init() {
         // defer to force didSet

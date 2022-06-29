@@ -16,7 +16,7 @@ extension UserDefaults {
         case envs
         case env
         case useUNUserNotificationCenterDelegate
-        case deferIAM
+        case logLevel
     }
 
     static func observerNotificationNameFor(key: DefaultKey) -> Notification.Name {
@@ -96,6 +96,23 @@ extension UserDefaults {
             self[.env] = try? JSONEncoder().encode(newValue)
             if newValue != oldValue {
                 postObserverNotificationFor(key: .env)
+            }
+        }
+    }
+    
+    var logLevel: Leanplum.LogLevel {
+        get {
+            if let value = self[.logLevel] as? UInt,
+               let level = Leanplum.LogLevel.init(rawValue: value) {
+                return level
+            }
+            return .debug
+        }
+        set {
+            let oldValue = logLevel
+            self[.logLevel] = newValue.rawValue
+            if newValue != oldValue {
+                postObserverNotificationFor(key: .logLevel)
             }
         }
     }

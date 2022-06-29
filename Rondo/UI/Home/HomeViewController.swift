@@ -29,13 +29,22 @@ class HomeViewController: FormViewController {
             }
         }
     }
+    var logLevel: Leanplum.LogLevel = UserDefaults.standard.logLevel {
+        didSet {
+            if logLevel != oldValue {
+                context.logLevel = logLevel
+                form.rowBy(tag: "logLevel")?.reload()
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         env = context.env
         app = context.app
-
+        logLevel = context.logLevel
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "bug"),
                                                             style: .plain,
                                                             target: self,
@@ -128,6 +137,20 @@ class HomeViewController: FormViewController {
         }.cellUpdate { (cell, row) in
             cell.accessoryType = .disclosureIndicator
         }
+        
+        section <<< ActionSheetRow<Leanplum.LogLevel> {
+            $0.title = "Log level"
+            $0.tag = "logLevel"
+            $0.value = self.logLevel
+            $0.options = [.off, .debug, .info, .error]
+            $0.selectorTitle = "Set log level"
+        }.onPresent { from, to in
+            to.popoverPresentationController?.permittedArrowDirections = .up
+        }.onChange { row in
+            self.logLevel = row.value ?? .debug
+        }.cellUpdate { (cell, row) in
+            cell.accessoryType = .disclosureIndicator
+        }
 
         form +++ section
     }
@@ -204,4 +227,16 @@ class HomeViewController: FormViewController {
         let index = form.firstIndex { $0.tag == "info" } ?? 1
         form.insert(section, at: index + 1)
     }
+}
+
+extension Leanplum.LogLevel: CustomStringConvertible {
+    public var description : String {
+        switch self {
+        // Use Internationalization, as appropriate.
+        case .off: return "Off"
+        case .debug: return "Debug"
+        case .info: return "Info"
+        case .error: return "Error"
+        }
+      }
 }
