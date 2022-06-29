@@ -123,6 +123,7 @@ class HomeViewController: FormViewController {
             to.popoverPresentationController?.permittedArrowDirections = .up
         }.onChange { row in
             self.app?.mode = row.value ?? .development
+            self.context.app?.mode = row.value ?? .development
             self.build()
         }.cellUpdate { (cell, row) in
             cell.accessoryType = .disclosureIndicator
