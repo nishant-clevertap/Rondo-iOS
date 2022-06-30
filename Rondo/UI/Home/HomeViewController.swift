@@ -228,16 +228,3 @@ class HomeViewController: FormViewController {
         form.insert(section, at: index + 1)
     }
 }
-
-extension Leanplum.LogLevel: CustomStringConvertible {
-    public var description : String {
-        switch self {
-        case .off: return "Off"
-        case .debug: return "Debug"
-        case .info: return "Info"
-        case .error: return "Error"
-        @unknown default:
-            return "Unknown"
-        }
-    }
-}
