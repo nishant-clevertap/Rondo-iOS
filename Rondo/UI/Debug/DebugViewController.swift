@@ -11,7 +11,16 @@ import Eureka
 import Leanplum
 
 class DebugViewController: FormViewController {
-
+    let savedSdkVersionKey = "savedSdkVersion"
+    private var savedSdkVersion: String {
+        get {
+            UserDefaults.standard.string(forKey: savedSdkVersionKey) ?? "1.0"
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: savedSdkVersionKey)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -97,6 +106,17 @@ class DebugViewController: FormViewController {
         }.onCellSelection({ (cell, row) in
             // Calls private static reset method
             Leanplum.perform(NSSelectorFromString("reset"))
+        })
+        
+        resetSection <<< ButtonRow {
+            $0.title = "Delete file cache"
+        }.onCellSelection({ (cell, row) in
+            let currentVersion = self.savedSdkVersion
+            // force change of version
+            self.savedSdkVersion = "1.0-force"
+            LPFileManager.clearCacheIfSDKUpdated()
+            // restore version
+            self.savedSdkVersion = currentVersion
         })
         
         form +++ resetSection
