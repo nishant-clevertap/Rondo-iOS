@@ -49,7 +49,7 @@ class DebugViewController: FormViewController {
             $0.cellStyle = .value1
             $0.title = "Vars"
             $0.presentationMode = .show(controllerProvider: .callback(builder: { () -> UIViewController in
-                let ctrl = AreaController()
+                let ctrl = TextAreaController()
                 ctrl.title = "Vars JSON"
                 ctrl.message = LPJSON.string(fromJSON: VarCache.shared().diffs())
                 return ctrl
@@ -60,7 +60,7 @@ class DebugViewController: FormViewController {
             $0.cellStyle = .value1
             $0.title = "Secured Vars"
             $0.presentationMode = .show(controllerProvider: .callback(builder: { () -> UIViewController in
-                let ctrl = AreaController()
+                let ctrl = TextAreaController()
                 ctrl.title = "Secured Vars JSON"
                 ctrl.message = LPJSON.string(fromJSON: VarCache.shared().securedVars())
                 return ctrl
@@ -71,7 +71,7 @@ class DebugViewController: FormViewController {
             $0.cellStyle = .value1
             $0.title = "Variants"
             $0.presentationMode = .show(controllerProvider: .callback(builder: { () -> UIViewController in
-                let ctrl = AreaController()
+                let ctrl = TextAreaController()
                 ctrl.title = "Variants JSON"
                 ctrl.message = "Not supported yet"
 //                let variants = VarCache.shared().variants()
@@ -84,7 +84,7 @@ class DebugViewController: FormViewController {
             $0.cellStyle = .value1
             $0.title = "Regions"
             $0.presentationMode = .show(controllerProvider: .callback(builder: { () -> UIViewController in
-                let ctrl = AreaController()
+                let ctrl = TextAreaController()
                 ctrl.title = "Regions JSON"
                 ctrl.message = LPJSON.string(fromJSON: VarCache.shared().regions())
                 return ctrl
@@ -144,7 +144,7 @@ class ActionsController: FormViewController {
                 row.cellStyle = .value1
                 row.value = key as? String
                 row.presentationMode = .show(controllerProvider: .callback(builder: { () -> UIViewController in
-                    let ctrl = AreaController()
+                    let ctrl = TextAreaController()
                     ctrl.title = row.title
                     ctrl.message = LPJSON.string(fromJSON: ActionManager.shared.messages[row.value!])
                     return ctrl
@@ -155,27 +155,6 @@ class ActionsController: FormViewController {
             }
         }
 
-        form +++ section
-    }
-}
-
-class AreaController: FormViewController {
-    var message: String?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        build()
-    }
-    
-    func build() {
-        let section = Section(title)
-
-        section <<< TextAreaRow() {
-            $0.value = message
-            $0.textAreaHeight = .dynamic(initialTextViewHeight: 96)
-        }
-        
         form +++ section
     }
 }
