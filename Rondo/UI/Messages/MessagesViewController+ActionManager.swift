@@ -66,8 +66,11 @@ extension MessagesViewController {
                 listRow.title = option.rawValue
                 listRow.tag = option.rawValue
                 listRow.selectableValue = option
-                listRow.value = nil
+                listRow.value = model.displayChoice == option ? option : nil
             }
+        }
+        section.onSelectSelectableRow = { [weak self] (cell, cellRow) in
+            self?.model.displayChoice = cellRow.value
         }
         
         form +++ section
@@ -114,11 +117,14 @@ extension MessagesViewController {
         
         let prioritizeOptions = MessagePrioritization.allCases
         for option in prioritizeOptions {
-            prioritySection <<< ListCheckRow<MessagePrioritization>(){ listRow in
+            prioritySection <<< ListCheckRow<MessagePrioritization>() { listRow in
                 listRow.title = option.rawValue
                 listRow.selectableValue = option
-                listRow.value = nil
+                listRow.value = model.prioritizationChoice == option ? option : nil
             }
+        }
+        prioritySection.onSelectSelectableRow = { [weak self] (cell, cellRow) in
+            self?.model.prioritizationChoice = cellRow.value
         }
         
         form +++ prioritySection

@@ -30,6 +30,7 @@ enum MessageDisplay: String, CaseIterable {
 }
 
 enum MessagePrioritization: String, CaseIterable {
+    case all = "All"
     case firstOnly = "First Only"
     case allReversed = "All Reversed"
 }
@@ -185,6 +186,10 @@ class ActionManagerModel {
     
     func prioritizationChoiceChanged(_ prioritization: MessagePrioritization?) {
         switch prioritization {
+        case .all:
+            ActionManager.shared.prioritizeMessages { contexts, trigger in
+                return contexts
+            }
         case .firstOnly:
             ActionManager.shared.prioritizeMessages { contexts, trigger in
                 guard let first = contexts.first else {
