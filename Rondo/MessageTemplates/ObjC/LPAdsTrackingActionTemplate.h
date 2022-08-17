@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Leanplum.h"
+#import <Leanplum/LPActionContext.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
