@@ -134,7 +134,9 @@ class AppContext {
         }
 
         try LPExceptionCatcher.catchException {
-            Leanplum.start()
+            let startAttr = ["startAttributeInt": 1,
+                             "startAttributeString": "stringValueFromStart"]
+            Leanplum.start(attributes: startAttr)
         }
     }
 }
