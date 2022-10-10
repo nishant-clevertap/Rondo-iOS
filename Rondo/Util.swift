@@ -23,4 +23,11 @@ struct Util {
         }
         return value
     }
+    
+    static func jsonPrettyString(_ model: Encodable) -> String {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+        let data = try! encoder.encode(model)
+        return String(data: data, encoding: .utf8)!
+    }
 }

@@ -14,13 +14,13 @@ import Leanplum
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     
     let context = AppContext()
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         UNUserNotificationCenter.current().delegate = self
         application.applicationIconBadgeNumber = 0
         
-        Leanplum.setLogLevel(Leanplum.LogLevel.debug)
+        Leanplum.setLogLevel(LeanplumLogLevel.debug)
         // Start Leanplum
         do {
             try context.start(with: context.app, environment: context.env) { success in

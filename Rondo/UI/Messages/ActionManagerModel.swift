@@ -48,10 +48,7 @@ struct ActionModel: Encodable {
                                 parent: context.parent?.messageId ?? "",
                                 handler: handler ?? "",
                                 actionName: action ?? "")
-        let encoder = JSONEncoder()
-        encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
-        let data = try! encoder.encode(model)
-        return String(data: data, encoding: .utf8)!
+        return Util.jsonPrettyString(model)
     }
 }
 

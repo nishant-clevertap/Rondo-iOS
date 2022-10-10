@@ -100,10 +100,10 @@ extension UserDefaults {
         }
     }
     
-    var logLevel: Leanplum.LogLevel {
+    var logLevel: LeanplumLogLevel {
         get {
             if let value = self[.logLevel] as? UInt,
-               let level = Leanplum.LogLevel.init(rawValue: value) {
+               let level = LeanplumLogLevel.init(rawValue: value) {
                 return level
             }
             return .debug
