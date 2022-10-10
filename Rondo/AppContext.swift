@@ -43,7 +43,7 @@ class AppContext {
         }
     }
     
-    var logLevel: Leanplum.LogLevel = UserDefaults.standard.logLevel {
+    var logLevel: LeanplumLogLevel = UserDefaults.standard.logLevel {
         didSet {
             if logLevel != oldValue {
                 UserDefaults.standard.logLevel = logLevel
@@ -79,6 +79,11 @@ class AppContext {
             if envs.isEmpty {
                 envs = [
                     LeanplumEnv(
+                        apiHostName: "ct-dot-ingester.prod.leanplum.com",
+                        ssl: true,
+                        socketHostName: "dev.leanplum.com",
+                        socketPort: 443),
+                    LeanplumEnv(
                         apiHostName: "api.leanplum.com",
                         ssl: true,
                         socketHostName: "dev.leanplum.com",
@@ -95,12 +100,17 @@ class AppContext {
                         socketPort: 443),
                 ]
             }
-
-            env = LeanplumEnv(
-                apiHostName: ApiConfig.shared.apiHostName,
-                ssl: true,
-                socketHostName: ApiConfig.shared.socketHost,
-                socketPort: ApiConfig.shared.socketPort)
+            
+            if ApiConfig.shared.apiHostName == "api.leanplum.com",
+               envs.first?.apiHostName != "api.leanplum.com" {
+                env = envs.first
+            } else {
+                env = LeanplumEnv(
+                    apiHostName: ApiConfig.shared.apiHostName,
+                    ssl: true,
+                    socketHostName: ApiConfig.shared.socketHost,
+                    socketPort: ApiConfig.shared.socketPort)
+            }
         }
     }
 
@@ -124,7 +134,9 @@ class AppContext {
         }
 
         try LPExceptionCatcher.catchException {
-            Leanplum.start()
+            let startAttr = ["startAttributeInt": 1,
+                             "startAttributeString": "stringValueFromStart"]
+            Leanplum.start(attributes: startAttr)
         }
     }
 }

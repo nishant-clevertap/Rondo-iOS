@@ -30,7 +30,7 @@ extension LeanplumApp: CustomStringConvertible {
     }
 }
 
-extension Leanplum.LogLevel: CustomStringConvertible {
+extension LeanplumLogLevel: CustomStringConvertible {
     public var description : String {
         switch self {
         case .off: return "Off"

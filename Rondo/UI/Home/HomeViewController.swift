@@ -29,7 +29,7 @@ class HomeViewController: FormViewController {
             }
         }
     }
-    var logLevel: Leanplum.LogLevel = UserDefaults.standard.logLevel {
+    var logLevel: LeanplumLogLevel = UserDefaults.standard.logLevel {
         didSet {
             if logLevel != oldValue {
                 context.logLevel = logLevel
@@ -138,7 +138,7 @@ class HomeViewController: FormViewController {
             cell.accessoryType = .disclosureIndicator
         }
         
-        section <<< ActionSheetRow<Leanplum.LogLevel> {
+        section <<< ActionSheetRow<LeanplumLogLevel> {
             $0.title = "Log level"
             $0.tag = "logLevel"
             $0.value = self.logLevel
