@@ -7,34 +7,51 @@
 //
 
 import UserNotifications
+import CTNotificationService
 
-class NotificationService: UNNotificationServiceExtension {
+class NotificationService: CTNotificationServiceExtension {
+    
+    struct Constants {
+        static let ImageKey = "LP_URL"
+        static let LP_KEY_PUSH_MESSAGE_ID = "_lpm"
+        static let LP_KEY_PUSH_MUTE_IN_APP = "_lpu"
+        static let LP_KEY_PUSH_NO_ACTION = "_lpn"
+        static let LP_KEY_PUSH_NO_ACTION_MUTE = "_lpv"
+    }
 
     var contentHandler: ((UNNotificationContent) -> Void)?
     var bestAttemptContent: UNMutableNotificationContent?
 
     override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
-        let imageKey = "LP_URL"
         self.contentHandler = contentHandler
         bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
 
         // MARK: - Leanplum Rich Push
         if let bestAttemptContent = bestAttemptContent {
             let userInfo = request.content.userInfo;
+            
+            guard (userInfo[Constants.LP_KEY_PUSH_MESSAGE_ID] ??
+                   userInfo[Constants.LP_KEY_PUSH_MUTE_IN_APP] ??
+                   userInfo[Constants.LP_KEY_PUSH_NO_ACTION] ??
+                   userInfo[Constants.LP_KEY_PUSH_NO_ACTION_MUTE]) != nil else {
+                // Not a Leanplum notification, try CleverTap
+                super.didReceive(request, withContentHandler: contentHandler)
+                return
+            }
 
             // LP_URL is the key that is used from Leanplum to
             // send the image URL in the payload.
             //
             // If there is no LP_URL in the payload than
             // the code will still show the push notification.
-            if userInfo[imageKey] == nil {
+            if userInfo[Constants.ImageKey] == nil {
                 contentHandler(bestAttemptContent);
                 return;
             }
 
             // If there is an image in the payload,
             // download and display the image.
-            if let attachmentMedia = userInfo[imageKey] as? String {
+            if let attachmentMedia = userInfo[Constants.ImageKey] as? String {
                 let mediaUrl = URL(string: attachmentMedia)
                 let LPSession = URLSession(configuration: .default)
                 LPSession.downloadTask(with: mediaUrl!, completionHandler: { temporaryLocation, response, error in
