@@ -33,6 +33,7 @@
 		07869B72243CBB83005E7E94 /* AppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07869B71243CBB83005E7E94 /* AppsViewController.swift */; };
 		078D587F243CDACB00D088BD /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078D587E243CDACB00D088BD /* ScannerViewController.swift */; };
 		078D5881243CEC8000D088BD /* UserDefaultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078D5880243CEC8000D088BD /* UserDefaultExtension.swift */; };
+		5D9C5543A193B518D125ED09 /* Pods_RichPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4F20E926C5E0560928FD9F /* Pods_RichPush.framework */; };
 		6A33382E2542C187005F6097 /* AdsTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A33382D2542C187005F6097 /* AdsTrackingManager.swift */; };
 		6A3338332542C4AC005F6097 /* LPAdsTrackingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A3338322542C4AC005F6097 /* LPAdsTrackingManager.m */; };
 		6A3752702514E49200BE87D3 /* AdsAskToAskMessageTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A37526F2514E49200BE87D3 /* AdsAskToAskMessageTemplate.swift */; };
@@ -135,6 +136,7 @@
 		6A9197D5250A553700B13E05 /* LPAdsAskToAskMessageTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPAdsAskToAskMessageTemplate.h; sourceTree = "<group>"; };
 		871B813E40B9D5721DE92AC4 /* Pods-Rondo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo.release.xcconfig"; path = "Target Support Files/Pods-Rondo/Pods-Rondo.release.xcconfig"; sourceTree = "<group>"; };
 		88A45896E92697F830BDDD12 /* Pods-Rondo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.release.xcconfig"; path = "Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		962D0A550FE14C657F76B57D /* Pods-RichPush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichPush.debug.xcconfig"; path = "Target Support Files/Pods-RichPush/Pods-RichPush.debug.xcconfig"; sourceTree = "<group>"; };
 		A82BBF5D24782B4F00B99FA0 /* Rondo-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Rondo-iOS.entitlements"; sourceTree = "<group>"; };
 		A82BBF5E24783AB300B99FA0 /* LeanplumEnv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeanplumEnv.swift; sourceTree = "<group>"; };
 		A8B533E324AC192F009F53F3 /* AddEnvironmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEnvironmentViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,8 @@
 		C9E3A1A5278D7BBB00DFAA58 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		D5682E911E4DA8B24364D333 /* Pods_LPFeatures_Sources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LPFeatures_Sources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D647E832B0D526E395A3F79C /* Pods-Rondo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		DC4F20E926C5E0560928FD9F /* Pods_RichPush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichPush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC9E97B0CA447DF39CA46600 /* Pods-RichPush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichPush.release.xcconfig"; path = "Target Support Files/Pods-RichPush/Pods-RichPush.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D9C5543A193B518D125ED09 /* Pods_RichPush.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +415,8 @@
 				871B813E40B9D5721DE92AC4 /* Pods-Rondo.release.xcconfig */,
 				D647E832B0D526E395A3F79C /* Pods-Rondo-iOS.debug.xcconfig */,
 				88A45896E92697F830BDDD12 /* Pods-Rondo-iOS.release.xcconfig */,
+				962D0A550FE14C657F76B57D /* Pods-RichPush.debug.xcconfig */,
+				DC9E97B0CA447DF39CA46600 /* Pods-RichPush.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -419,6 +426,7 @@
 			children = (
 				D5682E911E4DA8B24364D333 /* Pods_LPFeatures_Sources.framework */,
 				0DDAFBDF6F1A75C834118A65 /* Pods_Rondo_iOS.framework */,
+				DC4F20E926C5E0560928FD9F /* Pods_RichPush.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -451,6 +459,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8C78A6524992B46004729A1 /* Build configuration list for PBXNativeTarget "RichPush" */;
 			buildPhases = (
+				3C36C2B2AD487BBC4A35D99A /* [CP] Check Pods Manifest.lock */,
 				A8C78A5624992B46004729A1 /* Sources */,
 				A8C78A5724992B46004729A1 /* Frameworks */,
 				A8C78A5824992B46004729A1 /* Resources */,
@@ -528,6 +537,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3C36C2B2AD487BBC4A35D99A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RichPush-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		60787AA64799D9E7F63A220F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -819,6 +850,7 @@
 		};
 		A8C78A6324992B46004729A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 962D0A550FE14C657F76B57D /* Pods-RichPush.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
@@ -841,6 +873,7 @@
 		};
 		A8C78A6424992B46004729A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC9E97B0CA447DF39CA46600 /* Pods-RichPush.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;

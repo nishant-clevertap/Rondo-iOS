@@ -33,6 +33,12 @@ target 'Rondo-iOS' do
 
 end
 
+target 'RichPush' do
+  use_frameworks!
+  platform :ios, '10.0'
+  pod 'CTNotificationService'
+end
+
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     if target.respond_to?(:product_type) and target.product_type == "com.apple.product-type.bundle"
