@@ -42,9 +42,10 @@ class AppsViewController: FormViewController {
                 $0.title = app.name
                 $0.selectableValue = app
                 $0.value = app == self.context.app ? app : nil
-            }.onChange{ (row) in
-                self.context.app = row.value
             }
+        }
+        section.onSelectSelectableRow = { [weak self] (cell, cellRow) in
+            self?.context.app = cellRow.value
         }
 
         form +++ section

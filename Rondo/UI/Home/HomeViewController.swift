@@ -70,6 +70,7 @@ class HomeViewController: FormViewController {
         buildApps()
         buildAppInfo()
         buildSettingsInfo()
+        buildUseApiConfig()
         
         if #available(iOS 14, *) {
             // Objective-C templates
@@ -226,5 +227,18 @@ class HomeViewController: FormViewController {
 
         let index = form.firstIndex { $0.tag == "info" } ?? 1
         form.insert(section, at: index + 1)
+    }
+    
+    func buildUseApiConfig() {
+        let section = Section("Use ApiConfig")
+        
+        section <<< SwitchRow {
+            $0.title = "Use ApiConfig"
+            $0.value = UserDefaults.standard.useApiConfig
+        }.onChange({ row in
+            UserDefaults.standard.useApiConfig = row.value!
+        })
+        
+        form +++ section
     }
 }

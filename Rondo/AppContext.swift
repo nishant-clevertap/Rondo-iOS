@@ -37,9 +37,7 @@ class AppContext {
 
     var env: LeanplumEnv? = UserDefaults.standard.env {
         didSet {
-            if env != oldValue {
-                env?.setNetworkConfig()
-            }
+            env?.setNetworkConfig()
         }
     }
     
@@ -48,6 +46,14 @@ class AppContext {
             if logLevel != oldValue {
                 UserDefaults.standard.logLevel = logLevel
                 Leanplum.setLogLevel(logLevel)
+            }
+        }
+    }
+    
+    var useApiConfig: Bool = UserDefaults.standard.useApiConfig {
+        didSet {
+            if useApiConfig != oldValue {
+                UserDefaults.standard.useApiConfig = useApiConfig
             }
         }
     }
@@ -101,15 +107,8 @@ class AppContext {
                 ]
             }
             
-            if ApiConfig.shared.apiHostName == "api.leanplum.com",
-               envs.first?.apiHostName != "api.leanplum.com" {
+            if env == nil && !useApiConfig {
                 env = envs.first
-            } else {
-                env = LeanplumEnv(
-                    apiHostName: ApiConfig.shared.apiHostName,
-                    ssl: true,
-                    socketHostName: ApiConfig.shared.socketHost,
-                    socketPort: ApiConfig.shared.socketPort)
             }
         }
     }
@@ -119,7 +118,9 @@ class AppContext {
             return
         }
 
-        self.env = env
+        if !useApiConfig {
+            self.env = env
+        }
         self.app = app
         
         switch app.mode {
