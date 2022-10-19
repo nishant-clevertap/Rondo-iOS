@@ -17,6 +17,7 @@ extension UserDefaults {
         case env
         case useUNUserNotificationCenterDelegate
         case logLevel
+        case useApiConfig
     }
 
     static func observerNotificationNameFor(key: DefaultKey) -> Notification.Name {
@@ -113,6 +114,22 @@ extension UserDefaults {
             self[.logLevel] = newValue.rawValue
             if newValue != oldValue {
                 postObserverNotificationFor(key: .logLevel)
+            }
+        }
+    }
+    
+    var useApiConfig: Bool {
+        get {
+            if let config = self[.useApiConfig] as? Bool {
+                return config
+            }
+            return false
+        }
+        set {
+            let oldValue = useApiConfig
+            self[.useApiConfig] = newValue
+            if newValue != oldValue {
+                postObserverNotificationFor(key: .useApiConfig)
             }
         }
     }

@@ -44,9 +44,11 @@ class EnvironmentsViewController: FormViewController {
                 $0.title = env.apiHostName
                 $0.selectableValue = env
                 $0.value = env == self.context.env ? env : nil
-            }.onChange{ (row) in
-                self.context.env = row.value
             }
+        }
+        section.onSelectSelectableRow = { [weak self] (cell, cellRow) in
+            self?.context.env = cellRow.value
+            UserDefaults.standard.env = cellRow.value
         }
 
         form +++ section
