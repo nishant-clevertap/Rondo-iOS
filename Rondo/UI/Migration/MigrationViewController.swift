@@ -108,6 +108,17 @@ class MigrationViewController: FormViewController {
                                         "arr": ["c", 3, "d", 4, nil], // optionals
                                         "empty": nil])
         })
+
+        section <<< ButtonRow(){
+            $0.title = "Set DOB"
+        }.onCellSelection({ cell, row in
+            let dateFormatter = DateFormatter()
+            dateFormatter.timeZone = TimeZone.init(abbreviation: "UTC")
+            dateFormatter.dateFormat = "dd-MM-yyyy"
+            if let date = dateFormatter.date(from: "10-01-1999") {
+                Leanplum.setUserAttributes(["DOB": date])
+            }
+        })
         
         form +++ section
     }
