@@ -55,6 +55,7 @@ extension EventsViewController {
         buildAdvance()
         buildUserId()
         buildUserAttributes()
+        buildDeviceId()
         buildForceContentUpdate()
     }
 
@@ -221,6 +222,26 @@ extension EventsViewController {
             if let key = keyRow?.value, let value = valueRow?.value {
                 let attributes: [String : Any] = [key : value]
                 Leanplum.setUserAttributes(attributes)
+            }
+        }
+        form +++ section
+    }
+    
+    func buildDeviceId() {
+        let section = Section("Device ID")
+
+        section <<< AccountRow {
+            $0.title = "Device ID"
+            $0.placeholder = "enter id"
+            $0.tag = "deviceId"
+        }
+
+        section <<< ButtonRow {
+            $0.title = "Set DeviceID"
+        }.onCellSelection { (cell, row) in
+            let accountRow: AccountRow? = section.rowBy(tag: "deviceId")
+            if let value = accountRow?.value {
+                Leanplum.setDeviceId(value)
             }
         }
         form +++ section
