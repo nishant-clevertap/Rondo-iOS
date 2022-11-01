@@ -1,9 +1,9 @@
 language: objective-c
-osx_image: xcode13.3
+osx_image: xcode14
 
 xcode_workspace: Rondo-iOS.xcworkspace
 xcode_scheme: Rondo-iOS
-xcode_destination: platform=iOS Simulator,OS=15.0,name=iPhone 12
+xcode_destination: platform=iOS Simulator,OS=16.0,name=iPhone 14
 
 cache: cocoapods
 podfile: Podfile
@@ -13,6 +13,7 @@ before_install:
 
 install:
   - bundle install
+  - bundle update fastlane
   - pod install --repo-update
   - echo -e "machine github.com\n  login $GITHUB_TOKEN" >> ~/.netrc
   - bundle exec fastlane install_certificates
