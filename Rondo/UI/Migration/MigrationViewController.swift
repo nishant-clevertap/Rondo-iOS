@@ -60,15 +60,15 @@ class MigrationViewController: FormViewController {
         }
         section <<< LabelRow {
             $0.title = "Account Id"
-            $0.value = UserDefaults.standard.string(forKey: "__leanplum_ct_account_key")
+            $0.value = MigrationManager.shared.cleverTapAccountId
         }
         section <<< LabelRow {
             $0.title = "Account Token"
-            $0.value = UserDefaults.standard.string(forKey: "__leanplum_ct_account_token")
+            $0.value = MigrationManager.shared.cleverTapAccountToken
         }
         section <<< LabelRow {
             $0.title = "Account Region"
-            $0.value = UserDefaults.standard.string(forKey: "__leanplum_region_code")
+            $0.value = MigrationManager.shared.cleverTapAccountRegion
         }
         
         section <<< ButtonRow {
@@ -76,7 +76,7 @@ class MigrationViewController: FormViewController {
             $0.presentationMode = .show(controllerProvider: .callback(builder: { () -> UIViewController in
                 let ctrl = TextAreaController()
                 ctrl.title = "Attribute Mappings"
-                let mappings = UserDefaults.standard.object(forKey: "__leanplum_attribute_mappings") as? [String: String]
+                let mappings = MigrationManager.shared.cleverTapAttributeMappings
                 ctrl.message = Util.jsonPrettyString(mappings)
                 return ctrl
             }), onDismiss: nil)
