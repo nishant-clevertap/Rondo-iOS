@@ -9,6 +9,7 @@
 import UIKit
 import UserNotifications
 import Leanplum
+import CleverTapSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
@@ -21,6 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         application.applicationIconBadgeNumber = 0
         
         Leanplum.setLogLevel(LeanplumLogLevel.debug)
+        
+        let ct = CleverTapInstanceCallback(callback: { CleverTap in
+            Log.print("CleverTapInstance created")
+        })
+        Leanplum.addCleverTapInstance(callback: ct)
+        
         // Start Leanplum
         do {
             try context.start(with: context.app, environment: context.env) { success in
