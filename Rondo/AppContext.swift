@@ -3,7 +3,7 @@
 //  LPFeatures
 //
 //  Created by Milos Jakovljevic on 13/12/2019.
-//  Copyright © 2022 Leanplum. All rights reserved.
+//  Copyright © 2023 Leanplum. All rights reserved.
 //
 
 import Foundation
@@ -84,11 +84,6 @@ class AppContext {
 
             if envs.isEmpty {
                 envs = [
-                    LeanplumEnv(
-                        apiHostName: "ct-dot-ingester.prod.leanplum.com",
-                        ssl: true,
-                        socketHostName: "dev.leanplum.com",
-                        socketPort: 443),
                     LeanplumEnv(
                         apiHostName: "api.leanplum.com",
                         ssl: true,
