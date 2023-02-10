@@ -194,6 +194,7 @@ extension EventsViewController {
                 Leanplum.setUserId(value)
             }
         }
+        
         form +++ section
     }
 
@@ -244,6 +245,13 @@ extension EventsViewController {
                 Leanplum.setDeviceId(value)
             }
         }
+        
+        section <<< ButtonRow {
+            $0.title = "Set IDFA"
+        }.onCellSelection { (cell, row) in
+            AdsTrackingManager.showNativeAdsPrompt()
+        }
+        
         form +++ section
     }
     

@@ -20,7 +20,7 @@ struct LeanplumApp: Equatable, Codable {
     let productionKey: String
     let developmentKey: String
 
-    var mode: Mode = .development
+    var mode: Mode = .production
 }
 
 extension LeanplumApp: CustomStringConvertible {
