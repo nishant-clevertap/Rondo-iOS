@@ -82,6 +82,11 @@ class MigrationViewController: FormViewController {
             }), onDismiss: nil)
         }
         
+        section <<< LabelRow {
+            $0.title = "Identity Keys"
+            $0.value = MigrationManager.shared.cleverTapIdentityKeys.joined(separator: ", ")
+        }
+        
         form +++ section
     }
     
