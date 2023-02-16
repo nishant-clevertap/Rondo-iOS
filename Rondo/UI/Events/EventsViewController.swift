@@ -102,7 +102,9 @@ extension EventsViewController {
                     event = row.value
                 }
                 if let row = row as? KeyValueRow {
-                    if let key = row.cell.keyTextField.text, let value = row.cell.valueTextField.text {
+                    if let key = row.cell.keyTextField.text,
+                       key != "", // Do not allow empty parameter names
+                       let value = row.cell.valueTextField.text {
                         params[key] = value
                     }
                 }
@@ -160,7 +162,9 @@ extension EventsViewController {
                     state = row.value
                 }
                 if let row = row as? KeyValueRow {
-                    if let key = row.cell.keyTextField.text, let value = row.cell.valueTextField.text {
+                    if let key = row.cell.keyTextField.text,
+                       key != "", // Do not allow empty parameter names
+                       let value = row.cell.valueTextField.text {
                         params[key] = value
                     }
                 }
