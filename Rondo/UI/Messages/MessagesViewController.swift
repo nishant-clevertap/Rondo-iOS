@@ -32,6 +32,11 @@ class MessagesViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addSegmentedControl()
+        buildIAM()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         LabelRow.defaultCellSetup = { cell, row in
             cell.selectionStyle = .default
             row.onCellSelection { (cell, row) in
@@ -43,9 +48,10 @@ class MessagesViewController: FormViewController {
                 }
             }
         }
-        
-        addSegmentedControl()
-        buildIAM()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        LabelRow.defaultCellSetup = nil
     }
     
     func addSegmentedControl() {
