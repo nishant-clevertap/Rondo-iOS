@@ -22,6 +22,13 @@ extension MessagesViewController {
         let section = Section("Action Manager Configuration")
         
         section <<< SwitchRow {
+            $0.title = "Enable Async Handlers"
+            $0.value = self.model.isAsyncEnabled
+        }.onChange({ row in
+            self.model.isAsyncEnabled = row.value!
+        })
+        
+        section <<< SwitchRow {
             $0.title = "Pause Queue"
             $0.value = self.model.isQueuePaused
         }.onChange({ row in
