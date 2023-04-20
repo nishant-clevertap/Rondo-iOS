@@ -30,6 +30,11 @@ extension MessagesViewController {
             $0.tag = "systemPush"
         }
         
+        section <<< LabelRow {
+            $0.title = "Provisional Push"
+            $0.tag = "provisionalPush"
+        }
+        
         form +++ section
     }
     

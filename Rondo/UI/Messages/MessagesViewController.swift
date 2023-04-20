@@ -43,6 +43,8 @@ class MessagesViewController: FormViewController {
                 row.deselect(animated: true)
                 if row.tag == "systemPush" {
                     self.requestSystemPushPermission()
+                } else if row.tag == "provisionalPush" {
+                    Leanplum.enableProvisionalPushNotifications()
                 } else {
                     Leanplum.track(row.tag!)
                 }

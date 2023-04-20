@@ -87,6 +87,11 @@ extension MessagesViewController {
             $0.tag = "starRating"
         }
         
+        section <<< LabelRow {
+            $0.title = "Image Interstitial"
+            $0.tag = "imageInterstitial"
+        }
+        
         form +++ section
     }
 }
