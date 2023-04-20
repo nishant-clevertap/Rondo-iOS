@@ -75,7 +75,7 @@ class ActionManagerModel {
                     // .delay with seconds is handled separately
                 case .show, .discard, .delayIndefinitely:
                     ActionManager.shared.shouldDisplayMessage { _ in
-                        Log.print("ShouldDisplayMessage running on main thread: \(Thread.isMainThread)")
+                        self.logAsyncHandlers(message: "ShouldDisplayMessage")
                         return displayChoice.messageDisplayChoice()
                     }
                 default:
@@ -103,9 +103,9 @@ class ActionManagerModel {
         }
     }
     
-    var isAsyncEnabled = ActionManager.shared.useAsyncDecisionHandlers {
+    var isAsyncEnabled = ActionManager.shared.useAsyncHandlers {
         didSet {
-            ActionManager.shared.useAsyncDecisionHandlers = isAsyncEnabled
+            ActionManager.shared.useAsyncHandlers = isAsyncEnabled
         }
     }
     
@@ -169,9 +169,7 @@ class ActionManagerModel {
     
     lazy var onMessageHandler: ((String) -> (ActionContext) -> ()) = { handler in
         { context in
-            if !Thread.isMainThread {
-                Log.print("[ERROR]: onMessageHandler NOT running on main thread")
-            }
+            self.logAsyncHandlers(message: handler)
             self.addAction(context: context, handler: handler)
         }
     }
@@ -195,7 +193,7 @@ class ActionManagerModel {
         switch prioritization {
         case .all:
             ActionManager.shared.prioritizeMessages { contexts, trigger in
-                Log.print("MessagePrioritization running on main thread: \(Thread.isMainThread)")
+                self.logAsyncHandlers(message: "MessagePrioritization")
                 return contexts
             }
         case .firstOnly:
@@ -203,12 +201,12 @@ class ActionManagerModel {
                 guard let first = contexts.first else {
                     return []
                 }
-                Log.print("MessagePrioritization running on main thread: \(Thread.isMainThread)")
+                self.logAsyncHandlers(message: "MessagePrioritization")
                 return [first]
             }
         case .allReversed:
             ActionManager.shared.prioritizeMessages { contexts, trigger in
-                Log.print("MessagePrioritization running on main thread: \(Thread.isMainThread)")
+                self.logAsyncHandlers(message: "MessagePrioritization")
                 return contexts.reversed()
             }
         default:
@@ -287,5 +285,13 @@ class ActionManagerModel {
             }
         }
         return []
+    }
+    
+    func logAsyncHandlers(message: String) {
+        var logMessage = message.appending(" running on main thread: \(Thread.isMainThread)")
+        if Thread.isMainThread == ActionManager.shared.useAsyncHandlers {
+            logMessage = "[ERROR]: \(message)"
+        }
+        Log.print(logMessage)
     }
 }
