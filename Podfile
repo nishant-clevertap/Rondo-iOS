@@ -1,9 +1,9 @@
 # Uncomment the next line to define a global platform for your project
- platform :ios, '9.0'
+ platform :ios, '11.0'
 
 
 def use_lp_source
-  pod 'Leanplum-iOS-SDK', :path => '../Leanplum-iOS-SDK'
+  pod 'Leanplum-iOS-SDK', :path => '/Users/nikolazagorchev/Developer/Leanplum-iOS-SDK'
 #  pod 'Leanplum-iOS-Location', :path => '../Leanplum-iOS-Location'
 #  pod 'Leanplum-iOS-LocationAndBeacons', :path => '../Leanplum-iOS-Location'
 end
@@ -11,7 +11,7 @@ end
 def use_lp_release
   version = ENV['LEANPLUM_SDK_VERSION']
   if version == nil
-    version = "6.0.5-beta2"
+    version = "6.0.5"
   end
   pod 'Leanplum-iOS-SDK', version
   pod 'Leanplum-iOS-LocationAndBeacons', version
