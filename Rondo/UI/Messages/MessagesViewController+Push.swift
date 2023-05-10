@@ -15,6 +15,7 @@ extension MessagesViewController {
         
         buildPushPermissions()
         buildPushTriggers()
+        buildCleverTapPush()
     }
     
     func buildPushPermissions() {
@@ -89,6 +90,29 @@ extension MessagesViewController {
             $0.title = "Local Push with Same Priority Different Time"
             $0.tag = "pushLocalSamePriorityDifferentTime"
         }
+        
+        form +++ section
+    }
+    
+    func buildCleverTapPush() {
+        let section = Section("CleverTap Push")
+        
+        section <<< SwitchRow {
+            $0.title = "Open DeepLinks In Foreground"
+            $0.value = false
+        }.onChange({ row in
+            Leanplum.setCleverTapOpenDeepLinksInForeground(row.value!)
+        })
+        
+        section <<< SwitchRow {
+            $0.title = "Handle CleverTap Notification"
+            $0.value = false
+        }.onChange({ row in
+            Leanplum.setHandleCleverTapNotification { (userInfo, isNotificationOpen, block) in
+                Log.print("CleverTap handle push block: \(userInfo), isNotificationOpen: \(isNotificationOpen)")
+                block()
+            }
+        })
         
         form +++ section
     }
