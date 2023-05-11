@@ -73,6 +73,8 @@ extension MigrationViewController {
         section <<< LabelRow {
             $0.title = "dot_group.var_string"
             $0.value = var_dot?.stringValue
+            $0.cell.textLabel?.numberOfLines = 0
+            $0.cell.detailTextLabel?.numberOfLines = 0
         }
         
         section <<< LabelRow {
@@ -82,7 +84,10 @@ extension MigrationViewController {
             $0.cell.detailTextLabel?.numberOfLines = 0
         }
         
-        form +++ section
+        form.removeAll {
+            $0.header?.title == section.header?.title
+        }
+        form.insert(section, at: 1)
     }
     
     func buildVariablesActions(_ instance: CleverTap) {
