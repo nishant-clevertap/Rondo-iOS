@@ -29,8 +29,8 @@ class MigrationViewController: FormViewController {
     func build() {
         buildStatus()
         // CleverTap Variables
-        Leanplum.addCleverTapInstance(callback: CleverTapInstanceCallback(callback: { instance in
-            self.buildVariables(instance)
+        Leanplum.addCleverTapInstance(callback: CleverTapInstanceCallback(callback: { [weak self] instance in
+            self?.buildVariables(instance)
         }))
         buildAttributes()
         buildAdvance()

@@ -14,8 +14,12 @@ extension MigrationViewController {
     func buildVariables(_ instance: CleverTap) {
         defineVariables(instance)
         
-        instance.onVariablesChanged {
-            self.buildVariablesLabels()
+        instance.onVariablesChanged { [weak self] in
+            Log.print("[CleverTap] onVariablesChanged")
+            self?.buildVariablesLabels()
+        }
+        var_string?.onValueChanged {
+            Log.print("[CleverTap] var_string onValueChanged: \(self.var_string?.stringValue ?? "var_string is nil")")
         }
         
         buildVariablesLabels()
@@ -23,6 +27,7 @@ extension MigrationViewController {
     }
     
     func defineVariables(_ instance: CleverTap) {
+        // Primitives
         var_string = instance.defineVar(name: "var_string", string: "hello, world")
         var_int = instance.defineVar(name: "var_int", integer: 10)
         var_number = instance.defineVar(name: "var_number", number: NSNumber(value: 11.2))
@@ -47,6 +52,7 @@ extension MigrationViewController {
         section <<< LabelRow {
             $0.title = "var_string"
             $0.value = var_string?.stringValue
+            $0.cell.detailTextLabel?.numberOfLines = 0
         }
         
         section <<< LabelRow {
@@ -97,7 +103,7 @@ extension MigrationViewController {
             $0.title = "Fetch Variables"
         }.onCellSelection({ cell, row in
             instance.fetchVariables({ success in
-                Log.print("Fetch Variables success: \(success)")
+                Log.print("[CleverTap] Fetch Variables success: \(success)")
             })
         })
         
