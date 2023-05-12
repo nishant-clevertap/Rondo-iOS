@@ -8,17 +8,30 @@
 
 import Foundation
 import Eureka
+import CleverTapSDK
 
 class MigrationViewController: FormViewController {
     
+    var var_string: CleverTapSDK.Var?
+    var var_int: CleverTapSDK.Var?
+    var var_number: CleverTapSDK.Var?
+    var var_bool: CleverTapSDK.Var?
+    var var_dict: CleverTapSDK.Var?
+    var var_dot: CleverTapSDK.Var?
+    var var_dot_dict: CleverTapSDK.Var?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         build()
     }
     
     func build() {
         buildStatus()
+        // CleverTap Variables
+        Leanplum.addCleverTapInstance(callback: CleverTapInstanceCallback(callback: { [weak self] instance in
+            self?.buildVariables(instance)
+        }))
         buildAttributes()
         buildAdvance()
         buildTrack()
@@ -113,7 +126,7 @@ class MigrationViewController: FormViewController {
                                         "arr": ["c", 3, "d", 4, nil], // optionals
                                         "empty": nil])
         })
-
+        
         section <<< ButtonRow(){
             $0.title = "Set DOB"
         }.onCellSelection({ cell, row in
@@ -232,7 +245,7 @@ class MigrationViewController: FormViewController {
                 "publisherSubCampaign": "sub-campaign",
                 "publisherSubAdGroup": "sub-ad-group",
                 "publisherSubAd": "sub-ad"
-                ])
+            ])
         })
         
         form +++ section
