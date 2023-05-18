@@ -3,15 +3,15 @@
 
 
 def use_lp_source
-  pod 'Leanplum-iOS-SDK', :path => '../Leanplum-iOS-SDK'
-  pod 'Leanplum-iOS-Location', :path => '../Leanplum-iOS-SDK'
-#  pod 'Leanplum-iOS-LocationAndBeacons', :path => '../Leanplum-iOS-SDK'
+  pod 'Leanplum-iOS-SDK', :path => '/Users/nikolazagorchev/Developer/Leanplum-iOS-SDK'
+  pod 'Leanplum-iOS-Location', :path => '/Users/nikolazagorchev/Developer/Leanplum-iOS-SDK'
+#  pod 'Leanplum-iOS-LocationAndBeacons', :path => '../Leanplum-iOS-Location'
 end
 
 def use_lp_release
   version = ENV['LEANPLUM_SDK_VERSION']
   if version == nil
-    version = "6.1.0-beta2"
+    version = "6.1.0-beta3"
   end
   pod 'Leanplum-iOS-SDK', version
   pod 'Leanplum-iOS-LocationAndBeacons', version
