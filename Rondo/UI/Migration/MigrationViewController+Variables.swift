@@ -110,7 +110,8 @@ extension MigrationViewController {
         section <<< ButtonRow(){
             $0.title = "Sync Variables"
         }.onCellSelection({ cell, row in
-            instance.syncVariables()
+            // Force sync in prod to support TestFlight
+            instance.syncVariables(true)
         })
         
         form +++ section
