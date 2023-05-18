@@ -3,9 +3,9 @@
 
 
 def use_lp_source
-  pod 'Leanplum-iOS-SDK', :path => '/Users/nikolazagorchev/Developer/Leanplum-iOS-SDK'
-  pod 'Leanplum-iOS-Location', :path => '/Users/nikolazagorchev/Developer/Leanplum-iOS-SDK'
-#  pod 'Leanplum-iOS-LocationAndBeacons', :path => '../Leanplum-iOS-Location'
+  pod 'Leanplum-iOS-SDK', :path => '../Leanplum-iOS-SDK'
+  pod 'Leanplum-iOS-Location', :path => '../Leanplum-iOS-SDK'
+#  pod 'Leanplum-iOS-LocationAndBeacons', :path => '../Leanplum-iOS-SDK'
 end
 
 def use_lp_release
