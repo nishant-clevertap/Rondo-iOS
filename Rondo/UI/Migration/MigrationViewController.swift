@@ -3,7 +3,7 @@
 //  Rondo-iOS
 //
 //  Created by Nikola Zagorchev on 7.10.22.
-//  Copyright © 2022 Leanplum. All rights reserved.
+//  Copyright © 2023 Leanplum. All rights reserved.
 //
 
 import Foundation
@@ -20,10 +20,22 @@ class MigrationViewController: FormViewController {
     var var_dot: CleverTapSDK.Var?
     var var_dot_dict: CleverTapSDK.Var?
     
+    let refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+        
         build()
+    }
+    
+    @objc func refresh(_ sender: AnyObject) {
+        form.removeAll()
+        build()
+        refreshControl.endRefreshing()
     }
     
     func build() {
@@ -83,6 +95,17 @@ class MigrationViewController: FormViewController {
             $0.title = "Account Region"
             $0.value = MigrationManager.shared.cleverTapAccountRegion
         }
+        
+        Leanplum.addCleverTapInstance(callback: CleverTapInstanceCallback(callback: { instance in
+            section <<< LabelRow {
+                $0.title = "CT ID"
+                $0.value = instance.profileGetID()
+            }
+            section <<< LabelRow {
+                $0.title = "Identity"
+                $0.value = instance.profileGet("Identity") as? String ?? ""
+            }
+        }))
         
         section <<< ButtonRow {
             $0.title = "View Attribute Mappings"

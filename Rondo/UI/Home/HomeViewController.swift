@@ -3,7 +3,7 @@
 //  LPFeatures
 //
 //  Created by Milos Jakovljevic on 13/12/2019.
-//  Copyright © 2022 Leanplum. All rights reserved.
+//  Copyright © 2023 Leanplum. All rights reserved.
 //
 
 import UIKit
@@ -22,6 +22,7 @@ class HomeViewController: FormViewController {
             }
         }
     }
+    
     var env: LeanplumEnv? {
         didSet {
             if env != oldValue {
@@ -29,6 +30,7 @@ class HomeViewController: FormViewController {
             }
         }
     }
+    
     var logLevel: LeanplumLogLevel = UserDefaults.standard.logLevel {
         didSet {
             if logLevel != oldValue {
@@ -37,9 +39,15 @@ class HomeViewController: FormViewController {
             }
         }
     }
+    
+    let refreshControl = UIRefreshControl()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(self.build), for: .valueChanged)
+        tableView.addSubview(refreshControl)
 
         env = context.env
         app = context.app
@@ -64,7 +72,7 @@ class HomeViewController: FormViewController {
         present(vc, animated: true)
     }
 
-    func build() {
+    @objc func build() {
         form.removeAll()
 
         buildApps()
@@ -91,6 +99,8 @@ class HomeViewController: FormViewController {
             self.buildUserInfo()
             self.form.allSections.forEach { $0.reload() }
         }
+        
+        refreshControl.endRefreshing()
     }
 
     func buildApps() {

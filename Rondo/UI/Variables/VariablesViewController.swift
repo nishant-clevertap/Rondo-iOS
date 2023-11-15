@@ -15,7 +15,7 @@ class VariablesViewController: FormViewController {
     let varString = Var(name: "varString", string: "This is a local string.")
     let varNumber = Var(name: "varNumber", number: 0)
     let varBool = Var(name: "varBool", boolean: false)
-    let varFile = Var(name: "varFile", file: nil)
+    let varFile = Var(name: "varFile", file: "gaming-promo.png")
     
     let weapons = Var(name: "weapons", dictionary: [:])
     
