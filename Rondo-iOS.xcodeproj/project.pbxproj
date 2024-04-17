@@ -48,6 +48,7 @@
 		6A7B2ECD28872A5F00F73EC7 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7B2ECC28872A5F00F73EC7 /* Util.swift */; };
 		6A9197D6250A553700B13E05 /* LPAdsAskToAskMessageTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A9197D4250A553700B13E05 /* LPAdsAskToAskMessageTemplate.m */; };
 		6AD7F0422A0C1EF700B4E16B /* MigrationViewController+Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD7F0412A0C1EF700B4E16B /* MigrationViewController+Variables.swift */; };
+		6B587A672BCFE8250077493E /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 6B587A662BCFE8250077493E /* PrivacyInfo.xcprivacy */; };
 		6BB81BB02B0290BE00E6BCCB /* gaming-promo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BB81BAF2B0290BE00E6BCCB /* gaming-promo.png */; };
 		8C0B0D93D1B61FAC21A6FC4C /* Pods_Rondo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDAFBDF6F1A75C834118A65 /* Pods_Rondo_iOS.framework */; };
 		A82BBF5F24783AB300B99FA0 /* LeanplumEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82BBF5E24783AB300B99FA0 /* LeanplumEnv.swift */; };
@@ -137,6 +138,7 @@
 		6A9197D4250A553700B13E05 /* LPAdsAskToAskMessageTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPAdsAskToAskMessageTemplate.m; sourceTree = "<group>"; };
 		6A9197D5250A553700B13E05 /* LPAdsAskToAskMessageTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPAdsAskToAskMessageTemplate.h; sourceTree = "<group>"; };
 		6AD7F0412A0C1EF700B4E16B /* MigrationViewController+Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MigrationViewController+Variables.swift"; sourceTree = "<group>"; };
+		6B587A662BCFE8250077493E /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		6BB81BAF2B0290BE00E6BCCB /* gaming-promo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gaming-promo.png"; sourceTree = "<group>"; };
 		871B813E40B9D5721DE92AC4 /* Pods-Rondo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo.release.xcconfig"; path = "Target Support Files/Pods-Rondo/Pods-Rondo.release.xcconfig"; sourceTree = "<group>"; };
 		88A45896E92697F830BDDD12 /* Pods-Rondo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rondo-iOS.release.xcconfig"; path = "Target Support Files/Pods-Rondo-iOS/Pods-Rondo-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				074C65D523A399D400EC586B /* Assets.xcassets */,
 				074C65D723A399D400EC586B /* LaunchScreen.storyboard */,
 				074C65DA23A399D400EC586B /* Info.plist */,
+				6B587A662BCFE8250077493E /* PrivacyInfo.xcprivacy */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				074C65D423A399D200EC586B /* Main.storyboard in Resources */,
 				075A17612422E777007C6B72 /* KeyValueTableViewCell.xib in Resources */,
 				C90B360424DD819C002B4889 /* Test1.png in Resources */,
+				6B587A672BCFE8250077493E /* PrivacyInfo.xcprivacy in Resources */,
 				C90B360624DD82E5002B4889 /* Primary@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
