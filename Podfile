@@ -3,18 +3,17 @@
 
 
 def use_lp_source
-  pod 'Leanplum-iOS-SDK', :path => '../Leanplum-iOS-SDK'
-  pod 'Leanplum-iOS-Location', :path => '../Leanplum-iOS-SDK'
-#  pod 'Leanplum-iOS-LocationAndBeacons', :path => '../Leanplum-iOS-SDK'
+  pod 'Leanplum-iOS-SDK', :git => 'https://github.com/nishant-clevertap/Leanplum-iOS-SDK.git', :branch => 'fix_push_notification_handled_twice'
+  pod 'Leanplum-iOS-Location', :git => 'https://github.com/nishant-clevertap/Leanplum-iOS-SDK.git', :branch => 'fix_push_notification_handled_twice'
 end
 
 def use_lp_release
-  version = ENV['LEANPLUM_SDK_VERSION']
-  if version == nil
-    version = "6.4.1"
-  end
-  pod 'Leanplum-iOS-SDK', version
-  pod 'Leanplum-iOS-LocationAndBeacons', version
+  #version = ENV['LEANPLUM_SDK_VERSION']
+  #if version == nil
+  #  version = "6.4.1"
+  #end
+  pod 'Leanplum-iOS-SDK', :git => 'https://github.com/nishant-clevertap/Leanplum-iOS-SDK.git', :branch => 'fix_push_notification_handled_twice'
+  pod 'Leanplum-iOS-LocationAndBeacons', :git => 'https://github.com/nishant-clevertap/Leanplum-iOS-SDK.git', :branch => 'fix_push_notification_handled_twice'
 end
 
 def shared_pods
