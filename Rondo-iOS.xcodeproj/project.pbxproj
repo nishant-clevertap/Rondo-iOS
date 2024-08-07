@@ -11,7 +11,6 @@
 		0739F942248066DC00B12A6E /* EnvironmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739F941248066DC00B12A6E /* EnvironmentsViewController.swift */; };
 		0739F94724806C6D00B12A6E /* LPExceptionCatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0739F94624806C6D00B12A6E /* LPExceptionCatcher.m */; };
 		074C65CD23A399D200EC586B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074C65CC23A399D200EC586B /* AppDelegate.swift */; };
-		074C65CF23A399D200EC586B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074C65CE23A399D200EC586B /* SceneDelegate.swift */; };
 		074C65D423A399D200EC586B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 074C65D223A399D200EC586B /* Main.storyboard */; };
 		074C65D623A399D400EC586B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 074C65D523A399D400EC586B /* Assets.xcassets */; };
 		074C65D923A399D400EC586B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 074C65D723A399D400EC586B /* LaunchScreen.storyboard */; };
@@ -94,7 +93,6 @@
 		0739F94624806C6D00B12A6E /* LPExceptionCatcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPExceptionCatcher.m; sourceTree = "<group>"; };
 		074C65C923A399D200EC586B /* Rondo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rondo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		074C65CC23A399D200EC586B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		074C65CE23A399D200EC586B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		074C65D323A399D200EC586B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		074C65D523A399D400EC586B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		074C65D823A399D400EC586B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -233,7 +231,6 @@
 				6A9197D3250A552300B13E05 /* MessageTemplates */,
 				074C65EC23A3CB0500EC586B /* AppContext.swift */,
 				074C65CC23A399D200EC586B /* AppDelegate.swift */,
-				074C65CE23A399D200EC586B /* SceneDelegate.swift */,
 				074C65E023A39E4400EC586B /* UI */,
 				074C65E723A3C80F00EC586B /* Data */,
 				0739F94324806C4D00B12A6E /* ObjectiveC */,
@@ -646,7 +643,6 @@
 				078D5881243CEC8000D088BD /* UserDefaultExtension.swift in Sources */,
 				075A17592422D5ED007C6B72 /* ImageTableViewCell.swift in Sources */,
 				0739F942248066DC00B12A6E /* EnvironmentsViewController.swift in Sources */,
-				074C65CF23A399D200EC586B /* SceneDelegate.swift in Sources */,
 				6A4A39EF2539DF4D00BD8C9A /* AdsTrackingActionTemplate.swift in Sources */,
 				6A7B2EC92886EF3400F73EC7 /* ActionManagerModel.swift in Sources */,
 				6A7B2ECD28872A5F00F73EC7 /* Util.swift in Sources */,
